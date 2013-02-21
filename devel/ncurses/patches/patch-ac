@@ -16,7 +16,29 @@ $NetBSD: patch-ac,v 1.17 2011/02/28 11:02:46 adam Exp $
  	cf_xopen_source="-D__EXTENSIONS__ -D_XOPEN_SOURCE=$cf_XOPEN_SOURCE"
  	;;
  solaris2.[1-9]) #(vi
-@@ -9640,12 +9647,7 @@ case ".$MANPAGE_RENAMES" in #(vi
+@@ -7818,11 +7825,6 @@ if test "$with_widec" = yes ; then
+ #define USE_WIDEC_SUPPORT 1
+ EOF
+ 
+-	case "$CFLAGS $CPPFLAGS" in #(vi
+-	*-D_XOPEN_SOURCE=500) #(vi
+-		;;
+-	*)
+-
+ echo "$as_me:7826: checking if we must define _XOPEN_SOURCE_EXTENDED" >&5
+ echo $ECHO_N "checking if we must define _XOPEN_SOURCE_EXTENDED... $ECHO_C" >&6
+ cat >conftest.$ac_ext <<_ACEOF
+@@ -7911,9 +7913,6 @@ echo "${ECHO_T}$cf_result" >&6
+ 	fi
+ fi
+ 
+-		;;
+-	esac
+-
+ 	# with_overwrite=no
+ 	NCURSES_CH_T=cchar_t
+ 
+@@ -9640,12 +9639,7 @@ case ".$MANPAGE_RENAMES" in #(vi
  .no) #(vi
    ;;
  .|.yes)
@@ -29,7 +51,7 @@ $NetBSD: patch-ac,v 1.17 2011/02/28 11:02:46 adam Exp $
    ;;
  esac
  
-@@ -18592,7 +18587,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
+@@ -18592,7 +18586,7 @@ echo "${ECHO_T}$LIB_SUBSETS" >&6
  
  ### Construct the list of include-directories to be generated
  

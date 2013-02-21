@@ -1,0 +1,20 @@
+$NetBSD$
+
+--- configure.in.orig	Mon Mar 28 00:22:26 2011
++++ configure.in
+@@ -721,14 +721,7 @@ AC_MSG_RESULT($with_widec)
+ if test "$with_widec" = yes ; then
+ 	LIB_SUFFIX="w${LIB_SUFFIX}"
+ 	AC_DEFINE(USE_WIDEC_SUPPORT)
+-
+-	case "$CFLAGS $CPPFLAGS" in #(vi
+-	*-D_XOPEN_SOURCE=500) #(vi
+-		;;
+-	*)
+-		CF_PREDEFINE(_XOPEN_SOURCE_EXTENDED)
+-		;;
+-	esac
++	CF_PREDEFINE(_XOPEN_SOURCE_EXTENDED)
+ 
+ 	# with_overwrite=no
+ 	NCURSES_CH_T=cchar_t
