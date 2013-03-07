@@ -17,6 +17,7 @@ PKGCONFIG_OVERRIDE+=	xaw7.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
