@@ -22,6 +22,7 @@ PKGCONFIG_OVERRIDE+=	ice.pc.in
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
 
