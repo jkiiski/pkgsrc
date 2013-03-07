@@ -35,6 +35,8 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.2
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.99.2
