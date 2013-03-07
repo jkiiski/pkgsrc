@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--without-libuuid
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xtrans/buildlink3.mk"
