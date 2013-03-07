@@ -23,6 +23,7 @@ CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/xf86miscproto/buildlink3.mk"
