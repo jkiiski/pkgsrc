@@ -16,4 +16,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	inputproto.pc.in
 CONFIGURE_ARGS+=	--with-asciidoc=no
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
