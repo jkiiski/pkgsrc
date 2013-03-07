@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--disable-devel-docs
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/fontcacheproto/buildlink3.mk"
