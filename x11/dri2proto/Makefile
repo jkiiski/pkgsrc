@@ -13,4 +13,6 @@ COMMENT=		DRI2 extension headers from modular X.org
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	dri2proto.pc.in
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
