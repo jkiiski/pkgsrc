@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xf86vidmodeproto/buildlink3.mk"
