@@ -53,6 +53,8 @@ FILES_SUBST+=		XKBCOMPDIR_SYMLINK=${XKBCOMPDIR_SYMLINK:Q}
 
 OWN_DIRS+=		${XKBCOMPDIR}
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 BUILDLINK_DEPMETHOD.gettext=	build	# for the configure only
 .include "../../devel/gettext-lib/buildlink3.mk"
 
