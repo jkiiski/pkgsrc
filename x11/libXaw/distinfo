@@ -5,3 +5,4 @@ RMD160 (libXaw-1.0.11.tar.bz2) = 551785a6b92a2b274354615e7dff343d9cf059ae
 Size (libXaw-1.0.11.tar.bz2) = 649633 bytes
 SHA1 (patch-Makefile.in) = bc701f17befebb04c0062c6c670f85f48adfaabf
 SHA1 (patch-aa) = 9fdbdf625260763fc7345421870633ed3e4b6b7b
+SHA1 (patch-configure) = ba9909b2299859369c1bb238de7602cef8aea773
