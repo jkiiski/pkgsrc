@@ -2,9 +2,54 @@ $NetBSD: patch-ac,v 1.11 2011/09/15 19:50:14 bsiegert Exp $
 
 See patch-aa.
 
---- configure.orig	2012-06-02 15:37:31.000000000 +0900
-+++ configure	2012-06-28 19:20:03.000000000 +0900
-@@ -19942,43 +19942,18 @@
+--- configure.orig	Sat Jun  2 06:37:31 2012
++++ configure
+@@ -5282,7 +5282,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | darwin* | dragonfly* | minix*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
+@@ -5779,7 +5779,7 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-netbsd*)
++netbsd* | minix*)
+   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+     lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+   else
+@@ -9129,7 +9129,7 @@ _LT_EOF
+       fi
+       ;;
+ 
+-    netbsd*)
++    netbsd* | minix*)
+       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+ 	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	wlarc=
+@@ -9759,7 +9759,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >&6; }
+       link_all_deplibs=yes
+       ;;
+ 
+-    netbsd*)
++    netbsd* | minix*)
+       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+ 	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
+       else
+@@ -10787,7 +10787,7 @@ fi
+   dynamic_linker='GNU/Linux ld.so'
+   ;;
+ 
+-netbsd*)
++netbsd* | minix*)
+   version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+@@ -19942,43 +19942,18 @@ $as_echo "#define XUSE_MTSAFE_API 1" >>confdefs.h
  	;;
  esac
  
@@ -57,12 +102,14 @@ See patch-aa.
    thrstubs="no"
  else
    thrstubs="yes"
-@@ -19999,12 +19974,12 @@
+@@ -19998,13 +19973,13 @@ if test x$xthreads = xyes ; then
+     case $host_os in
      linux*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
-     netbsd*)
+-    netbsd*)
 -	XTHREAD_CFLAGS="-D_POSIX_THREAD_SAFE_FUNCTIONS"
 -	XTHREADLIB="-lpthread" ;;
++    netbsd* | minix*)
 +	XTHREAD_CFLAGS="-D_REENTRANT"
 +	XTHREADLIB="-pthread" ;;
      freebsd*)

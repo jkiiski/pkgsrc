@@ -50,6 +50,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
