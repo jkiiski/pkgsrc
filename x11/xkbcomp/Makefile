@@ -17,6 +17,7 @@ PKGCONFIG_OVERRIDE=	xkbcomp.pc.in
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
