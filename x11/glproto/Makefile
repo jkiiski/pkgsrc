@@ -14,4 +14,6 @@ PKGCONFIG_OVERRIDE+=	glproto.pc.in
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
