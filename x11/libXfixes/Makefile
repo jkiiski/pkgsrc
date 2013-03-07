@@ -24,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 # needs version 4 which defines xXFixesHideCursorReq
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 
