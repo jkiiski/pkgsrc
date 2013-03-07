@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	XPM_CFLAGS=${XPM_CFLAGS:Q} \
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
