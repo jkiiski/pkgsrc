@@ -35,6 +35,8 @@ CPPFLAGS.OSF1+=		-pthread # Required by compiler if including pthread.h
 
 .include "../../mk/compiler.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
+
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILD_DEPENDS+=		ucpp-[0-9]*:../../devel/ucpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
@@ -42,6 +44,7 @@ CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/ucpp -t -c90 -Uunix"
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
