@@ -41,6 +41,8 @@ CONFIGURE_ARGS+=	XPM_CFLAGS=${XPM_CFLAGS:Q} \
 			SXPM_LIBS=${SXPM_LIBS:Q}
 .endif
 
+LIBS.Minix+= -lpthread
+
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
 .include "../../devel/xorg-util-macros/buildlink3.mk"
