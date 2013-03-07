@@ -17,4 +17,6 @@ USE_TOOLS+=	pkg-config perl
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
 
+CPPFLAGS.Minix+=	-DPIXMAN_NO_TLS
+
 .include "../../mk/bsd.pkg.mk"
