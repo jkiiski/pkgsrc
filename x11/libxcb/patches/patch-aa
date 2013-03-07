@@ -1,8 +1,53 @@
 $NetBSD$
 
---- configure.orig	2010-09-06 16:16:29.000000000 +0000
+--- configure.orig	Fri Oct  5 12:54:21 2012
 +++ configure
-@@ -11827,7 +11827,7 @@ else
+@@ -5909,7 +5909,7 @@ else
+     lt_cv_sys_max_cmd_len=8192;
+     ;;
+ 
+-  netbsd* | freebsd* | openbsd* | darwin* | dragonfly*)
++  netbsd* | freebsd* | openbsd* | darwin* | dragonfly* | minix*)
+     # This has been around since 386BSD, at least.  Likely further.
+     if test -x /sbin/sysctl; then
+       lt_cv_sys_max_cmd_len=`/sbin/sysctl -n kern.argmax`
+@@ -6399,7 +6399,7 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu | gnu*)
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-netbsd* | netbsdelf*-gnu)
++netbsd* | netbsdelf*-gnu | minix*)
+   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
+     lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
+   else
+@@ -9747,7 +9747,7 @@ _LT_EOF
+       fi
+       ;;
+ 
+-    netbsd* | netbsdelf*-gnu)
++    netbsd* | netbsdelf*-gnu | minix*)
+       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+ 	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
+ 	wlarc=
+@@ -10378,7 +10378,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >&6; }
+       link_all_deplibs=yes
+       ;;
+ 
+-    netbsd* | netbsdelf*-gnu)
++    netbsd* | netbsdelf*-gnu | minix*)
+       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
+ 	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
+       else
+@@ -11407,7 +11407,7 @@ netbsdelf*-gnu)
+   dynamic_linker='NetBSD ld.elf_so'
+   ;;
+ 
+-netbsd*)
++netbsd* | minix*)
+   version_type=sunos
+   need_lib_prefix=no
+   need_version=no
+@@ -13062,7 +13062,7 @@ else
  $as_echo "yes" >&6; }
  
  fi

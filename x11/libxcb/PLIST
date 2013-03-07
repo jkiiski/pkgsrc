@@ -886,7 +886,6 @@ man/man3/xcb_input_get_selected_extension_events_all_classes_length.3
 man/man3/xcb_input_get_selected_extension_events_reply.3
 man/man3/xcb_input_get_selected_extension_events_this_classes.3
 man/man3/xcb_input_get_selected_extension_events_this_classes_end.3
-man/man3/xcb_input_get_selected_extension_events_this_classes_length.3
 man/man3/xcb_input_get_selected_extension_events_unchecked.3
 man/man3/xcb_input_grab_device.3
 man/man3/xcb_input_grab_device_button.3
@@ -1747,7 +1746,6 @@ man/man3/xcb_xf86dri_destroy_drawable_checked.3
 man/man3/xcb_xf86dri_get_client_driver_name.3
 man/man3/xcb_xf86dri_get_client_driver_name_client_driver_name.3
 man/man3/xcb_xf86dri_get_client_driver_name_client_driver_name_end.3
-man/man3/xcb_xf86dri_get_client_driver_name_client_driver_name_length.3
 man/man3/xcb_xf86dri_get_client_driver_name_reply.3
 man/man3/xcb_xf86dri_get_client_driver_name_unchecked.3
 man/man3/xcb_xf86dri_get_device_info.3
