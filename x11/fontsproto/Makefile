@@ -14,4 +14,6 @@ USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/fontsproto.pc.in
 GNU_CONFIGURE=		yes
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
