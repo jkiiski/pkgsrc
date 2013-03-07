@@ -30,5 +30,6 @@ CONFIGURE_ARGS+=	--disable-xthreads
 .endif
 
 .include "../../x11/xproto/buildlink3.mk"
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
