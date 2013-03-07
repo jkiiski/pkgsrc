@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
