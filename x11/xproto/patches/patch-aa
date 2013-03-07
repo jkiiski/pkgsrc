@@ -1,8 +1,8 @@
 $NetBSD: patch-aa,v 1.7 2012/03/19 19:08:37 bsiegert Exp $
 
---- Xos_r.h.in.orig	2012-03-16 06:11:44.000000000 +0000
+--- Xos_r.h.in.orig	Fri Mar 16 06:11:44 2012
 +++ Xos_r.h.in
-@@ -73,13 +73,7 @@ in this Software without prior written a
+@@ -73,13 +73,7 @@ in this Software without prior written authorization f
  # include <X11/Xfuncs.h>
  
  # ifndef X_NOT_POSIX
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.7 2012/03/19 19:08:37 bsiegert Exp $
  #  ifndef LINE_MAX
  #   define X_LINE_MAX 2048
  #  else
-@@ -88,6 +82,10 @@ in this Software without prior written a
+@@ -88,6 +82,10 @@ in this Software without prior written authorization f
  # endif
  #endif /* _XOS_R_H */
  
@@ -51,12 +51,21 @@ $NetBSD: patch-aa,v 1.7 2012/03/19 19:08:37 bsiegert Exp $
  #  define XOS_USE_MTSAFE_PWDAPI 1
  # endif
  #endif
-@@ -318,7 +323,7 @@ static __inline__ void _Xpw_copyPasswd(_
+@@ -248,7 +253,7 @@ typedef struct {
+  */
+ 
+ #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
+-    defined(__APPLE__) || defined(__DragonFly__)
++    defined(__APPLE__) || defined(__DragonFly__) || defined(__minix)
+ static __inline__ void _Xpw_copyPasswd(_Xgetpwparams p)
+ {
+    memcpy(&(p).pws, (p).pwp, sizeof(struct passwd));
+@@ -318,7 +323,7 @@ static __inline__ void _Xpw_copyPasswd(_Xgetpwparams p
    (_Xos_processUnlock), \
    (p).pwp )
  
 -#elif !defined(_POSIX_THREAD_SAFE_FUNCTIONS) && !defined(__APPLE__)
-+#elif !defined(_POSIX_THREAD_SAFE_FUNCTIONS) && !defined(__APPLE__) && !defined(__NetBSD__) && !defined(__DragonFly__)
++#elif !defined(_POSIX_THREAD_SAFE_FUNCTIONS) && !defined(__APPLE__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__minix)
  # define X_NEEDS_PWPARAMS
  typedef struct {
    struct passwd pws;
@@ -69,7 +78,16 @@ $NetBSD: patch-aa,v 1.7 2012/03/19 19:08:37 bsiegert Exp $
  #  define XOS_USE_MTSAFE_NETDBAPI 1
  # endif
  #endif
-@@ -543,7 +548,7 @@ typedef int _Xgetservbynameparams; /* du
+@@ -403,7 +408,7 @@ typedef int _Xgetservbynameparams; /* dummy */
+ #elif !defined(XOS_USE_MTSAFE_NETDBAPI) || defined(XNO_MTSAFE_NETDBAPI)
+ /* WARNING:  The h_addr_list and s_aliases values are *not* copied! */
+ 
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__minix)
+ #include <sys/param.h>
+ #endif
+ 
+@@ -543,7 +548,7 @@ typedef int _Xgetservbynameparams; /* dummy */
  #   define dirent direct
  #  endif
  # endif
