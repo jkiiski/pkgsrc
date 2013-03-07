@@ -31,6 +31,8 @@ SUBST_SED.sosubdir=	-e 's|\.so X|.so manlibmansuffix/X|'
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 .endif
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
+
 BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.2
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.5
 BUILDLINK_API_DEPENDS.libXext+=		libXext>=1.1
