@@ -15,6 +15,7 @@ CONFLICTS+=		fixesext-[0-9]*
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/fixesproto.pc.in
 
+.include "../../devel/xorg-util-macros/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
