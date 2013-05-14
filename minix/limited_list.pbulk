@@ -117,6 +117,7 @@ editors/mined
 editors/nano
 editors/nvi
 editors/pico
+editors/se
 editors/ssam
 editors/tweak
 editors/uemacs
