@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/12 21:50:32 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2012/10/08 12:19:09 asau Exp $
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
@@ -21,7 +21,7 @@ CONFIG_SHELL=		ksh
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-S
 
-INSTALL_DIRS=		${WRKSRC} ${WRKSRC}/nls
+INSTALL_DIRS=		${WRKSRC} nls
 INSTALLATION_DIRS=	share/nls/C
 
 CONF_FILES=		${PREFIX}/lib/elm.mimetypes-dist		\

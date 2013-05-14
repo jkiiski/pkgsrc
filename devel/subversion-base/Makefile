@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2012/12/16 01:52:12 obache Exp $
+# $NetBSD: Makefile,v 1.81 2013/02/06 23:21:05 jperkin Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -46,12 +46,6 @@ CONFIGURE_ARGS+=	--without-berkeley-db
 
 PLIST_SUBST+=		DAV_RA=${DAV_RA:Q}
 
-SUBST_CLASSES+=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	contrib/cgi/tweak-log.cgi
-SUBST_SED.paths=	-e "s|/usr/local/bin/|${PREFIX}/bin|g"
-SUBST_MESSAGE.paths=	Fixing hardcoded /usr/local/bin paths.
-
 RCD_SCRIPTS=	svnserve
 
 post-install:
@@ -65,8 +59,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${SVNEXAMPLES}/hook-scripts/mailer/tests
 	${INSTALL_DATA} ${WRKSRC}/tools/backup/hot-backup.py \
 		${DESTDIR}${SVNEXAMPLES}/backup
-	${INSTALL_DATA} ${WRKSRC}/contrib/cgi/tweak-log.cgi \
-		${DESTDIR}${SVNEXAMPLES}/cgi
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/commit* \
 		${DESTDIR}${SVNEXAMPLES}/hook-scripts
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/svnperms* \

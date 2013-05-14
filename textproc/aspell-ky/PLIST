@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/kirghiz.alias
+lib/aspell/ky.multi
+lib/aspell/ky.rws
+share/aspell/ky.dat
+share/aspell/ky_affix.dat
+share/aspell/l-ky.cmap
+share/aspell/l-ky.cset

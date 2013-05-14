@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2012/07/05 16:09:18 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2013/02/01 22:21:12 wiz Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.15
 PKGREVISION=		4
 CATEGORIES=		security
-MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-lml/ 
+MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-lml/
 
-MAINTAINER=		shannonjr@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/
 COMMENT=		Log analyzer monitoring your logfile and received syslog messages
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2012/06/27 10:53:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.52 2013/02/06 19:30:54 jperkin Exp $
 
-DISTNAME=	libpcap-1.1.1
-PKGREVISION=	1
+DISTNAME=	libpcap-1.3.0
+PKGREVISION=	2
 SVR4_PKGNAME=	lpcap
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcpdump.org/release/
@@ -14,26 +14,15 @@ LICENSE=	modified-bsd
 NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-INSTALLATION_DIRS=	bin
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bison gm4 lex
+USE_TOOLS+=		bison flex gm4
 GNU_CONFIGURE=		yes
-PLIST_VARS+=		SunOS std
 
 .include "../../mk/bsd.prefs.mk"
 
-.if exists(/usr/include/netinet/ip6.h)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
-
 .if ${OPSYS} == "SunOS"
-.if ${OS_VERSION} != "5.11"
 CONFIGURE_ARGS+=	--with-pcap=dlpi
-.endif
-PLIST.SunOS=	yes
-.else
-PLIST.std=	yes
 .endif
 
 .if ${OPSYS} == "Minix"

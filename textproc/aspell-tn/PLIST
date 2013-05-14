@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/setswana.alias
+lib/aspell/tn.multi
+lib/aspell/tn.rws
+lib/aspell/tswana.alias
+share/aspell/tn.dat

@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/bengali.alias
+lib/aspell/bn.multi
+lib/aspell/bn.rws
+share/aspell/bn.dat
+share/aspell/u-beng.cmap
+share/aspell/u-beng.cset

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2013/01/11 00:15:39 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2013/02/16 11:18:10 wiz Exp $
 
 DISTNAME=	vigra-1.9.0-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://hci.iwr.uni-heidelberg.de/vigra/
 
@@ -20,6 +20,7 @@ USE_TOOLS+=		pkg-config
 
 CMAKE_ARGS+=	-D DOCINSTALL:PATH=${PREFIX}/share/doc
 CMAKE_ARGS+=	-D WITH_OPENEXR=YES
+CMAKE_ARGS+=	-D WITH_VIGRANUMPY=NO
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2012/09/02 06:43:39 ryoon Exp $
+$NetBSD: patch-aa,v 1.14 2013/03/30 23:31:36 tron Exp $
 
---- mozilla/configure.in.orig	2012-11-19 22:42:12.000000000 +0000
+--- mozilla/configure.in.orig	2013-03-28 18:08:16.000000000 +0000
 +++ mozilla/configure.in
 @@ -2080,6 +2080,9 @@ ia64*-hpux*)
      if test -z "$MC"; then
@@ -32,6 +32,15 @@ $NetBSD: patch-aa,v 1.12 2012/09/02 06:43:39 ryoon Exp $
          #include <resolv.h>
          ],
          [int foo = res_ninit(&_res);],
+@@ -3937,7 +3946,7 @@ AC_CHECK_PROGS(YASM, yasm, "")
+ if test -n "$YASM"; then
+   dnl Pull out yasm's version string
+   changequote(,)
+-  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
++  _YASM_VER_FILTER='s|.* \([0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}\).*|\1|p'
+   changequote([,])
+ 
+   YASM_VERSION=`yasm --version | sed -ne "$_YASM_VER_FILTER"`
 @@ -3947,6 +3956,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
@@ -72,3 +81,16 @@ $NetBSD: patch-aa,v 1.12 2012/09/02 06:43:39 ryoon Exp $
        VPX_ASFLAGS="-f elf64 -rnasm -pnasm -DPIC"
        VPX_X86_ASM=1
      ;;
+@@ -5516,10 +5533,11 @@ dnl ====================================
+ 
+ dnl If using sydneyaudio with Linux, ensure that the alsa library is available
+ if test -n "$MOZ_SYDNEYAUDIO" -a "$OS_TARGET" = "Linux"; then
+-    PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
++    PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi
++AC_SUBST(MOZ_ALSA)
+ 
+ dnl ========================================================
+ dnl = Enable PulseAudio

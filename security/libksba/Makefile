@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.23 2011/04/22 13:42:47 obache Exp $
+# $NetBSD: Makefile,v 1.27 2013/05/10 20:24:17 riastradh Exp $
 
-DISTNAME=	libksba-1.2.0
-PKGREVISION=	1
+DISTNAME=	libksba-1.3.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libksba/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	shannonjr@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.g10code.com/p-libksba.html
 COMMENT=	X.509 library
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v2
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -17,6 +16,12 @@ INFO_FILES=		yes
 
 TEST_TARGET=		check
 TEXINFO_REQD=		4.0
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ARGS+=	CC_FOR_BUILD=${NATIVE_CC:Q}
+.endif
 
 .include "../../security/libgcrypt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.2

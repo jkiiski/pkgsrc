@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2012/10/02 23:48:01 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 21:53:56 wiz Exp $
 #
 
 DISTNAME=	mstream-1.3
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_BACKUP}
+MASTER_SITES=	http://oss.gw.com/people/kim/
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://kimmo.suominen.com/gwradio/

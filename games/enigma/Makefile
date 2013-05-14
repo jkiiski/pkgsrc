@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2012/01/28 11:00:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2013/02/16 11:21:16 wiz Exp $
 
 DISTNAME=	enigma-1.01-r1914
 PKGNAME=	${DISTNAME:S/-r/./}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/enigma-game/
 
-MAINTAINER=	heinz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/enigma/
 COMMENT=	Puzzle game similar to Oxyd/Rock'n'Roll/Marble Madness
 LICENSE=	gnu-gpl-v2

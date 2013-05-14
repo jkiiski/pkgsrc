@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/03/18 20:47:06 zafer Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/23 19:51:26 asau Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -13,7 +13,7 @@ COMMENT=	Graphical frontend to crontab
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} > tkcron.tcl
+EXTRACT_CMD=	${GZCAT} $$extract_file > tkcron.tcl
 
 INSTALLATION_DIRS=	bin
 

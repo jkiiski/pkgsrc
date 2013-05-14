@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/28 20:28:33 is Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 17:18:19 asau Exp $
 #
 
 DISTNAME=		ether2dns-1.6
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://theory.cs.uni-bonn.de/~ignatios/
 EXTRACT_SUFX=		.shar
 
-MAINTAINER=		is@netbsd.org
+MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://theory.cs.uni-bonn.de/~ignatios/
 COMMENT=		Converter from /etc/ethers to IPv6 DNS records
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/08/11 12:00:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/29 05:07:24 asau Exp $
 #
 
-DISTNAME=	xvkbd-3.3
+DISTNAME=	xvkbd-3.4a
 CATEGORIES=	x11
 MASTER_SITES=	http://homepage3.nifty.com/tsato/xvkbd/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/10/25 22:01:06 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/01/06 15:45:12 taca Exp $
 #
 
 DISTNAME=	chasen-${CHASEN_VERSION}
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://chasen-legacy.sourceforge.jp/
-COMMENT=	meta package of ChaSen, Japanese Morphological Analysis System
+COMMENT=	Meta package of ChaSen, Japanese Morphological Analysis System
 
 META_PACKAGE=		yes
 

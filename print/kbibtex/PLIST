@@ -19,6 +19,7 @@ share/kde/apps/kbibtex/fancy.xsl
 share/kde/apps/kbibtex/findduplicatesui.rc
 share/kde/apps/kbibtex/kbibtexui.rc
 share/kde/apps/kbibtex/lyx.rc
+share/kde/apps/kbibtex/pam2bibtex.xsl
 share/kde/apps/kbibtex/pubmed2bibtex.xsl
 share/kde/apps/kbibtex/standard.xsl
 share/kde/apps/kbibtexpart/kbibtexpartui.rc

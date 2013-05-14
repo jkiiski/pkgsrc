@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.38 2012/03/19 12:34:16 joerg Exp $
+# $NetBSD: AIX.mk,v 1.39 2012/11/19 11:34:15 ryoon Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -28,6 +28,10 @@ ROOT_GROUP?=		system
 ULIMIT_CMD_datasize?=	ulimit -d `ulimit -H -d`
 ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
+
+_OPSYS_SYSTEM_RPATH?=		/usr/lib
+_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

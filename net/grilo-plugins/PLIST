@@ -11,6 +11,7 @@ lib/grilo-0.2/grl-local-metadata.xml
 lib/grilo-0.2/grl-metadata-store.xml
 lib/grilo-0.2/grl-optical-media.xml
 lib/grilo-0.2/grl-podcasts.xml
+lib/grilo-0.2/grl-raitv.xml
 lib/grilo-0.2/grl-shoutcast.xml
 lib/grilo-0.2/grl-upnp.xml
 lib/grilo-0.2/libgrlappletrailers.la
@@ -25,5 +26,6 @@ lib/grilo-0.2/libgrllocalmetadata.la
 lib/grilo-0.2/libgrlmetadatastore.la
 lib/grilo-0.2/libgrloptical-media.la
 lib/grilo-0.2/libgrlpodcasts.la
+lib/grilo-0.2/libgrlraitv.la
 lib/grilo-0.2/libgrlshoutcast.la
 lib/grilo-0.2/libgrlupnp.la

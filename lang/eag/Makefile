@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2009/11/26 16:40:55 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/02 20:11:38 asau Exp $
 
-DISTNAME=		eag-2.3
-PKGREVISION=		3
+DISTNAME=		eag-2.6
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.cs.ru.nl/pub/eag/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		jaapb@kerguelen.org
+MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://www.cs.ru.nl/~kees/eag/
 COMMENT=		Transducer generator using affix grammars
+LICENSE=		eag-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc/eag
 
 .include "../../mk/bsd.prefs.mk"
 

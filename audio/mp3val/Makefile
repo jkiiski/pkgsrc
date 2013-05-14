@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/13 07:07:26 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 23:47:59 asau Exp $
 #
 
 DISTNAME=	mp3val-0.1.8-src
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3val/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mp3val.sourceforge.net/
-COMMENT=	mp3 checker
+COMMENT=	Checker for mp3
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c++

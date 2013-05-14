@@ -1,0 +1,2 @@
+@comment $NetBSD$
+bin/event_rpcgen.py

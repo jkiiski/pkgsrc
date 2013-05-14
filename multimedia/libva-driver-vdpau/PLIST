@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/xorg/modules/dri/nvidia_drv_video.so
+lib/xorg/modules/dri/s3g_drv_video.so
+lib/xorg/modules/dri/vdpau_drv_video.la

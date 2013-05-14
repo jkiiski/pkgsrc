@@ -1,0 +1,4 @@
+#!@SH@
+# $NetBSD$
+
+exec @PREFIX@/bin/libtool-fortran --tag=disable-static "$@"

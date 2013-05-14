@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2012/10/08 23:02:30 adam Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/16 11:24:45 wiz Exp $
 #
 
 PKGVER=		0.8.4
 PKGNAME=	compiz-fusion-plugins-extra-${PKGVER}
 DISTNAME=	compiz-plugins-extra-${PKGVER}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	wm x11
 MASTER_SITES=	http://releases.compiz.org/${PKGVER}/
 
@@ -57,4 +57,3 @@ GCONF_SCHEMAS+=		compiz-widget.schemas
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../wm/compiz/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

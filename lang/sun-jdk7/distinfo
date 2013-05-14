@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.1 2012/12/11 14:51:33 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2013/04/13 11:20:05 ryoon Exp $
 
-SHA1 (jdk-7u10-linux-i586.tar.gz) = cef0f812aaa5b1245fdd007ca553da4eef8a8429
-RMD160 (jdk-7u10-linux-i586.tar.gz) = eb8c672e59e66dff46f7d0badd112ef6f5e393fb
-Size (jdk-7u10-linux-i586.tar.gz) = 97489980 bytes
-SHA1 (jdk-7u10-linux-x64.tar.gz) = ca61207ed10a8aa2f1657d9704143bb2c5ae4d6b
-RMD160 (jdk-7u10-linux-x64.tar.gz) = 4698f7eda5eb42969d95f9c4fcec841743d55bca
-Size (jdk-7u10-linux-x64.tar.gz) = 96159666 bytes
+SHA1 (jdk-7u21-linux-i586.tar.gz) = ce05b9a7ecfe348878389671bd82ddc68eac2491
+RMD160 (jdk-7u21-linux-i586.tar.gz) = 59629bd9010b2995e5889d830f268662783f4d66
+Size (jdk-7u21-linux-i586.tar.gz) = 97585097 bytes
+SHA1 (jdk-7u21-linux-x64.tar.gz) = 5391a86ac11dcd62849de2b354048d83881d2a94
+RMD160 (jdk-7u21-linux-x64.tar.gz) = 053f647c7b36cc2749b531fc8e7ee945e9d596ee
+Size (jdk-7u21-linux-x64.tar.gz) = 96272413 bytes
+SHA1 (jdk-7u21-solaris-i586.tar.gz) = 7c31939ca9adfc3fd989e2c8af5ab8fe589aa795
+RMD160 (jdk-7u21-solaris-i586.tar.gz) = 78ff39818ac175f17c5cafe6b6731fec78c02ca4
+Size (jdk-7u21-solaris-i586.tar.gz) = 96552938 bytes
+SHA1 (jdk-7u21-solaris-x64.tar.gz) = 52bccba67efe951c59881756c4d1918904e789ea
+RMD160 (jdk-7u21-solaris-x64.tar.gz) = d39f8e3ffc31869704e4a44c78ec74fd26d5311e
+Size (jdk-7u21-solaris-x64.tar.gz) = 15749823 bytes

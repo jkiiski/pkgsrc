@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 11:43:37 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/27 06:13:20 dholland Exp $
 #
 
 DISTNAME=		mflteco
@@ -27,4 +27,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/mflteco
 .endfor
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

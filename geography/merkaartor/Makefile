@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2012/12/16 01:52:15 obache Exp $
+# $NetBSD: Makefile,v 1.40 2013/02/16 11:21:33 wiz Exp $
 #
 
 DISTNAME=	merkaartor-0.17.2
-PKGREVISION=	15
+PKGREVISION=	17
 CATEGORIES=	geography
 MASTER_SITES=	http://merkaartor.be/attachments/download/253/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +31,11 @@ do-configure:
 	cd ${WRKSRC} && \
 		${QMAKE} ${CONFIGURE_ARGS} Merkaartor.pro && \
 		${MAKE} qmake
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++11
+.endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"

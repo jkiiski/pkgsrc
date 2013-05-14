@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2013/01/07 14:41:10 taca Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/02 15:34:35 taca Exp $
 #
 
 DISTNAME=	contao-${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=contao/}
-DIST_SUBDIR=	${CT_DIST_SUBDIR}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.contao.org/
@@ -81,7 +79,7 @@ pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
 
 pre-install:
-	cd ${WRKSRC}; ${RM} -fr files/music_academy templates/music_academy.sql 
+	cd ${WRKSRC}; ${RM} -fr files/music_academy templates/music_academy.sql
 	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
 
 do-install:

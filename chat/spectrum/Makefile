@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2012/12/21 00:10:59 schnoebe Exp $
+# $NetBSD: Makefile,v 1.32 2013/03/01 15:37:56 jperkin Exp $
 
 DISTNAME=		spectrum-1.4.8
-PKGREVISION=		17
+PKGREVISION=		20
 CATEGORIES=		chat
 MASTER_SITES=		http://cloud.github.com/downloads/hanzz/libtransport/
 
@@ -95,6 +95,8 @@ INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR}
 INSTALLATION_DIRS+=	share/locales
 INSTALLATION_DIRS+=	${EGDIR}
 # INSTALLATION_DIRS+=	${DOCDIR}
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 pre-install:
 	${RM} -f ${WRKSRC}/spectrumctl/spectrumctl.py.orig

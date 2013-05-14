@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2011/03/19 09:18:02 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/23 18:16:51 asau Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	4
 CATEGORIES=	security www
 MASTER_SITES+=	http://www.mit.edu/people/marc/pks/ \
-	${MASTER_SITE_SOURCEFORGE:=pks/} 
+	${MASTER_SITE_SOURCEFORGE:=pks/}
 PATCH_SITES=	http://www.mit.edu/people/marc/pks/
 PATCHFILES=	pks094-patch2 \
 		pks094-patch3

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2012/10/08 23:00:37 adam Exp $
+# $NetBSD: Makefile,v 1.33 2013/02/16 11:19:40 wiz Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-pango-${VERSION}
 COMMENT=		Ruby binding of pango-1.x
-PKGREVISION=		4
 CATEGORIES=		devel fonts
 
 CONFLICTS+=		ruby-gnome2-pango-[0-9]*

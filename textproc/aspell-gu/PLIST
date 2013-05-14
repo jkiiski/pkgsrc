@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/gu.multi
+lib/aspell/gu.rws
+lib/aspell/gujarati.alias
+share/aspell/gu.dat
+share/aspell/u-gujr.cmap
+share/aspell/u-gujr.cset

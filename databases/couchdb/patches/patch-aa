@@ -1,18 +1,45 @@
-$NetBSD$
+$NetBSD: patch-aa,v 1.4 2013/03/04 14:12:40 fhajny Exp $
 
 Set pkgsrc standard paths.
 
---- configure.orig	2012-03-29 21:05:41.000000000 +0000
+--- configure.orig	2013-03-30 14:46:50.000000000 +0000
 +++ configure
-@@ -814,6 +814,7 @@ bug_uri
- localconfdir
- localdatadir
+@@ -646,6 +646,7 @@ localstatelogdir
+ localstatelibdir
+ locallibdir
  localdocdir
 +localegdir
- locallibdir
- localstatelibdir
- localstatelogdir
-@@ -18661,13 +18662,15 @@ localdatadir=${datadir}/${package_identi
+ localdatadir
+ localconfdir
+ bug_uri
+@@ -18288,7 +18289,7 @@ fi
+ done
+ test -n "$CURL_CONFIG" || CURL_CONFIG="no"
+ 
+-    if test "$CURL_CONFIG" == "no"; then :
++    if test "$CURL_CONFIG" = "no"; then :
+ 
+       :
+ 
+@@ -18300,7 +18301,7 @@ $as_echo "$as_me: WARNING: You will be u
+ 
+ else
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
+ 
+@@ -18310,7 +18311,7 @@ else
+ 
+ fi
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
+ 
+@@ -19116,13 +19117,15 @@ localdatadir=${datadir}/${package_identi
  
  localdocdir=${datadir}/doc/${package_identifier}
  
@@ -30,7 +57,7 @@ Set pkgsrc standard paths.
  
  
  # On Windows we install directly into our erlang distribution.
-@@ -18677,9 +18680,9 @@ if test x${IS_WINDOWS} = xTRUE; then
+@@ -19132,9 +19135,9 @@ if test x${IS_WINDOWS} = xTRUE; then
      localerlanglibdir=${libdir}
  
  else
@@ -42,20 +69,3 @@ Set pkgsrc standard paths.
  
  fi
  
-@@ -20087,6 +20090,7 @@ bug_uri!$bug_uri$ac_delim
- localconfdir!$localconfdir$ac_delim
- localdatadir!$localdatadir$ac_delim
- localdocdir!$localdocdir$ac_delim
-+localegdir!$localegdir$ac_delim
- locallibdir!$locallibdir$ac_delim
- localstatelibdir!$localstatelibdir$ac_delim
- localstatelogdir!$localstatelogdir$ac_delim
-@@ -20099,7 +20103,7 @@ LIBOBJS!$LIBOBJS$ac_delim
- LTLIBOBJS!$LTLIBOBJS$ac_delim
- _ACEOF
- 
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 91; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 92; then
-     break
-   elif $ac_last_try; then
-     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5

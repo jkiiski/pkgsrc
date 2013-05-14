@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/10/22 03:28:22 taca Exp $
+# $NetBSD: Makefile,v 1.31 2012/10/23 19:50:52 asau Exp $
 #
 
 DISTNAME=	bkpupsd-2.2.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not exist
 COMMENT=	Simple UPS daemon for BK-Pro, BK and FREQUPS A/F series
+
+MAKE_JOBS_SAFE=	no
 
 INSTALLATION_DIRS=	libexec/bkpupsd sbin ${PKGMANDIR}/cat5 \
 			${PKGMANDIR}/cat8 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \

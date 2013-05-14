@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/12/17 00:59:54 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/16 11:22:59 wiz Exp $
 #
 
 DISTNAME=	Mailer-0.1.5
 PKGNAME=	deforaos-mailer-0.1.5
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.defora.org/os/download/download/3704/
 
@@ -22,6 +23,8 @@ MAKE_JOBS_SAFE=	no
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
+
+CONFLICTS=	john-[0-9]*
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/compose.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/compose.1

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/12/16 01:52:00 obache Exp $
+# $NetBSD: Makefile,v 1.29 2013/03/02 18:19:10 joerg Exp $
 #
 
 DISTNAME=	telepathy-gabble-0.11.10
-PKGREVISION=	11
+PKGREVISION=	13
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
@@ -17,6 +17,11 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 CONFIGURE_ENV+=	UUID_CFLAGS=" " UUID_LIBS=" "
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-Wno-error=deprecated-declarations -Wno-error=tautological-constant-out-of-range-compare
+.endif
 
 # see pkgsrc/security/mozilla-rootcerts
 CONFIGURE_ARGS+=	--with-ca-certificates=/etc/ssl/certs/ca-certificates.crt

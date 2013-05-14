@@ -1,16 +1,7 @@
-$NetBSD: patch-ac,v 1.10 2009/07/07 15:47:59 sborrill Exp $
+$NetBSD: patch-ac,v 1.12 2013/02/27 18:06:39 jperkin Exp $
 
---- src/fluxbox.cc.orig	Sat Oct 29 13:45:51 2011
+--- src/fluxbox.cc.orig	2013-04-30 20:22:28.000000000 +0000
 +++ src/fluxbox.cc
-@@ -84,7 +84,7 @@
- #ifdef SHAPE
- #include <X11/extensions/shape.h>
- #endif // SHAPE
--#ifdef HAVE_RANDR
-+#if !defined(__sun)
- #include <X11/extensions/Xrandr.h>
- #endif // HAVE_RANDR
- 
 @@ -1077,7 +1077,7 @@ void Fluxbox::saveWindowSearchGroup(Wind
  }
  
@@ -20,3 +11,12 @@ $NetBSD: patch-ac,v 1.10 2009/07/07 15:47:59 sborrill Exp $
  }
  
  
+@@ -1341,7 +1341,7 @@ bool Fluxbox::validateClient(const WinCl
+     WinClientMap::const_iterator it =
+         find_if(m_window_search.begin(),
+                 m_window_search.end(),
+-                Compose(bind2nd(equal_to<WinClient *>(), client),
++                Compose(bind2nd(equal_to<const WinClient *>(), client),
+                         Select2nd<WinClientMap::value_type>()));
+     return it != m_window_search.end();
+ }

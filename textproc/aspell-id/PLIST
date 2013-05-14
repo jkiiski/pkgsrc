@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/id.multi
+lib/aspell/id.rws
+lib/aspell/indonesian.alias
+share/aspell/id.dat

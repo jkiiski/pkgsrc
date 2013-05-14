@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/10/27 09:11:10 gendalia Exp $ 
+# $NetBSD: options.mk,v 1.1 2012/08/30 17:37:55 jakllsch Exp $
 
 .include "../../mk/bsd.prefs.mk"
 

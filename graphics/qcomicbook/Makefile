@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/01/23 21:55:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/31 08:13:29 obache Exp $
 #
 
 DISTNAME=		qcomicbook-0.9.0
-PKGREVISION=		1
+PKGREVISION=		5
 CATEGORIES=		graphics
 MASTER_SITES=		http://qcomicbook.org/releases/
 

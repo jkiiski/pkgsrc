@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/10/08 23:02:21 adam Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/04 07:19:08 obache Exp $
 
 DISTNAME=	okular-${_KDE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	2
 CATEGORIES=	print
 COMMENT=	KDE universal document viewer
 
@@ -19,6 +19,7 @@ COMMENT=	KDE universal document viewer
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/ebook-tools/buildlink3.mk"
+.include "../../x11/kactivities/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

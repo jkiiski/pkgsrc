@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2012/08/21 23:49:26 marino Exp $
+# $NetBSD: Makefile,v 1.52 2013/04/06 03:59:24 rodent Exp $
 #
 
-PKGNAME=	${PYPKGPREFIX}-Tk-0
-PKGREVISION=	6
+PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 CATEGORIES=	x11 python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -32,7 +31,7 @@ EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/tkinter.h
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
 	cd ${WRKSRC} && for f in ${PATCHDIR}/patch-*; do \
-	${PATCH} ${PATCHARGS} --batch <$$f || true; \
+	${PATCH} ${PATCHARGS} --batch <$$f || ${TRUE}; \
 	done
 
 .include "../../lang/python/srcdist.mk"

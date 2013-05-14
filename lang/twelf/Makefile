@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2010/02/04 01:21:39 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2013/02/17 19:18:05 dholland Exp $
 #
 
 DISTNAME=	twelf-1-4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}twelf-1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.cmu.edu/~twelf/dist/
 
@@ -27,7 +27,7 @@ MAKE_FILE=	smlnj/Makefile
 MAKEFLAGS+=	sml=${PREFIX:Q}/bin/sml
 BUILD_TARGET=	twelf-server twelf-sml
 
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 TWELF_LIBDIR=		${PREFIX}/lib/twelf
 TWELF_EMACSDIR=		${EMACS_LISPPREFIX}/twelf

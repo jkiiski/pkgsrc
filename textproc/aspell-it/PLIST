@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/it.multi
+lib/aspell/it.rws
+lib/aspell/italian.alias
+lib/aspell/italiano.alias
+share/aspell/it.dat

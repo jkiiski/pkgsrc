@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/04/25 18:40:27 hans Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2012/05/07 01:53:40 dholland Exp $
 
 BUILDLINK_TREE+=	gcc34
 
@@ -49,7 +49,7 @@ BUILDLINK_FILES_CMD.gcc34=	\
 # When not using the GNU linker, gcc will always link shared libraries
 # against the shared version of libgcc. Always enable _USE_GCC_SHILB on
 # platforms that don't use the GNU linker, such as SunOS.
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "SunOS"
 _USE_GCC_SHLIB= yes
 .endif

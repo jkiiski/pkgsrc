@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2010/02/07 17:47:28 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/02 21:25:49 asau Exp $
 #
 
 DISTNAME=	metakit-2.4.9.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	http://www.equi4.com/pub/mk/ 
+MASTER_SITES=	http://www.equi4.com/pub/mk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.equi4.com/metakit/

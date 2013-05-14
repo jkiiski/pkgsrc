@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/07/20 12:30:36 taca Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/06 23:21:54 jperkin Exp $
 
 MODNAME=		mssql
 CATEGORIES+=		databases

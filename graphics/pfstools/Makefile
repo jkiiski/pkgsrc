@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/12/16 01:52:17 obache Exp $
+# $NetBSD: Makefile,v 1.18 2013/02/16 11:22:21 wiz Exp $
 #
 
 DISTNAME=	pfstools-1.7.0
-PKGREVISION=	14
+PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pfstools/}
 

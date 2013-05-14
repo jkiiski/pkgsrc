@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2012/12/23 15:42:44 marino Exp $
+# $NetBSD: Makefile,v 1.28 2013/05/04 07:19:04 obache Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
-PKGREVISION=		12
+PKGREVISION=		18
 CATEGORIES=		misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.6/ \
 		http://dev-www.libreoffice.org/src/ \
@@ -155,8 +155,7 @@ post-extract:
 	${LN} -s ${DISTDIR}/${DIST_SUBDIR}/${md} ${WRKSRC}/src/${md}
 .endfor
 
-do-configure:
-	cd ${WRKSRC} && ./autogen.sh ${CONFIGURE_ARGS}
+CONFIGURE_SCRIPT=	./autogen.sh
 
 post-configure:
 	cd ${WRKSRC} && ./bin/create_bootstrap_links

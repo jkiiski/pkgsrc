@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/03 12:37:40 wiz Exp $
 #
 
 DISTNAME=	libssh2-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libssh2/}
 MASTER_SITES=	http://www.libssh2.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://libssh2.sourceforge.net/
+HOMEPAGE=	http://www.libssh2.org/
 COMMENT=	SSH2 protocol library
 
 GNU_CONFIGURE=	yes

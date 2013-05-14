@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2012/07/23 12:47:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2013/04/21 08:56:34 sbd Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
 
-DISTNAME=		gcc-${GCC_DIST_VERSION}
-PKGNAME=		${GCC_PKGNAME}-${GCC_DIST_VERSION}
-PKGREVISION=		3
-CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${GCC_DIST_VERSION}/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	gcc-${GCC47_DIST_VERSION}
+PKGNAME=	${GCC_PKGNAME}-${GCC47_DIST_VERSION}
+## When bumping the PKGREVISION of this package the PKGREVISION of
+## lang/gcc47-libs needs to be bump to be at least 1 more than the
+## PKGREVISION of this package!
+PKGREVISION=	0
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC47_DIST_VERSION}/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		sbd@NetBSD.org
-HOMEPAGE=		http://gcc.gnu.org/
-COMMENT=		The GNU Compiler Collection (GCC) - 4.7 Release Series
-LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
+MAINTAINER=	sbd@NetBSD.org
+HOMEPAGE=	http://gcc.gnu.org/
+COMMENT=	The GNU Compiler Collection (GCC) - 4.7 Release Series
+LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DEFAULT_DISTFILES}
@@ -31,23 +34,34 @@ CONFIGURE_DIRS=		${OBJDIR}
 CONFIGURE_SCRIPT=	../${DISTNAME}/configure
 GCC_SUBPREFIX=		${GCC_PKGNAME}
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
+GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 GNU_CONFIGURE_PREFIX=	${GCC_PREFIX}
 INFO_FILES=		yes
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	GCC_TARGET_MACHINE
+
 .include "../../mk/bsd.prefs.mk"
 
 LANGS=			c
 
+# In some cases LINKER_RPATH_FLAG needs a trailing space.
+LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
+
 ## The Library rpath to use in end programs.
 LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
 
-## The "-static-libstdc++ -static-libgcc" flags are normally added to the
-## boot-ldflags by configure but because we are supply the boot-ldflags
-## we mash supply them.
+# The "-static-libstdc++ -static-libgcc" flags are normally added to the
+# boot-ldflags by configure but because we are supply the boot-ldflags
+# we mash supply them.
 BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
+# Needed on Darwin when LDFLAGS point to a SDK
+BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 
 ## For target librarys and libjava programs.
 CONFIGURE_ENV+=		LDFLAGS_FOR_TARGET=${LDFLAGS_FOR_TARGET:Q}
@@ -73,6 +87,10 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
+CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
 
 .include "options.mk"

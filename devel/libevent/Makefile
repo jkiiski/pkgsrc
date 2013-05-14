@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2012/10/31 11:17:13 asau Exp $
+# $NetBSD: Makefile,v 1.43 2013/02/06 23:21:03 jperkin Exp $
 
-DISTNAME=	libevent-2.0.21-stable
-PKGNAME=	${DISTNAME:S/-stable//}
+.include "../../devel/libevent/Makefile.common"
+
+PKGNAME=	libevent-${LIBEVENT_VERSION}
+PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=levent/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libevent.org/
@@ -18,7 +19,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libevent_openssl.pc.in
 PKGCONFIG_OVERRIDE+=	libevent_pthreads.pc.in
 PKGCONFIG_OVERRIDE+=	libevent.pc.in
-REPLACE_PYTHON=		event_rpcgen.py
 TEST_TARGET=		verify
 
 LIBS.SunOS+=	-lnsl -lresolv

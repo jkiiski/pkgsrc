@@ -1,4 +1,4 @@
-# $NetBSD: utility.mk,v 1.1 2011/10/15 00:23:09 reed Exp $
+# $NetBSD: utility.mk,v 1.2 2011/10/23 11:36:02 dholland Exp $
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
@@ -77,16 +77,6 @@ show-pkgsrc-dir: _about-to-be-removed
 		${ECHO} ${PKGPATH};					\
 	fi
 .endif
-
-.PHONY: show-depends-options
-show-depends-options:
-	${RUN}                                                          \
-	${_DEPENDS_WALK_CMD} ${PKGPATH} |                               \
-	while read dir; do                                              \
-		${ECHO} "===> Options for $${dir}" &&                   \
-		cd ${.CURDIR}/../../$$dir &&                            \
-		${RECURSIVE_MAKE} ${MAKEFLAGS} show-options;            \
-	done
 
 # Short aliases
 .PHONY: sid

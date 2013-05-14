@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/08 12:19:27 asau Exp $
 #
 
 DISTNAME=	popa3d-1.0.2
@@ -28,8 +28,8 @@ FILES_SUBST+=	POPA3D_GROUP=${POPA3D_GROUP:Q}
 SUBST_CLASSES+=		params
 SUBST_STAGE.params=	pre-configure
 SUBST_FILES.params=	params.h
-SUBST_SED.params=	-e 's,/var/empty,${PREFIX}/share/empty,'	\
-			-e 's,@@POPA3D_USER@@,"${POPA3D_USER}",'
+SUBST_SED.params=	-e 's,/var/empty,${PREFIX}/share/empty,'
+SUBST_SED.params+=	-e 's,@@POPA3D_USER@@,"${POPA3D_USER}",'
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 

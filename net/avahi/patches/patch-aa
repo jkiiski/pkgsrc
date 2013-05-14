@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2010/07/24 13:42:12 obache Exp $
+
+Add NetBSD support.
 
 --- avahi-core/iface-pfroute.c.orig	2010-06-26 00:14:35.000000000 +0000
 +++ avahi-core/iface-pfroute.c

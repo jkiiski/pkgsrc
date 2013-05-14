@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/af.multi
+lib/aspell/af.rws
+lib/aspell/afrikaans.alias
+share/aspell/af.dat

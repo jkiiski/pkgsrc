@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.85 2013/01/20 08:33:13 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2013/03/22 21:02:45 ryoon Exp $
 #
 
 DISTNAME=	# empty
 PKGNAME=	seamonkey-${SM_VER}
-SM_VER=		2.15
-LIGHTNINGVER=	1.9
-PKGREVISION=	1
+SM_VER=		2.17
+#LIGHTNINGVER=	1.9
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/} \
 		${MASTER_SITE_MOZILLA_ALL:=seamonkey/releases/${SM_VER}/source/}
@@ -14,7 +13,7 @@ DISTFILES=	seamonkey-${SM_VER}.source.tar.bz2
 #SITES.lightning-${LIGHTNINGVER}.source.tar.bz2=	${MASTER_SITE_MOZILLA:=calendar/lightning/releases/${LIGHTNINGVER}/source/}
 EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2=	${WRKSRC}/lightning
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
 

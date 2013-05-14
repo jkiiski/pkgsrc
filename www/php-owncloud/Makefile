@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2012/12/24 01:40:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2013/03/20 13:11:46 taca Exp $
 #
 
-DISTNAME=	owncloud-4.5.6
+DISTNAME=	owncloud-5.0.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://owncloud.org/releases/
+MASTER_SITES=	http://download.owncloud.org/community/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -19,6 +19,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.0:../../converters/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.0:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.0:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-pdo>=5.3.0:../../databases/php-pdo
 
 .include "options.mk"
 
@@ -47,8 +48,8 @@ FILES_SUBST+=	WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 		OC_DIR=${OC_DIR}
 
 do-install:
-	cd ${WRKDIR} && pax -rw -pmp owncloud \
-		${DESTDIR}${PREFIX}/share
+	cd ${WRKDIR} && ${FIND} owncloud -type f \! -name '*.orig' -print | \
+		pax -rw -pmp ${DESTDIR}${PREFIX}/share
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/21 11:34:56 zafer Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 17:19:04 asau Exp $
 
 DISTNAME=	radiusclient-ng-0.5.5.1
 CATEGORIES=	net
-MASTER_SITES=	http://download.berlios.de/radiusclient-ng/ 
+MASTER_SITES=	http://download.berlios.de/radiusclient-ng/
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Client library and basic utilities for Radius authenticated login

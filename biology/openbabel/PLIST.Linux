@@ -1,0 +1,2 @@
+@comment $NetBSD$
+lib/openbabel/${PKGVERSION}/xtcformat.so

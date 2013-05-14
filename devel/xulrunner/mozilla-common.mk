@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.41 2013/01/22 10:38:46 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.47 2013/04/15 15:21:26 mef Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -11,6 +11,15 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
+
+.include "../../mk/bsd.prefs.mk"
+# gcc45-4.5.3 of lang/gcc45 does not generate proper binary,
+# but gcc 4.5.4 of NetBSD 7 generates working binary.
+.if !empty(MACHINE_PLATFORM:MNetBSD-5.*)
+GCC_REQD+=		4.6
+.else
+GCC_REQD+=		4.5
+.endif
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
@@ -59,12 +68,31 @@ PYTHON_FOR_BUILD_ONLY=		yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
-# When MACHINAE_ARCH == "arm", linjpeg-turbo should be enabled.
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_MESSAGE.python=	Fixing path to python.
+SUBST_FILES.python+=	media/webrtc/trunk/build/common.gypi
+SUBST_SED.python+=	-e 's,<!(python,<!(${PYTHONBIN},'
+
+# When MACHINAE_ARCH == "arm", libjpeg-turbo should be enabled.
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 BUILD_DEPENDS+=		yasm>=1.1.0:../../devel/yasm
 CONFIGURE_ARGS+=	--enable-libjpeg-turbo
 .else
-CONFIGURE_ARGS+=	--diable-libjpeg-turbo
+CONFIGURE_ARGS+=	--disable-libjpeg-turbo
+.endif
+
+PLIST_VARS+=	sps vorbis tremor
+
+.if !empty(MACHINE_PLATFORM:S/i386/x86/:MLinux-*-x86*)
+PLIST.sps=	yes
+.endif
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-arm*) || ${OPSYS} == "DragonFly" \
+    || ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+PLIST.tremor=	yes
+.else
+PLIST.vorbis=	yes
 .endif
 
 #
@@ -106,6 +134,7 @@ CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
+BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.9.4
 .include "../../devel/nspr/buildlink3.mk"
 BUILDLINK_API_DEPENDS.nss+=	nss>=3.14.1
 .include "../../devel/nss/buildlink3.mk"

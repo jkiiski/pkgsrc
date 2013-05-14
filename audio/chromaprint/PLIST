@@ -1,0 +1,7 @@
+@comment $NetBSD$
+bin/fpcalc
+include/chromaprint.h
+lib/libchromaprint.so
+lib/libchromaprint.so.0
+lib/libchromaprint.so.0.2.0
+lib/pkgconfig/libchromaprint.pc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/20 22:12:50 hans Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/28 22:51:41 marino Exp $
 #
 
 CLISP_MODULE=	berkeley-db
@@ -7,7 +7,7 @@ PKGNAME=	clisp-bdb-$(CLISP_VERSION)
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 
-MAINTAINER=	hans@netbsd.org
+MAINTAINER=	hans@NetBSD.org
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP Berkeley DB module
 

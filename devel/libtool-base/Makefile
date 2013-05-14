@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2012/07/02 16:07:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.99 2013/04/12 13:44:08 joerg Exp $
 
 ###########################################################################
 ###########################################################################
@@ -26,7 +26,7 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	8
+PKGREVISION=	1
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -34,7 +34,6 @@ COMMENT=	Generic shared library support script (the script itself)
 CONFLICTS+=	libtool<=1.3.5nb11
 
 TEST_TARGET=	check
-PLIST_VARS+=	shlibtool
 
 OVERRIDE_DIRDEPTH.install-sh=	1
 
@@ -52,22 +51,14 @@ CONFIGURE_ARGS+=	--disable-libtool-lock
 # workaround is itself broken.  Disable it unconditionally.
 CONFIGURE_ARGS+=	--disable-libtool-lock
 
-.elif ${OPSYS} == "NetBSD"
-.  if !exists(/usr/libexec/ld.so) && !exists(/usr/libexec/ld.elf_so)
-CONFIGURE_ARGS+=	--disable-shared
-BUILD_SHLIBTOOL=	NO
-.  endif
-
 .elif ${OPSYS} == "SunOS"
 CFLAGS+=	${_COMPILER_ABI_FLAG.${ABI}}
 .endif
 
-BUILD_SHLIBTOOL?=	YES
-
 # We are going to want libtool to find the same versions of the C, C++,
 # and Fortran compilers.
 #
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++
 CONFIGURE_ARGS+=	--disable-ltdl-install
 
 USE_TOOLS+=		echo
@@ -82,9 +73,6 @@ fix-libtool:
 
 post-build: fix-libtool
 
-.if ${BUILD_SHLIBTOOL} != "NO"
-PLIST.shlibtool=	yes
-
 post-build:
 	@${SED}	-e "s|@PREFIX@|"${PREFIX:Q}"|g"				\
 		-e "s|@SH@|"${SH:Q}"|g"					\
@@ -92,7 +80,6 @@ post-build:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/bin/shlibtool
-.endif
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
 

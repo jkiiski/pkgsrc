@@ -1,12 +1,13 @@
-$NetBSD$
+$NetBSD: patch-src-main.cc,v 1.1 2011/11/22 20:02:48 joerg Exp $
 
---- src/main.cc.orig	2011-11-22 18:56:19.000000000 +0000
+--- src/main.cc.orig	2005-01-03 09:42:57.000000000 +0000
 +++ src/main.cc
-@@ -35,7 +35,7 @@
+@@ -35,7 +35,8 @@
  #include "../version.h"
  
  #include <stdio.h>
 -
++#include <stdlib.h>
 +#include <string.h>
  
  static void showHelp(int exitval) {

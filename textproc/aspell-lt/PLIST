@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/lietuviu.alias
+lib/aspell/lithuanian.alias
+lib/aspell/lt.multi
+lib/aspell/lt.rws
+share/aspell/lt.dat
+share/aspell/lt_affix.dat

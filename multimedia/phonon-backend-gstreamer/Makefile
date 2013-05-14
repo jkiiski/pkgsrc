@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2012/10/08 23:02:12 adam Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/16 11:23:39 wiz Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.5.1
-PKGREVISION=	6
+PKGREVISION=	8
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-gstreamer/4.5.1/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://phonon.kde.org
+HOMEPAGE=	http://phonon.kde.org/
 COMMENT=	Multimedia API for KDE and QT - GStreamer backend
 LICENSE=	gnu-lgpl-v2.1
 

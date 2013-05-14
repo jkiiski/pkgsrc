@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2013/01/26 21:38:40 adam Exp $
+# $NetBSD: Makefile,v 1.33 2013/03/31 08:13:30 obache Exp $
 #
 
 DISTNAME=	diffpdf-2.1.2
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://www.qtrac.eu/
 

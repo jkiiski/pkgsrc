@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/07/28 12:02:16 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/11 19:57:51 joerg Exp $
 #
 
 VERSION=	3.3.2
@@ -7,7 +7,6 @@ PKGNAME=	xenkernel33-${VERSION}
 PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
@@ -27,7 +26,7 @@ WRKSRC=		${WRKDIR}/xen-${VERSION}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-PYTHON_FOR_BUILD_ONLY=	# empty
+PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		NO
 
 SUBST_CLASSES+=		py
@@ -47,10 +46,18 @@ XENKERNELDIR=		${PREFIX}/${INSTALLATION_DIRS}
 
 MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
 
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
+		-Wno-error=parentheses-equality -Wno-error=enum-conversion \
+		-Wno-error=tautological-compare
+.endif
+
 do-build:
-	cd ${WRKSRC} && ${GMAKE} debug=n xen
+	cd ${WRKSRC} && EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} debug=n xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
-	cd ${WRKSRC} && ${GMAKE} clean && ${GMAKE} debug=y xen
+	cd ${WRKSRC} && ${GMAKE} clean
+	cd ${WRKSRC} && EXTRA_CFLAGS=${EXTRA_CFLAGS:Q} ${GMAKE} debug=y xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
 
 do-install:

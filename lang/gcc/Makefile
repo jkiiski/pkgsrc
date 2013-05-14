@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2011/07/15 08:47:22 asau Exp $
+# $NetBSD: Makefile,v 1.96 2012/10/02 20:11:40 asau Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		7
@@ -39,7 +39,7 @@ MESSAGE_SUBST+=		DISTNAME=${DISTNAME}
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}				\
 			GCC_PREFIX=${GCC_PREFIX:S|^${PREFIX}/||:Q}
 
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

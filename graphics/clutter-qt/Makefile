@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 23:01:40 adam Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/06 23:22:25 jperkin Exp $
 #
 
 DISTNAME=	clutter-qt-1.0.0
-PKGREVISION=	15
+PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/clutter-qt/1.0/
 

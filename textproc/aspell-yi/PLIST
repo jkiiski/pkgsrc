@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/yi.multi
+lib/aspell/yi.rws
+lib/aspell/yiddish.alias
+share/aspell/u-hebr.cmap
+share/aspell/u-hebr.cset
+share/aspell/yi.dat

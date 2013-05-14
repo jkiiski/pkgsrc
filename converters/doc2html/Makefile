@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/10/03 00:20:10 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/04/06 13:24:18 rodent Exp $
 #
 
 DISTNAME=	doc2html
 PKGNAME=	doc2html-3.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 MASTER_SITES=	http://www.htdig.org/files/contrib/parsers/
 
@@ -21,12 +21,12 @@ USE_TOOLS+=	gs:run perl:run
 INSTALLATION_DIRS=	bin
 
 do-build:
-.for CVTR in doc2html pdf2html
+.for cvtr in doc2html pdf2html
 	${SED} -e "s%@@LOCALBASE@@%${LOCALBASE}%g" \
 		-e "s%/usr/bin/perl%${PERL5}%g" \
 		-e "s%/bin/sed%${SED}%g" \
-		-e "s%@@X11BASE@@%${X11BASE}%g" < ${WRKSRC}/${CVTR}.pl \
-		> ${WRKSRC}/${CVTR}
+		-e "s%@@X11BASE@@%${X11BASE}%g" < ${WRKSRC}/${cvtr}.pl \
+		> ${WRKSRC}/${cvtr}
 .endfor
 
 do-install:

@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: options.mk,v 1.1 2012/11/29 08:21:17 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
 PKG_SUPPORTED_OPTIONS=	gstcheck
@@ -15,4 +15,3 @@ TEST_TARGET=	check-torture
 .else
 CONFIGURE_ARGS+=--disable-check
 .endif
-

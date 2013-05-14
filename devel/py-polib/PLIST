@@ -1,0 +1,5 @@
+@comment $NetBSD$
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/polib.py
+${PYSITELIB}/polib.pyc
+${PYSITELIB}/polib.pyo

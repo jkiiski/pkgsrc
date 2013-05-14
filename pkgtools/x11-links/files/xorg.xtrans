@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: xorg.xtrans,v 1.2 2008/10/05 21:36:35 cube Exp $
 #
 include/X11/Xtrans/Xtrans.c
 include/X11/Xtrans/Xtrans.h
@@ -11,3 +11,4 @@ include/X11/Xtrans/Xtranstli.c
 include/X11/Xtrans/Xtransutil.c
 include/X11/Xtrans/transport.c
 lib/pkgconfig/xtrans.pc
+share/pkgconfig/xtrans.pc

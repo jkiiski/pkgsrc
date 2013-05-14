@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2012/10/06 14:10:59 asau Exp $
+# $NetBSD: Makefile,v 1.44 2013/02/16 11:22:10 wiz Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNU:=hp2xx/}
 
@@ -16,7 +16,7 @@ MAKE_FLAGS=	prefix=${PREFIX}					\
 		mandir=${PREFIX}/${PKGMANDIR}				\
 		infodir=${PREFIX}/${PKGINFODIR}
 MAKE_ENV+=	XLDFLAGS=${LDFLAGS:Q} XCPPFLAGS=${CPPFLAGS:Q}
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}			\
 		mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}			\

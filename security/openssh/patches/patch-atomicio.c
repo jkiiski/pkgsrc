@@ -1,7 +1,6 @@
 $NetBSD$
 
-Avoid SSP side effect:
-http://mail-index.netbsd.org/source-changes/2011/08/01/msg025290.html
+Check for vwrite instead of read to avoid read being renamed by SSP issues
 
 --- atomicio.c.orig	2010-09-24 12:15:11.000000000 +0000
 +++ atomicio.c

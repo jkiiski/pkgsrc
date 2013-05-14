@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/conjugue
+lib/br.aff
+lib/br.hash
+lib/verbos
+man/man1/conjugue.1

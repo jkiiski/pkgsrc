@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2012/12/16 01:52:32 obache Exp $
+# $NetBSD: Makefile,v 1.47 2013/02/16 11:24:18 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
 PKGNAME=	hydra-5.4
-PKGREVISION=	22
+PKGREVISION=	25
 CATEGORIES=	security
 MASTER_SITES=	http://freeworld.thc.org/releases/
 
@@ -32,7 +32,7 @@ SUBST_MESSAGE.build=	Patching build files.
 USE_OLD_DES_API=	YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-BUILDLINK_API_DEPENDS.libssh+=	libssh-0.11{,nb*}
+BUILDLINK_API_DEPENDS.libssh+=	libssh-0.54{,nb*}
 
 INSTALLATION_DIRS=	bin
 

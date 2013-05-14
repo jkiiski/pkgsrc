@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/11/03 07:13:31 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:28:23 asau Exp $
 #
 
 DISTNAME=	Gentium_102_W
@@ -9,8 +9,9 @@ EXTRACT_SUFX=	.zip
 WRKSRC=		${WRKDIR}/Gentium102
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://scripts.sil.org/
+HOMEPAGE=	http://scripts.sil.org/FontDownloadsGentium
 COMMENT=	Free TrueType fonts from Bitstream, useful for web viewing
+LICENSE=	ofl-v1.1
 
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 

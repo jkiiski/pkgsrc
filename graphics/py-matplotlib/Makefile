@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2012/10/06 14:11:17 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/02/16 11:22:25 wiz Exp $
 #
 
 DISTNAME=		matplotlib-1.2.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		https://github.com/downloads/matplotlib/matplotlib/
 FETCH_USING=		curl
@@ -27,13 +28,13 @@ REPLACE_PYTHON+=	lib/mpl_toolkits/mplot3d/axis3d.py
 REPLACE_PYTHON+=	lib/mpl_toolkits/mplot3d/proj3d.py
 
 post-patch:
-	( echo "[directories]"; \
-	echo "basedirlist=/usr"; \
-	echo "[gui_support]"; \
-	echo "gtk = False"; \
-	echo "gtkagg = False"; \
-	echo "tkagg = False"; \
-	echo "wxagg = False" ) > ${WRKSRC}/setup.cfg
+	( ${ECHO} "[directories]"; \
+	${ECHO} "basedirlist=/usr"; \
+	${ECHO} "[gui_support]"; \
+	${ECHO} "gtk = False"; \
+	${ECHO} "gtkagg = False"; \
+	${ECHO} "tkagg = False"; \
+	${ECHO} "wxagg = False" ) > ${WRKSRC}/setup.cfg
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/01/12 15:18:12 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/29 21:20:59 minskim Exp $
 
 DISTNAME=	kotex-dev
 PKGNAME=	tex-${DISTNAME}-0.3
@@ -8,7 +8,7 @@ TEXLIVE_REV=	21
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/ko.TeX/
-COMMENT=	ko.TeX macros for luatex and xetex
+COMMENT=	Macros (ko.TeX) for luatex and xetex
 
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath

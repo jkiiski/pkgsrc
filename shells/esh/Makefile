@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/05/07 12:02:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2012/09/11 23:25:08 asau Exp $
 
 DISTNAME=		esh-0.8
 PKGREVISION=		3
@@ -10,7 +10,7 @@ COMMENT=		Unix shell with Lisp-like syntax
 
 WRKSRC=			${WRKDIR}/esh
 PKG_SHELL=		bin/esh
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 INSTALLATION_DIRS=	bin ${PKGINFODIR} share/doc/esh share/examples/esh \
 			share/emacs/site-lisp
 

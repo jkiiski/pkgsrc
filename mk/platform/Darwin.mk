@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.48 2012/03/19 12:34:16 joerg Exp $
+# $NetBSD: Darwin.mk,v 1.51 2013/04/04 10:24:14 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -43,9 +43,8 @@ IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
 .endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
-# Use the GNU cpp, not the OS X cpp, don't look in "/usr/local/include"
-# before "/usr/include".
-CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	-isystem /usr/include
+# don't look in "/usr/local/include" before "/usr/include".
+CPP_PRECOMP_FLAGS?=	-isystem /usr/include
 # don't symlink to /usr/bin/gcc since the latter is a wrapper that tries
 # evoke the real (architecture-dependent) gcc binary in the same place
 # which fails when called via a symlink from a different directory
@@ -72,6 +71,10 @@ _USER_DEPENDS=		user>=20040801:../../sysutils/user_darwin
 
 _OPSYS_EMULDIR.darwin=	# empty
 
+_OPSYS_SYSTEM_RPATH?=		/usr/lib
+_OPSYS_LIB_DIRS?=		/usr/lib
+_OPSYS_INCLUDE_DIRS?=		/usr/include
+
 .if ${OS_VERSION:R} >= 6
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
@@ -88,6 +91,9 @@ _OPSYS_SHLIB_TYPE=	dylib	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		no	# don't add rpath to LDFLAGS
+
+# Builtin defaults which make sense for this platform.
+PREFER.linux-pam?=	native
 
 # flags passed to the linker to extract all symbols from static archives.
 # this is GNU ld.

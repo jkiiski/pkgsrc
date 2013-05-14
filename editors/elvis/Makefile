@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/11/01 06:11:53 sbd Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 11:43:32 asau Exp $
 
 # This section contains variables that might be overridden.
 PKGNAME?=	${PKGNAME_BASE}
-COMMENT?=	vi clone with regex-search, hex-edit, HTML/LaTeX preview
+COMMENT?=	Clone of vi with regex-search, hex-edit, HTML/LaTeX preview
 
 # Normal package Makefile contents follow.
 DISTNAME=	elvis-2.2_0

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/hsb.multi
+lib/aspell/hsb.rws
+share/aspell/hsb.dat
+share/aspell/hsb_affix.dat

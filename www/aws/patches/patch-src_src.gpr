@@ -11,3 +11,12 @@ $NetBSD$
           end case;
  
           case Shared.LDAP is
+@@ -88,7 +88,7 @@ project Src is
+                        Project'Library_Options & ("-lwldap32");
+                   when others =>
+                      for Library_Options use
+-                       Project'Library_Options & ("-lldap");
++                       Project'Library_Options & ("-L@PREFIX@/lib", "-lldap");
+                end case;
+             when "Disabled" =>
+                null;

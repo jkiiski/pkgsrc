@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: hacks.mk,v 1.1 2012/01/08 22:19:03 dholland Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -6,4 +6,3 @@
 .if ${OPSYS} == "NetBSD"
 BUILDLINK_INCDIRS.heimdal=	# empty
 .endif
-

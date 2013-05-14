@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.48 2013/01/25 19:18:09 reed Exp $
+# $NetBSD: Makefile,v 1.51 2013/02/22 19:59:07 shattered Exp $
 #
 
 DISTNAME=	yaz-4.1.6
-PKGREVISION=	7
+PKGREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.indexdata.dk/pub/yaz/
 
 MAINTAINER=	phil@NetBSD.org
-HOMEPAGE=	http://indexdata.dk/yaz/
+HOMEPAGE=	https://www.indexdata.com/yaz/
 COMMENT=	C/C++ toolkit for the development of Z39.50v3/SRW clients and servers
 LICENSE=	modified-bsd
 

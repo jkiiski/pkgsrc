@@ -1,12 +1,11 @@
-$NetBSD$
-
---- sshd_config.orig	Fri Sep 10 01:20:12 2010
-+++ sshd_config
-@@ -94,7 +94,7 @@
+--- sshd_config.orig	Tue Feb 12 00:02:09 2013
++++ sshd_config	Tue May 14 19:37:44 2013
+@@ -102,7 +102,8 @@
  #PrintLastLog yes
  #TCPKeepAlive yes
  #UseLogin no
--#UsePrivilegeSeparation yes
+-UsePrivilegeSeparation sandbox		# Default for new installations.
++#UsePrivilegeSeparation sandbox		# Default for new installations.
 +UsePrivilegeSeparation no # not well supported under Minix
  #PermitUserEnvironment no
  #Compression delayed

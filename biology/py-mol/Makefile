@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 23:40:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/14 19:48:56 joerg Exp $
 
-DISTNAME=	pymol-v1.4.1
+DISTNAME=	pymol-v1.5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pymol-v/mol-/}
-EGG_NAME=	pymol-1.4.0
-PKGREVISION=	3
+EGG_NAME=	pymol-1.5.0.1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,8 +31,11 @@ CHECK_PORTABILITY_SKIP+=	setup/*
 
 INSTALLATION_DIRS=	bin
 
+# Gross hack
+PYSETUPBUILDTARGET=	install ${_PYSETUPINSTALLARGS}
+
 post-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PYTHONPATH=${DESTDIR}${PREFIX}/${PYSITELIB} ${PYTHONBIN} setup2.py install ${_PYSETUPINSTALLARGS}
 	${INSTALL_SCRIPT} ${WRKSRC}/pymol ${DESTDIR}${PREFIX}/bin/pymol
 
 .include "../../devel/zlib/buildlink3.mk"

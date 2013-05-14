@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/04/22 13:44:13 obache Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/08 09:57:35 asau Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -19,7 +19,7 @@ CPPFLAGS+=		-DDFLT_INFOPATH="\"/usr/share/info:${PREFIX}/${PKGINFODIR}:${X11BASE
 
 EGDIR=			${PREFIX}/share/examples/pinfo
 CONF_FILES=		${EGDIR}/pinforc ${PKG_SYSCONFDIR}/pinforc
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pinfo

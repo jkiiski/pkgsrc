@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.208 2012/10/23 18:16:38 asau Exp $
+# $NetBSD: Makefile,v 1.210 2013/02/06 23:23:40 jperkin Exp $
 
-DISTNAME=		openssh-5.8p2
-PKGNAME=		openssh-5.8.2
-PKGREVISION=		7
+DISTNAME=		openssh-6.2p1
+PKGNAME=		openssh-6.2.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -185,14 +184,6 @@ SUBST_MESSAGE.patch=	More patch a file.
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mldap)
-DOCDIR=			${PREFIX}/share/doc/openssh
-INSTALLATION_DIRS+=	${DOCDIR}
-
-pre-configure:
-	cd ${WRKSRC} && autoconf
-.endif
-
 #
 # type of key "ecdsa" isn't always supported depends on OpenSSL.
 #
@@ -214,13 +205,6 @@ post-install:
 .if !empty(PKG_OPTIONS:Mpam) && ${OPSYS} == "Linux"
 	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic \
 	  ${DESTDIR}${EGDIR}/sshd.pam
-.endif
-.if !empty(PKG_OPTIONS:Mldap)
-	${INSTALL_DATA} ${WRKSRC}/README.lpk \
-		${DESTDIR}${DOCDIR}
-	cd ${WRKSRC}; for file in ${LPK_CONFS}; do			\
-		${INSTALL_DATA} $${file} ${DESTDIR}${EGDIR}/$${file};	\
-	done
 .endif
 
 .include "../../mk/bsd.pkg.mk"

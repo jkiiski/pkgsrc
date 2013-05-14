@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.32 2012/03/19 12:34:18 joerg Exp $
+# $NetBSD: OSF1.mk,v 1.33 2012/11/19 11:34:15 ryoon Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -30,6 +30,10 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 FIX_SYSTEM_HEADERS?=    yes
 
 _OPSYS_EMULDIR.osf1=	# empty
+
+_OPSYS_SYSTEM_RPATH?=	/usr/lib
+_OPSYS_LIB_DIRS?=	/usr/lib
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard

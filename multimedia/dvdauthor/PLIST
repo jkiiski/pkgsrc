@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/20 14:24:21 wiz Exp $
+@comment $NetBSD$
 bin/dvdauthor
 bin/dvddirdel
 bin/dvdunauthor
@@ -11,5 +11,6 @@ man/man1/dvdunauthor.1
 man/man1/mpeg2desc.1
 man/man1/spumux.1
 man/man1/spuunmux.1
+share/dvdauthor/common.xsd
 share/dvdauthor/dvdauthor.xsd
 share/dvdauthor/spumux.xsd

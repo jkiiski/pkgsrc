@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2011/08/30 12:01:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/08 13:25:14 asau Exp $
 #
 
 DISTNAME=	ngspice-23
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-readline=yes
 LIBS+=			${BUILDLINK_LDADD.getopt}
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 TEXINFO_REQD=	4.6
 
 .include "../../devel/libgetopt/buildlink3.mk"

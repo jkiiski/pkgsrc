@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/ast.multi
+lib/aspell/ast.rws
+lib/aspell/asturianu.alias
+share/aspell/ast.dat
+share/aspell/ast_affix.dat
+share/aspell/l-ast.cmap
+share/aspell/l-ast.cset

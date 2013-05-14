@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2012/10/23 17:19:17 asau Exp $
+# $NetBSD: Makefile,v 1.49 2013/02/28 01:21:56 jperkin Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -42,8 +42,8 @@ post-patch: patch-sockets
 .PHONY: patch-sockets
 patch-sockets:
 	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-sockets.c
-.endif                
-                
+.endif
+
 # We have to frob a few things, and we want our own permissions, so it's easier
 # to do the install ourselves.
 
@@ -57,7 +57,16 @@ SUBST_STAGE.paths=	pre-configure
 INSTALLATION_DIRS=	bin share/doc/vnc
 
 .if ${OPSYS} == "SunOS"
+_WRAP_EXTRA_ARGS.CC+=	-D_POSIX_SOURCE
 SPECIAL_PERMS+=	bin/Xvnc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
+.endif
+
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		smartos
+SUBST_STAGE.smartos=	pre-configure
+SUBST_FILES.smartos=	Xvnc/config/cf/svr4.cf
+SUBST_SED.smartos+=	-e 's,/usr/ccs/bin/ar,/usr/bin/ar,g'
+SUBST_SED.smartos+=	-e 's,/usr/ccs/bin/make,${MAKE},g'
 .endif
 
 post-install:

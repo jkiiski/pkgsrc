@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/12/13 13:18:20 taca Exp $
+# $NetBSD: Makefile,v 1.24 2013/02/06 23:22:47 jperkin Exp $
 
 MODNAME=		imap
 CATEGORIES+=		mail

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/04/06 03:59:24 rodent Exp $
 #
 
-PKGNAME=	${PYPKGPREFIX}-readline-0
-PKGREVISION=	5
+PKGNAME=	${PYPKGPREFIX}-readline-${PY_DISTVERSION}
 CATEGORIES=	devel misc python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,7 +24,7 @@ PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
 do-patch:
 	(cd ${WRKSRC}; \
 	for f in ${PATCHDIR}/patch-*;do \
-	${PATCH} --batch <$$f || true; \
+	${PATCH} --batch <$$f || ${TRUE}; \
 	done)
 
 .include "../../devel/readline/buildlink3.mk"

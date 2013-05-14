@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2012/08/17 12:22:51 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2013/04/06 21:07:35 rodent Exp $
 
 .include "../../shells/zsh/Makefile.common"
+
+PKGREVISION=	1
 
 ZSH_VERSION=	5.0.2
 ZSH_MAINTAINER=	uebayasi@NetBSD.org
@@ -24,11 +26,10 @@ SUBST_FILES.prefix-fixup= \
 	Functions/Misc/zed \
 	Functions/Example/cat \
 	Functions/Example/zless
-SUBST_SED.prefix-fixup= \
-	-e 's|^\#\!/bin/zsh|\#\!${PREFIX}/bin/zsh|g' \
-	-e 's|^\#\! /bin/zsh|\#\! ${PREFIX}/bin/zsh|g' \
-	-e 's|^\#\!/usr/local/bin/zsh|\#\!${PREFIX}/bin/zsh|g' \
-	-e 's|^\#\! /usr/local/bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
+SUBST_SED.prefix-fixup= 	-e 's|^\#\!/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
+SUBST_SED.prefix-fixup+=	-e 's|^\#\! /bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
+SUBST_SED.prefix-fixup+=	-e 's|^\#\!/usr/local/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
+SUBST_SED.prefix-fixup+=	-e 's|^\#\! /usr/local/bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
 
 USE_TOOLS+= autoconf
 

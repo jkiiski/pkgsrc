@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/12 21:14:51 ahoka Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/06 13:09:26 rodent Exp $
 
-VERSION=		20090330		
+VERSION=		20090330
 DICTNAME=		sk_SK
 PKGNAME=		hunspell-${DICTNAME}-${VERSION}
 DISTNAME=		hunspell-sk-${VERSION}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 
 MASTER_SITES=		http://www.sk-spell.sk.cx/files/
 
-MAINTAINER=		pkgsrc-users@netbsd.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sk-spell.sk.cx/hunspell-sk
 COMMENT=		Slovak dictionary for hunspell
 

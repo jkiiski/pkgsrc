@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/09/16 06:20:48 taca Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/12 09:14:59 taca Exp $
 
 DISTNAME=	logging-1.8.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rubygems.org/gems/logging
+HOMEPAGE=	${MASTER_SITE_RUBYGEMS:=logging/}
 COMMENT=	Flexible logging library for Ruby based on log4j
 LICENSE=	ruby-license
 

@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2012/12/05 19:16:26 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2013/05/03 16:48:37 drochner Exp $
 #
 
-VERSION=	4.1.4
+VERSION=	4.1.5
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel41-${VERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
@@ -20,7 +19,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-PYTHON_FOR_BUILD_ONLY=	# empty
+PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		NO
 
 # XXX Why does this not work?
@@ -32,6 +31,14 @@ INSTALLATION_DIRS=	xen41-kernel
 XENKERNELDIR=		${PREFIX}/${INSTALLATION_DIRS}
 
 MESSAGE_SUBST+=		XENKERNELDIR=${XENKERNELDIR:Q}
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
+		-Wno-error=parentheses-equality -Wno-error=enum-conversion
+.endif
+
+MAKE_ENV+=	EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
 
 do-build:
 	cd ${WRKSRC}/xen && ${BUILD_MAKE_CMD} debug=n build

@@ -1,0 +1,25 @@
+--- Makefile.in.orig	Tue May 14 19:05:02 2013
++++ Makefile.in	Tue May 14 19:11:28 2013
+@@ -21,11 +21,11 @@
+ 
+ OPSYS!=		uname
+ OS_VER!=	uname -r
+-OS_ARCH!=	uname -p
++OS_ARCH=	i386
+ 
+ # satisfy mk.conf
+ BSD_PKG_MK=	1
+-.for MK_CONF in /etc/mk.conf @prefix@/etc/mk.conf /etc/pkgsrc.conf
++.for MK_CONF in @prefix@/etc/mk.conf /etc/pkgsrc.conf
+ .	if exists(${MK_CONF})
+ .		include "${MK_CONF}"
+ .	endif
+@@ -39,7 +39,7 @@
+ LOCALBASE?=		@prefix@
+ BINDIR?=		${LOCALBASE}/bin
+ PKG_SYSCONFDIR?=	${LOCALBASE}/etc
+-VARBASE?=		/var
++VARBASE?=		/usr/var
+ PKG_DBDIR?=		${VARBASE}/db/pkg
+ 
+ PKGTOOLS?=	${LOCALBASE}/sbin

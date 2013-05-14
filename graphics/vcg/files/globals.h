@@ -17,7 +17,7 @@
 /*                                                                    */
 /*--------------------------------------------------------------------*/
 
-/* $NetBSD$ */
+/* $NetBSD: globals.h,v 1.3 1999/06/13 13:06:08 sakamoto Exp $ */
 /* FreeBSD Id: globals.h,v 1.1.1.1 1995/02/19 09:25:43 hsu Exp $ */
 
 /*
@@ -43,10 +43,14 @@
  */
 
 
-/* $Log: globals.h,v $
-/* Revision 1.2  1999/06/13 12:54:19  sakamoto
-/* Adapt this package to NetBSD.
 /*
+ * $Log: globals.h,v $
+ * Revision 1.3  1999/06/13 13:06:08  sakamoto
+ * Fix FreeBSD RCS Id,Log.
+ *
+ * Revision 1.2  1999/06/13 12:54:19  sakamoto
+ * Adapt this package to NetBSD.
+ *
  * Revision 1.1.1.1  1995/02/19 09:25:43  hsu
  * vcg - a visualization tool for compiler graphs
  *

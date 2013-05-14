@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2012/04/18 00:06:12 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 18:28:24 asau Exp $
 
 DISTNAME=		elisat10
 PKGNAME=		ja-elisat-1.0
 PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
-MASTER_SITES=	${MASTER_SITE_FREEBSD}	
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.tea.forus.or.jp/toshi/exhibition/elisat10.html
 COMMENT=		8x8 dots X11 bitmap font for JIS X 0208

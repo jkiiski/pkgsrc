@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/12 07:37:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/23 17:18:33 asau Exp $
 #
 
 DISTNAME=	libbind-6.0
@@ -15,6 +15,14 @@ CONFLICTS=		man-pages-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+# Yes, we'll have /dev/random on NetBSD, even autoconf you can't detect
+# it by compiling and running a program when cross-compiling.
+CONFIGURE_ENV+=		ac_cv_file__dev_random=yes
+.endif
 
 CONFIGURE_ARGS+=	--with-libtool=yes
 

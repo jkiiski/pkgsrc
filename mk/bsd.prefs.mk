@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.329 2012/12/15 21:21:27 markd Exp $
+# $NetBSD: bsd.prefs.mk,v 1.335 2013/04/03 13:45:49 obache Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -70,7 +70,7 @@ UNAME=echo Unknown
 .endif
 
 .if !defined(OPSYS)
-OPSYS:=			${:!${UNAME} -s!:S/-//g:S/\///g}
+OPSYS:=			${:!${UNAME} -s!:S/-//g:S/\///g:C/^CYGWIN_.*$/Cygwin/}
 MAKEFLAGS+=		OPSYS=${OPSYS:Q}
 .endif
 
@@ -127,6 +127,16 @@ LOWER_VENDOR?=		ibm
 
 .elif ${OPSYS} == "BSDOS"
 LOWER_OPSYS?=		bsdi
+
+.elif ${OPSYS} == "Cygwin"
+LOWER_OPSYS?=		cygwin
+LOWER_VENDOR?=		pc
+.  if !defined(LOWER_ARCH)
+LOWER_ARCH!=		${UNAME} -m | sed -e 's/i.86/i386/'
+.  endif # !defined(LOWER_ARCH)
+_OS_VERSION!=		${UNAME} -r
+OS_VERSION=		${_OS_VERSION:C/\(.*\)//}
+OS_VARIANT!=		${UNAME} -s
 
 .elif ${OPSYS} == "Darwin"
 LOWER_OPSYS?=		darwin
@@ -288,7 +298,7 @@ OS_VARIANT=		SmartOS
 .elif ${OPSYS} == "Minix"
 LOWER_VENDOR?=		pc
 LOWER_OPSYS:=		${OPSYS:tl}
-LDFLAGS+=		-lcompat_minix -lminlib
+LIBS+=			-lcompat_minix -lminlib
 
 .elif !defined(LOWER_OPSYS)
 LOWER_OPSYS:=		${OPSYS:tl}
@@ -376,6 +386,8 @@ OBJECT_FMT=	ELF
 .  else
 OBJECT_FMT=	SOM
 .  endif
+.elif ${OPSYS} == "Cygwin"
+OBJECT_FMT=	PE
 .endif
 
 # Calculate depth
@@ -555,7 +567,7 @@ X11_TYPE?=		modular
 .  if ${OPSYS} == "SunOS"
 # On Solaris, we default to using OpenWindows for X11.
 X11BASE?=	/usr/openwin
-.  elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX"
+.  elif ${OPSYS} == "Cygwin" || ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1" || ${OPSYS} == "HPUX"
 X11BASE?=	/usr
 .  elif !empty(MACHINE_PLATFORM:MDarwin-9.*-*) || \
         !empty(MACHINE_PLATFORM:MDarwin-10.*-*) || \
@@ -633,6 +645,10 @@ COMPILER_RPATH_FLAG=	${_OPSYS_COMPILER_RPATH_FLAG}
 .else
 COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
 .endif
+
+COMPILER_INCLUDE_DIRS?=	${_OPSYS_INCLUDE_DIRS:U/usr/include}
+COMPILER_LIB_DIRS?=	${_OPSYS_LIB_DIRS:U/usr/lib${LIBABISUFFIX} /lib${LIBABISUFFIX}}
+SYSTEM_DEFAULT_RPATH?=	${_OPSYS_SYSTEM_RPATH:U/usr/lib}
 
 # WHOLE_ARCHIVE_FLAG and NO_WHOLE_ARCHIVE_FLAG publically export the
 # linker flags to extract all symbols from a static archive.

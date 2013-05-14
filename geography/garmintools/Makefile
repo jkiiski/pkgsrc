@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/12 15:55:40 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:19:17 asau Exp $
 
 DISTNAME=		garmintools-0.10
 CATEGORIES=		geography
 MASTER_SITES=		http://garmintools.googlecode.com/files/
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.google.com/p/garmintools/
 COMMENT=		Utilities for Garmin Forerunner 305 and similar GPS units
 

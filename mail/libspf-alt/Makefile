@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/04/22 13:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/08 12:19:15 asau Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	5
@@ -9,8 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libspf2.org/
 COMMENT=	Sender Permitted Framework (SPF) library
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.libbind}
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+CONFIGURE_ARGS+=	--with-bind=${BUILDLINK_PREFIX.libbind}
 
 CONFLICTS+=	libspf2-[0-9]*
 CONFLICTS+=	p5-Mail-SPF-[0-9]*

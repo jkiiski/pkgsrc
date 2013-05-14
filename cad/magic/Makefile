@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/08/21 23:49:18 marino Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/08 13:25:14 asau Exp $
 #
 
 DISTNAME=	magic-7.5.188
@@ -14,14 +14,17 @@ LICENSE=	magic-license
 
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=	gmake printf
+USE_TOOLS+=	gmake printf csh
 USE_GNU_READLINE=yes	# uses rl_*_completion_function
 MAKE_ENV+=	MAGIC_HOME=${PREFIX:Q}
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}
 GNU_CONFIGURE=	yes
-CONFIG_DIRS=	scripts
+CONFIGURE_DIRS= scripts
+BUILD_DIRS=	${WRKSRC}
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+
+REPLACE_CSH+=	scripts/makedbh scripts/printmans
 
 CFLAGS.SunOS=	-DSYSV
 

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/maori.alias
+lib/aspell/mi.multi
+lib/aspell/mi.rws
+share/aspell/mi.dat

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2012/08/06 20:12:17 gls Exp $
+# $NetBSD: Makefile,v 1.33 2013/02/06 23:24:19 jperkin Exp $
 
-DISTNAME=	suite3270-3.3.12ga11-src
-PKGNAME=	x3270-3.3.12ga11
+DISTNAME=	suite3270-3.3.12ga12-src
+PKGNAME=	x3270-3.3.12ga12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=x3270/}
 EXTRACT_SUFX=	.tgz
@@ -21,6 +21,7 @@ FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/misc
 IMAKEOPTS+=		-DFontDir=${PREFIX}/lib/X11/fonts
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
+CONFIGURE_ARGS+=	--with-fontdir=${PREFIX}/lib/X11/fonts/misc
 
 PKG_SYSCONFSUBDIR=	x3270
 

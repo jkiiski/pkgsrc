@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2011/02/28 14:52:47 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/31 11:19:50 asau Exp $
 #
 
-DISTNAME=	tkdiff-4.1.4-unix
-PKGNAME=	${DISTNAME:S/-unix//}
+DISTNAME=	tkdiff-4.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkdiff/}
 
@@ -15,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 USE_TOOLS+=	wish:run
+WRKSRC=		${WRKDIR}/tkdiff-unix
 
 SUBST_CLASSES+=		wish
 SUBST_MESSAGE.wish=	Fixing a hardcoded command.

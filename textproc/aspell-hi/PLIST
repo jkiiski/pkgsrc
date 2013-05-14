@@ -1,0 +1,10 @@
+@comment $NetBSD$
+lib/aspell/hi.multi
+lib/aspell/hi.rws
+lib/aspell/hindi.alias
+share/aspell/hi.dat
+share/aspell/hi_affix.dat
+share/aspell/hi_phonet.dat
+share/aspell/hi_repl.dat
+share/aspell/u-deva.cmap
+share/aspell/u-deva.cset

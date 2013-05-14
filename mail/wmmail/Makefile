@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/10/08 12:19:34 asau Exp $
+# $NetBSD: Makefile,v 1.37 2012/10/23 10:24:08 wiz Exp $
 
 DISTNAME=	WMMail.app-0.64
 PKGNAME=	wmmail-0.64
@@ -7,7 +7,7 @@ CATEGORIES=	mail x11 windowmaker
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	xbiff like "mail-checker" for WindowMaker
+COMMENT=	WindowMaker xbiff-like "mail-checker"
 
 DEPENDS+=	windowmaker>=0.80.0nb1:../../wm/windowmaker
 

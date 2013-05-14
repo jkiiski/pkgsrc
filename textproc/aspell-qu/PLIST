@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/qu.multi
+lib/aspell/qu.rws
+lib/aspell/quechua.alias
+share/aspell/qu.dat
+share/aspell/qu_affix.dat

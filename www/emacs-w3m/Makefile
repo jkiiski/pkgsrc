@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2011/12/17 13:11:09 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.30 2013/02/17 19:18:10 dholland Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 
@@ -27,8 +27,8 @@ PLIST_SUBST+=	ETCDIR=${ETCDIR:Q}
 SUBST_CLASSES+=	fix-icondir
 SUBST_STAGE.fix-icondir=	pre-configure
 SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
-SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g' \
-				-e 's|images/w3m|w3m|g'
+SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g'
+SUBST_SED.fix-icondir+=		-e 's|images/w3m|w3m|g'
 
 EMACS_BUILDLINK=# defined
 EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 \

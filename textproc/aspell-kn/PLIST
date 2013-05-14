@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/kannada.alias
+lib/aspell/kn.multi
+lib/aspell/kn.rws
+share/aspell/kn.dat
+share/aspell/u-knda.cmap
+share/aspell/u-knda.cset

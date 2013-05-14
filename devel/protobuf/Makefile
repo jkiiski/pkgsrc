@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:26 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/17 14:50:13 wiz Exp $
 #
 
-DISTNAME=	protobuf-2.4.1
+DISTNAME=	protobuf-2.5.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://protobuf.googlecode.com/files/
 

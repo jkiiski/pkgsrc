@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2012/10/05 21:03:12 adam Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/06 23:22:02 jperkin Exp $
 
 PKGNAME=	${DISTNAME:C/-/92-upgrade-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL binary upgrade tool
 MAINTAINER=	pkgsrc-users@NetBSD.org
 

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/ml.multi
+lib/aspell/ml.rws
+share/aspell/ml.dat
+share/aspell/u-mlym.cmap
+share/aspell/u-mlym.cset

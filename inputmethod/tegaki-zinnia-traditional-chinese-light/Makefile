@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/07 13:02:19 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 14:25:21 asau Exp $
 #
 
 DISTNAME=	tegaki-zinnia-traditional-chinese-light-0.3
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
-COMMENT=	Tegaki project handwriting model for Zinnia-Traditional-Chinese (light)
+COMMENT=	Zinnia-Traditional-Chinese Tegaki project handwriting model (light)
 LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	tegaki-zinnia-traditional-chinese-[0-9]*

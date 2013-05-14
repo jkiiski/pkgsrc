@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 11:43:43 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/16 11:21:00 wiz Exp $
 #
 
-DISTNAME=	scite229
-PKGNAME=	scite-2.29
-PKGREVISION=	6
+DISTNAME=	scite325
+PKGNAME=	scite-3.2.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=	.tgz
@@ -27,6 +26,7 @@ post-extract:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.scintilla+= scintilla>=3.2.4
 .include "../../devel/scintilla/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

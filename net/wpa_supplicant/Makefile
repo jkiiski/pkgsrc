@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/09/03 10:33:12 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/06 23:23:27 jperkin Exp $
 #
 
-DISTNAME=	wpa_supplicant-0.7.3
+DISTNAME=	wpa_supplicant-2.0
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 

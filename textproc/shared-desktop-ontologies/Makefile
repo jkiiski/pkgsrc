@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2012/03/19 08:53:30 markd Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/03 07:27:28 markd Exp $
 
-DISTNAME=	shared-desktop-ontologies-0.7.0
+DISTNAME=	shared-desktop-ontologies-0.10.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oscaf/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://oscaf.sourceforge.net
+HOMEPAGE=	http://oscaf.sourceforge.net/
 COMMENT=	Ontologies for Semantic Desktop
 #LICENSE=	modified-bsd
 

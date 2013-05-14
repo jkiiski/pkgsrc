@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2012/12/07 10:06:13 adam Exp $
+# $NetBSD: Makefile,v 1.87 2013/04/13 10:29:26 jaapb Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	4
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt4-libs/Makefile.common"
@@ -25,6 +25,11 @@ CONFIGURE_ARGS+=	-no-sql-sqlite
 
 # kdelibs4 requires openssl support!
 CONFIGURE_ARGS+=	-openssl-linked
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+.endif
 
 INSTALLATION_DIRS=	lib/pkgconfig
 INSTALLATION_DIRS+=	${QTPREFIX}/bin

@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2012/12/16 01:52:17 obache Exp $
+# $NetBSD: Makefile,v 1.74 2013/02/16 11:22:50 wiz Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
-
-PKGREVISION=		5
 
 COMMENT=		Multilingual input method library
 #LICENSE=		See ${WRKSRC}/COPYING
@@ -56,5 +54,4 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgcroots+=	libgcroots>=0.2.3
 .include "../../devel/libgcroots/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

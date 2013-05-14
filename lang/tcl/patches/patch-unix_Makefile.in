@@ -1,5 +1,5 @@
---- unix/Makefile.in.orig	Fri Nov  9 15:14:39 2012
-+++ unix/Makefile.in	Fri Feb  1 19:46:23 2013
+--- unix/Makefile.in.orig	2012-11-09 17:14:39.000000000 +0200
++++ unix/Makefile.in	2013-04-08 17:05:01.000000000 +0300
 @@ -8,6 +8,7 @@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
  MINOR_VERSION		= @TCL_MINOR_VERSION@
@@ -92,7 +92,7 @@
  	    do \
  	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
-@@ -748,13 +765,18 @@
+@@ -748,12 +765,17 @@
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
@@ -115,13 +115,13 @@
 +	    done;
  	@echo "Installing library files to $(SCRIPT_INSTALL_DIR)/";
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex \
- 		$(UNIX_DIR)/tclAppInit.c @LDAIX_SRC@ @DTRACE_SRC@; \
-@@ -766,22 +788,24 @@
- 	    do \
+@@ -767,21 +789,26 @@
  	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/http1.0; \
  	    done;
--	@echo "Installing package http 2.7.10 as a Tcl Module";
+ 	@echo "Installing package http 2.7.10 as a Tcl Module";
 -	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/http-2.7.10.tm;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/http/http.tcl;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/http/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/http/pkgIndex.tcl;
  	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
  	@for i in $(TOP_DIR)/library/opt/*.tcl ; \
  	    do \

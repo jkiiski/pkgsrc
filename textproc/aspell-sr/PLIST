@@ -1,0 +1,9 @@
+@comment $NetBSD$
+lib/aspell/sr-cyrl-only.rws
+lib/aspell/sr-cyrl.multi
+lib/aspell/sr-latn-only.rws
+lib/aspell/sr-latn.multi
+lib/aspell/sr.multi
+share/aspell/l-sr.cmap
+share/aspell/l-sr.cset
+share/aspell/sr.dat

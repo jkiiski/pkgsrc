@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/25 06:56:48 asau Exp $
 #
 
-PKGNAME=	${PYPKGPREFIX}-cElementTree-0
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-cElementTree-${PY_DISTVERSION}
 CATEGORIES=	textproc python
 
 MAINTAINER=	obache@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/10/28 06:30:06 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/15 10:06:44 obache Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
-DISTNAME=	mod_auth_mellon-0.4.0
-PKGREVISION=	6
+DISTNAME=	mod_auth_mellon-0.6.1
+#PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	http://modmellon.googlecode.com/files/
 
@@ -11,6 +11,8 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/modmellon/
 COMMENT=	SAML 2.0 authentication for Apache
 LICENSE=	gnu-gpl-v2 # or later
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

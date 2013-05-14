@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.107 2012/12/20 15:11:15 prlw1 Exp $
+# $NetBSD: Makefile,v 1.112 2013/04/06 14:09:34 rodent Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
-PKGREVISION=	4
 CATEGORIES=	math
-MASTER_SITES=	$(MASTER_SITE_GNU:=octave/) \
+MASTER_SITES=	${MASTER_SITE_GNU:=octave/} \
 		ftp://ftp.octave.org/pub/octave/ \
 		ftp://ftp.octave.org/pub/octave/bleeding-edge/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 BUILD_DEPENDS+=	teTeX-[0-9]*:../../print/teTeX
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	3.6.3
+OCTAVE_VER=	3.6.4
 
 .if (${MACHINE_ARCH} == "arm32")
 BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
@@ -71,7 +70,8 @@ SUBST_CLASSES+=			unwrapping
 SUBST_STAGE.unwrapping=		post-build
 SUBST_MESSAGE.unwrapping=	Unwrapping wrapper scripts.
 SUBST_FILES.unwrapping=		src/mkoctfile
-SUBST_SED.unwrapping=		-e 's:$(DESTDIR)::g' -e 's:$(BUILDLINK_DIR)/lib:$(PREFIX)/lib:g'
+SUBST_SED.unwrapping=		-e 's:$(DESTDIR)::g'
+SUBST_SED.unwrapping+=		-e 's:$(BUILDLINK_DIR)/lib:$(PREFIX)/lib:g'
 
 SUBST_CLASSES+=			fix-make
 SUBST_STAGE.fix-make=		post-patch

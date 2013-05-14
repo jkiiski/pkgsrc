@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/06/12 15:46:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2013/02/06 23:23:21 jperkin Exp $
 
 DISTNAME=		pchar-1.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://www.kitchenlab.org/www/bmah/Software/pchar/
 
@@ -26,6 +26,10 @@ CONFIGURE_ARGS+=	--with-ipv6
 .  include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-snmp=${BUILDLINK_PREFIX.net-snmp}
 LIBS+=			-lsnmp -lcrypto -ldes
+.endif
+
+.if ${OPSYS} == "Darwin"
+CFLAGS+=	-D__APPLE_USE_RFC_3542
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin

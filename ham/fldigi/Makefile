@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/01/16 02:54:54 mef Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/06 14:49:32 joerg Exp $
 #
 
-DISTNAME=	fldigi-3.21.65
-PKGREVISION=	1
+DISTNAME=	fldigi-3.21.70
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
 LICENSE=	gnu-gpl-v3
@@ -47,6 +46,11 @@ CHECK_WRKREF_SKIP+=	bin/fldigi
 
 .if ${LOWER_OPSYS} == "netbsd"
 CONFIGURE_ENV+=		ac_cv_header_execinfo_h=no
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
 .endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"

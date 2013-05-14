@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 21:57:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/06 23:23:34 jperkin Exp $
 #
 
 DISTNAME=	CSP-0.32
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.su.se/pub/users/leifj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CSPGUIDE}
@@ -32,8 +32,8 @@ BUILD_DEFS+=	CSPHOME
 
 SUBST_CLASSES+=		csp
 SUBST_FILES.csp=	csp
-SUBST_SED.csp=		-e s,@@CSPHOME@@,${CSPHOME},	\
-			-e s,@@OPENSSL@@,${OPENSSLBIN},
+SUBST_SED.csp=		-e s,@@CSPHOME@@,${CSPHOME},
+SUBST_SED.csp+=		-e s,@@OPENSSL@@,${OPENSSLBIN},
 SUBST_STAGE.csp=	post-patch
 
 post-install:

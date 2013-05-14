@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 14:11:17 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/02/16 11:22:25 wiz Exp $
 #
 
 DISTNAME=		matplotlib-1.2.0
 PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-1.2.0
+PKGREVISION=		1
 CATEGORIES=		graphics python
 MASTER_SITES=		https://github.com/downloads/matplotlib/matplotlib/
 FETCH_USING=		curl
@@ -17,17 +18,17 @@ PYDISTUTILSPKG=		yes
 USE_LANGUAGES=		c c++
 
 post-patch:
-	( echo "[directories]"; \
-	echo "basedirlist=/usr"; \
-	echo "[provide_packages]"; \
-	echo "pytz = False"; \
-	echo "dateutil = False"; \
-	echo "[gui_support]"; \
-	echo "gtk = False"; \
-	echo "gtkagg = False"; \
-	echo "tkagg = True"; \
-	echo "wxagg = False"; \
-	echo "macosx = False" ) > ${WRKSRC}/setup.cfg
+	( ${ECHO} "[directories]"; \
+	${ECHO} "basedirlist=/usr"; \
+	${ECHO} "[provide_packages]"; \
+	${ECHO} "pytz = False"; \
+	${ECHO} "dateutil = False"; \
+	${ECHO} "[gui_support]"; \
+	${ECHO} "gtk = False"; \
+	${ECHO} "gtkagg = False"; \
+	${ECHO} "tkagg = True"; \
+	${ECHO} "wxagg = False"; \
+	${ECHO} "macosx = False" ) > ${WRKSRC}/setup.cfg
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"

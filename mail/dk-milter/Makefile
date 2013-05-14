@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/02/06 06:19:17 sbd Exp $
+# $NetBSD: Makefile,v 1.23 2013/02/06 23:22:42 jperkin Exp $
 
 DISTNAME=	dk-milter-0.3.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dk-milter/}
 
@@ -20,10 +20,10 @@ REPLACE_CSH=		dk-filter/gentxt.csh
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	dk-filter/Makefile.m4 libdk/Makefile.m4
-SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
-			-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g' \
-			-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g' \
-			-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
+SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
+SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
+SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
+SUBST_SED.libs+=	-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
 SUBST_MESSAGE.libs=	Fixing makefile references.
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter

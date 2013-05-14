@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/04/13 11:10:09 hans Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2013/02/03 07:45:18 ryoon Exp $
 
 BUILDLINK_TREE+=	gcc45
 
@@ -51,7 +51,7 @@ BUILDLINK_FILES_CMD.gcc45=	\
 # When not using the GNU linker, gcc will always link shared libraries
 # against the shared version of libgcc. Always enable _USE_GCC_SHILB on
 # platforms that don't use the GNU linker, such as SunOS.
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "SunOS"
 _USE_GCC_SHLIB= yes
 .endif
@@ -66,7 +66,7 @@ BUILDLINK_DEPMETHOD.gcc45?=	build
 .include "../../mk/pthread.buildlink3.mk"
 pkgbase := gcc45
 .include "../../mk/pkg-build-options.mk"
-.if !empty(PKG_BUILD_OPTIONS.gcc46:Mnls)
+.if !empty(PKG_BUILD_OPTIONS.gcc45:Mnls)
 .include "../../devel/gettext-lib/buildlink3.mk"
 .endif
 .endif # GCC45_BUILDLINK3_MK

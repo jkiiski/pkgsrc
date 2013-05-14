@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/12/20 12:24:11 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 09:57:16 asau Exp $
 #
 
 DISTNAME=	asr.pages
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/2/www.winternet.com/~eric/sysadmin/manpages.html
-COMMENT=	alt.sysadmin.recovery man page distribution
+COMMENT=	Distribution of alt.sysadmin.recovery man page
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

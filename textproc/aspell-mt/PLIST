@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/maltese.alias
+lib/aspell/malti.alias
+lib/aspell/mt.multi
+lib/aspell/mt.rws
+share/aspell/mt.dat
+share/aspell/mt_phonet.dat

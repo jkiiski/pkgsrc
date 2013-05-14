@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/pa.multi
+lib/aspell/pa.rws
+lib/aspell/punjabi.alias
+share/aspell/pa.dat
+share/aspell/u-guru.cmap
+share/aspell/u-guru.cset

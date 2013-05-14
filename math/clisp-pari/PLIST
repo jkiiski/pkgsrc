@@ -1,3 +1,4 @@
+@comment $NetBSD$
 lib/clisp/dynmod/lib-pari.so
 lib/clisp/dynmod/pari.lisp
 lib/clisp/pari/README

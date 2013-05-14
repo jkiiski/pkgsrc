@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2010/02/19 14:06:19 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/02 20:11:57 asau Exp $
 
 DISTNAME=		wsbasic-1_2_7
 PKGNAME=		${DISTNAME:S/_/./g}
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wsbasic/}
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wsbasic.sourceforge.net/
 COMMENT=		Simple BASIC interpreter
 LICENSE=		gnu-gpl-v2

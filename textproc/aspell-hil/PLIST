@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/aspell/hil.multi
+lib/aspell/hil.rws
+share/aspell/hil.dat

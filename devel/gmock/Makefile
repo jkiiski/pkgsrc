@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/29 15:18:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/31 11:17:01 asau Exp $
 #
 
 DISTNAME=	gmock-1.6.0
@@ -25,6 +25,11 @@ SUBST_FILES.fix-python+=	gtest/scripts/*py
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
 CONFIGURE_ARGS+=	--enable-external-gtest
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 pre-configure:
 	${RM} -r ${WRKSRC}/gtest

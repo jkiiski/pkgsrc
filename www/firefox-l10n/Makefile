@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2013/01/10 16:03:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2013/03/10 11:31:35 ryoon Exp $
 #
 
-FIREFOX_VER=	18.0.1
+FIREFOX_VER=	20.0
 PKGNAME=	firefox-l10n-${FIREFOX_VER:S/esr//}
 DISTNAME=	# empty
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/linux-i686/xpi/}
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Language packs for www/firefox
 

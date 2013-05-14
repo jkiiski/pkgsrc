@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/10/04 22:54:08 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/06 23:22:50 jperkin Exp $
 
 DISTNAME=	wl-beta_2.15.9+0.20110420.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME:S/beta_//:S/+0//:S/.orig//}
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/w/wl-beta/}
 

@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2012/05/13 18:46:35 bsiegert Exp $
+# $NetBSD: Makefile,v 1.22 2013/03/23 12:18:19 joerg Exp $
 
-DISTNAME=			mksh-R40f
+DISTNAME=			mksh-R45
 PKGNAME=			${DISTNAME:S/-R/-/}
 CATEGORIES=			shells
 MASTER_SITES=			http://www.mirbsd.org/MirOS/dist/mir/mksh/ \
 				http://pub.allbsd.org/MirOS/dist/mir/mksh/
-EXTRACT_SUFX=			.cpio.gz
+SITES.${DISTNAME}.cat1.gz=	${MASTER_SITES:S/dist/cats/}
+
+EXTRACT_SUFX=			.tgz
 
 MAINTAINER=			ahoka@NetBSD.org
 HOMEPAGE=			http://mirbsd.de/mksh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 18:28:30 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/25 16:53:45 ryoon Exp $
 #
 
 DISTNAME=	Ricty-3.2.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html
 COMMENT=	Migu 1M and Inconsolata based TrueType fonts for programming
-LICENSE=	ipafont AND open-font-license AND public-domain
+LICENSE=	ipafont AND ofl-v1.1 AND public-domain
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.

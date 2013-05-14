@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1982 2012/07/18 12:29:12 obache Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1989 2013/05/09 23:37:25 riastradh Exp $
 #
 # This file is in the public domain.
 #
@@ -96,9 +96,11 @@ MAINTAINER?=		pkgsrc-users@NetBSD.org
 .endif
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
+TOOL_DEPENDS?=		# empty
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 # Override for SU_CMD user check
+_IS_ROOT_CMD?=		${TEST}	`${ID} -u` = `${ID} -u ${_SU_ROOT_USER}`
 _SU_ROOT_USER?=		${ROOT_USER}
 REAL_ROOT_USER?=	${ROOT_USER}
 REAL_ROOT_GROUP?=	${ROOT_GROUP}
@@ -164,6 +166,7 @@ ALL_ENV+=	F77=${FC:Q}
 ALL_ENV+=	FC=${FC:Q}
 ALL_ENV+=	FFLAGS=${FFLAGS:M*:Q}
 ALL_ENV+=	LANG=C
+ALL_ENV+=	LC_ALL=C
 ALL_ENV+=	LC_COLLATE=C
 ALL_ENV+=	LC_CTYPE=C
 ALL_ENV+=	LC_MESSAGES=C
@@ -368,7 +371,7 @@ _BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 #
 USE_TOOLS+=								\
 	[ awk basename cat chgrp chmod chown cmp cp cut dirname echo	\
-	egrep env false file find grep head hostname id install ln ls	\
+	egrep env false find grep head hostname id install ln ls	\
 	mkdir mv printf pwd rm rmdir sed sh sort			\
 	tail test touch tr true wc xargs
 
@@ -378,6 +381,11 @@ USE_TOOLS+=	expr
 # bsd.bulk-pkg.mk uses certain tools
 .if defined(BATCH)
 USE_TOOLS+=	tee tsort
+.endif
+
+# scripts/shlib-type
+.if ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
+USE_TOOLS+=	file
 .endif
 
 # INSTALL/DEINSTALL script framework
@@ -616,7 +624,7 @@ su-target: .USE
 	"")	;;							\
 	*)	${PRE_CMD.su-${.TARGET}} ;;				\
 	esac;								\
-	if ${TEST} `${ID} -u` = `${ID} -u ${_SU_ROOT_USER}`; then	\
+	if ${_IS_ROOT_CMD}; then					\
 		${_ROOT_CMD};						\
 	else								\
 		case ${PRE_ROOT_CMD:Q}"" in				\
@@ -785,6 +793,12 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 
 .if make(pbulk-index) || make(pbulk-index-item) || make(pbulk-save-wrkdir)
 .include "pbulk/pbulk-index.mk"
+.endif
+
+.if defined(_OPSYS_REQUIRE_UAC_MANIFEST) && !empty(_OPSYS_REQUIRE_UAC_MANIFEST:M[Yy][Ee][Ss])
+.  if defined(UAC_REQD_EXECS) && !empty(UAC_REQD_EXECS)
+.include "misc/uac-manifest.mk"
+.  endif
 .endif
 
 .if defined(PKG_DEVELOPER) && ${PKG_DEVELOPER} != "no"

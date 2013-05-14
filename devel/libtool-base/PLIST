@@ -1,7 +1,9 @@
 @comment $NetBSD$
 bin/libtool
 bin/libtoolize
-${PLIST.shlibtool}bin/shlibtool
+bin/shlibtool
+man/man1/libtool.1
+man/man1/libtoolize.1
 share/aclocal/argz.m4
 share/aclocal/libtool.m4
 share/aclocal/ltdl.m4

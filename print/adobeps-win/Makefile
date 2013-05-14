@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/08 13:45:35 asau Exp $
 
 DISTNAME=	winsteng
 PKGNAME=	adobeps-win-1.0.6
@@ -16,7 +16,7 @@ DEPENDS+=	cups>=1.1.15:../../print/cups
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${LOCALBASE}/bin/cabextract ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD=	${LOCALBASE}/bin/cabextract $$extract_file
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

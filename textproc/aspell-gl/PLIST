@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/galician.alias
+lib/aspell/gl-minimos.alias
+lib/aspell/gl.multi
+lib/aspell/gl.rws
+share/aspell/gl.dat
+share/aspell/gl_affix.dat
+share/aspell/gl_phonet.dat

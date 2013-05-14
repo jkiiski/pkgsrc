@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/hu.multi
+lib/aspell/hu.rws
+lib/aspell/hungarian.alias
+share/aspell/hu.dat
+share/aspell/hu_affix.dat

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/grc.multi
+lib/aspell/grc.rws
+share/aspell/grc.dat
+share/aspell/l-grc.cmap
+share/aspell/l-grc.cset

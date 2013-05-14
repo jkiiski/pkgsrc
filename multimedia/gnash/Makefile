@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2013/01/19 21:41:04 riastradh Exp $
+# $NetBSD: Makefile,v 1.69 2013/02/26 11:04:25 joerg Exp $
 #
 
 DISTNAME=		gnash-0.8.10
-PKGREVISION=		14
+PKGREVISION=		19
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_GNU:=gnash/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.bz2
@@ -38,6 +38,11 @@ CONF_FILES+=		${EGDIR}/gnashrc ${PKG_SYSCONFDIR}/gnashrc
 #ld: .libs/libgnashplugin_la-plugin.o(.text+0x5564): unresolvable relocation
 # against symbol `_ZNKSs5c_strEv'
 BUILDLINK_TRANSFORM+=	rm:-fvisibility-inlines-hidden
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

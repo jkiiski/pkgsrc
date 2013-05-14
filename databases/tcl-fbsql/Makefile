@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2012/09/15 15:03:23 obache Exp $
+# $NetBSD: Makefile,v 1.29 2013/03/02 20:33:25 wiz Exp $
 
 DISTNAME=		fbsql.c
 PKGNAME=		tcl-fbsql-1.06
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		databases
 MASTER_SITES=		http://www.fastbase.co.nz/fbsql/
 EXTRACT_SUFX=
@@ -15,6 +15,9 @@ WRKSRC=			${WRKDIR}/src
 USE_LIBTOOL=		YES
 DIST_SUBDIR=		${PKGNAME_NOREV}
 INSTALLATION_DIRS=	lib/tcl
+
+MAKE_ENV+=	MYSQLLIBDIR=${BUILDLINK_PREFIX.mysql-client}/${BUILDLINK_LIBDIRS.mysql-client}
+MAKE_ENV+=	MYSQLINCDIR=${BUILDLINK_PREFIX.mysql-client}/${BUILDLINK_INCDIRS.mysql-client}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

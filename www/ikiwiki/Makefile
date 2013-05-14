@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2013/01/15 23:10:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.106 2013/04/08 18:53:15 schmonz Exp $
 #
 
-DISTNAME=		ikiwiki_3.20121212
+DISTNAME=		ikiwiki_3.20130504
 PKGNAME=		${DISTNAME:S/_/-/}
-PKGREVISION=		2
 CATEGORIES=		www textproc
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -35,7 +34,7 @@ DEPENDS+=		p5-YAML-LibYAML-[0-9]*:../../textproc/p5-YAML-LibYAML
 
 WRKSRC=			${WRKDIR}/${PKGBASE}
 PERL5_PACKLIST=		auto/IkiWiki/.packlist
-USE_LANGUAGES=		# none
+USE_LANGUAGES=		c
 USE_TOOLS+=		gmake msgfmt perl:run xgettext
 
 REPLACE_PERL+=		Makefile.PL *.in *.cgi *.pm* */*.pm* */*/*.pm* */*.t
@@ -60,6 +59,8 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 #SPECIAL_PERMS+=		${PREFIX}/bin/ikiwiki-update-wikilist ...
+
+TEST_TARGET=		test
 
 .include "options.mk"
 

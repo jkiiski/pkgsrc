@@ -1,4 +1,4 @@
-# $NetBSD: pcc.mk,v 1.4 2010/12/26 14:20:01 asau Exp $
+# $NetBSD: pcc.mk,v 1.5 2010/12/26 14:23:47 asau Exp $
 #
 # This is the compiler definition for the PCC compiler.
 #
@@ -14,7 +14,7 @@ COMPILER_PCC_MK=	defined
 # Add the dependency on pcc
 # NOTE: not enabled by default as may be installed already
 # TODO: check for this?
-#BUILD_DEPENDS+= pcc-[0-9]*:../../lang/pcc
+#TOOL_DEPENDS+= pcc-[0-9]*:../../lang/pcc
 
 .include "../../mk/bsd.prefs.mk"
 

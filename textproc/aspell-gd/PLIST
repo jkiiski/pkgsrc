@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/gaidhlig.alias
+lib/aspell/gd.multi
+lib/aspell/gd.rws
+share/aspell/gd.dat
+share/aspell/gd_phonet.dat

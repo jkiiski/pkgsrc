@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/12/16 01:52:02 obache Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/06 23:21:54 jperkin Exp $
 
 MODNAME=		ldap
 CATEGORIES+=		databases

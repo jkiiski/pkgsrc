@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/11/23 12:35:01 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/16 11:21:25 wiz Exp $
 
 DISTNAME=	pingus-0.7.3
-PKGREVISION=	6
+PKGREVISION=	8
 CATEGORIES=	games
 MASTER_SITES=	http://pingus.seul.org/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,8 +28,7 @@ SCONS_CXX=	${CXX} -std=c++11
 SCONS_CXX=	${CXX}
 .endif
 
-MAKE_ENV+=	CPPPATH=${BUILDLINK_DIR}/include \
-		LIBPATH=${BUILDLINK_DIR}/lib 
+MAKE_ENV+=	CPPPATH=${BUILDLINK_DIR}/include LIBPATH=${BUILDLINK_DIR}/lib
 
 do-configure:
 	cd ${WRKSRC} && \

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2012/12/16 01:52:35 obache Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/06 23:21:36 jperkin Exp $
 #
 
 DISTNAME=	liblrdf-0.5.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	# github download sucks for packaging
 
-MAINTAINER=	heinz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/swh/LRDF
 COMMENT=	Library for easy manipulation of LADSPA plugin RDF descriptions
 LICENSE=	gnu-gpl-v2

@@ -18,6 +18,7 @@ share/mediawiki/bin/ulimit-tvf.sh
 share/mediawiki/bin/ulimit.sh
 share/mediawiki/bin/ulimit4.sh
 share/mediawiki/cache/.htaccess
+share/mediawiki/composer.json
 share/mediawiki/docs/README
 share/mediawiki/docs/code-coverage/README
 share/mediawiki/docs/database.txt
@@ -144,6 +145,8 @@ share/mediawiki/extensions/Vector/modules/images/open.png
 share/mediawiki/extensions/Vector/modules/images/portal-break.png
 share/mediawiki/extensions/Vector/modules/jquery.footerCollapsibleList.js
 share/mediawiki/extensions/Vector/switchExperimentPrefs.php
+share/mediawiki/extensions/WikiEditor/.jshintignore
+share/mediawiki/extensions/WikiEditor/.jshintrc
 share/mediawiki/extensions/WikiEditor/README
 share/mediawiki/extensions/WikiEditor/WikiEditor.hooks.php
 share/mediawiki/extensions/WikiEditor/WikiEditor.i18n.php
@@ -284,6 +287,11 @@ share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toc.js
 share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toolbar.config.js
 share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toolbar.css
 share/mediawiki/extensions/WikiEditor/modules/jquery.wikiEditor.toolbar.js
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiDialogs_Links.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiDialogs_Links_Setup.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiEditorConstants.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiEditorSeleniumConfig.php
+share/mediawiki/extensions/WikiEditor/tests/selenium/WikiEditorTestSuite.php
 share/mediawiki/images/.htaccess
 share/mediawiki/images/README
 share/mediawiki/img_auth.php

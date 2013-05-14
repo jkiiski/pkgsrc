@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2009/04/09 00:48:08 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 18:28:23 asau Exp $
 
 DISTNAME=	ghostscript-cmaps-20020913
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	# empty
 DISTFILES=	# empty

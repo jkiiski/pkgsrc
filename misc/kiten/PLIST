@@ -17,8 +17,10 @@ include/libkiten/kromajiedit.h
 include/libkiten/libkitenexport.h
 lib/libkiten.so
 lib/libkiten.so.4
-lib/libkiten.so.4.8.0
+lib/libkiten.so.${PKGVERSION}
 share/applications/kde4/kiten.desktop
+share/applications/kde4/kitenkanjibrowser.desktop
+share/applications/kde4/kitenradselect.desktop
 share/doc/kde/HTML/en/kiten/common
 share/doc/kde/HTML/en/kiten/common_uncommon_filtering.png
 share/doc/kde/HTML/en/kiten/ending_search.png

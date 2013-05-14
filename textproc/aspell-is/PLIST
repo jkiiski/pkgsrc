@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/icelandic.alias
+lib/aspell/is.multi
+lib/aspell/is.rws
+lib/aspell/íslenska.alias
+share/aspell/is.dat
+share/aspell/is_phonet.dat

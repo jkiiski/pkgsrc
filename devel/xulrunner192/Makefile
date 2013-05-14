@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2013/01/09 10:34:03 martin Exp $
+# $NetBSD: Makefile,v 1.25 2013/02/16 11:19:10 wiz Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner192-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-PKGREVISION=	8
+PKGREVISION=	10
 CATEGORIES=	devel www
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.mozilla.org/en/docs/XULRunner
 COMMENT=	XML User Interface Language runtime environment
 LICENSE=	mpl-1.1
@@ -35,7 +35,7 @@ SUBST_MESSAGE.fix-paths2=	Fixing absolute paths.
 SUBST_FILES.fix-paths2=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h
 SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/app/nsRegisterGREUnix.cpp
 SUBST_FILES.fix-paths2+=	${MOZILLA_DIR}xulrunner/installer/Makefile.in
-SUBST_SED.fix-paths2=           -e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g' 
+SUBST_SED.fix-paths2=           -e 's,/etc/gre.d,${PREFIX}/lib/xulrunner192/gre.d,g'
 
 .include "../../devel/xulrunner192/mozilla-common.mk"
 CONFIGURE_ARGS+=	--enable-chrome-format=jar

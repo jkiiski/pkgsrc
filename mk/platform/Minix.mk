@@ -1,4 +1,4 @@
-# $NetBSD: Minix.mk,v 1.1 2011/11/05 17:09:15 tcort Exp $
+# $NetBSD: Minix.mk,v 1.4 2013/03/01 00:09:20 tcort Exp $
 #
 # Variable definitions for the Minix operating system.
 
@@ -43,6 +43,9 @@ IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MISCMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}7
 IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 IMAKE_MANINSTALL?=	maninstall catinstall
+_OPSYS_SYSTEM_RPATH?=	/usr/lib
+_OPSYS_LIB_DIRS?=	/usr/lib
+_OPSYS_INCLUDE_DIRS?=	/usr/include
 
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
@@ -63,4 +66,4 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
-_OPSYS_CAN_CHECK_SHLIBS=	yes # can't use readelf in check/bsd.check-vars.mk
+_OPSYS_CAN_CHECK_SHLIBS=	yes

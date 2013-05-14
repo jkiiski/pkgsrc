@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/07/02 15:55:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/29 05:07:17 asau Exp $
 #
 
 DISTNAME=		xorg-cf-files-1.0.4
@@ -52,7 +52,7 @@ pre-configure:
 		-e "s|@MAKE@|${MAKE_PROGRAM}|"	${FILESDIR}/host.def > \
 		${WRKSRC}/host.def
 	if [ ${X11BASE} != ${PREFIX} ]; then \
-		echo '#define RealProjectRoot ${X11BASE}' >> ${WRKSRC}/host.def; \
+		${ECHO} '#define RealProjectRoot ${X11BASE}' >> ${WRKSRC}/host.def; \
 	fi
 
 .include "../../x11/xproto/buildlink3.mk"

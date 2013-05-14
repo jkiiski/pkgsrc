@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/mn.multi
+lib/aspell/mn.rws
+lib/aspell/mongolian.alias
+share/aspell/l-mn.cmap
+share/aspell/l-mn.cset
+share/aspell/mn.dat
+share/aspell/mn_affix.dat

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/09 19:08:46 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:17 asau Exp $
 #
 
 DISTNAME=	libmemcached-1.0.4
@@ -27,5 +27,7 @@ CONFIGURE_ARGS+=	--disable-64bit
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
 LIBS+=	-lexecinfo
 .endif
+
+CPPFLAGS+=	-D__STDC_FORMAT_MACROS
 
 .include "../../mk/bsd.pkg.mk"

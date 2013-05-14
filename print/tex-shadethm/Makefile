@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/12 16:00:31 is Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 13:45:48 asau Exp $
 
 DISTNAME=	shadethm
 PKGNAME=	tex-${DISTNAME}-20101030
@@ -9,7 +9,7 @@ LICENSE=	lppl-1.3c
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ctan.org/tex-archive/macros/latex/contrib/shadethm/
-COMMENT=	Theorem environments that are shaded.
+COMMENT=	Theorem environments that are shaded
 
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 

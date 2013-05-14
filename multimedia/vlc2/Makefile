@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/01/26 21:38:29 adam Exp $
+# $NetBSD: Makefile,v 1.28 2013/04/14 12:35:25 cheusov Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vlc/} \
 			http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.xz
 
-VLC_VERSION=		2.0.5
+VLC_VERSION=		2.0.6
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -27,7 +27,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-kde-solid=${PREFIX}/share/kde/apps/solid/actions
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
-PLIST_VARS+=		x86simd altivec v4l2
+PLIST_VARS+=		x86simd altivec v4l2 oss
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -52,6 +52,11 @@ CONFIGURE_ARGS+=	--enable-mmx \
 .if ${MACHINE_ARCH} == "powerpc"
 PLIST.altivec=		yes
 CONFIGURE_ARGS+=	--enable-altivec
+.endif
+
+# Linux uses alsa
+.if "${OPSYS}" != "Linux"
+PLIST.oss=		yes
 .endif
 
 # Enable when cleanly builds
@@ -146,6 +151,9 @@ BUILDLINK_API_DEPENDS.x264-devel+= x264-devel>=20100201
 .include "../../net/libupnp/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.if "${OPSYS}" == "Linux"
+.  include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

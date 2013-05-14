@@ -1,9 +1,8 @@
-$NetBSD$
-
---- REPOSITORIES.orig	Thu Mar  3 14:43:09 2011
-+++ REPOSITORIES
-@@ -1,3 +1,3 @@
- ftp://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/$arch/5.0/All
+--- REPOSITORIES.orig	Mon Feb 25 11:34:46 2013
++++ REPOSITORIES	Tue May 14 18:48:51 2013
+@@ -1,4 +1,4 @@
+ # NetBSD OS release can look like 6.0_STABLE, do not use it as-is
+ ftp://ftp.netbsd.org/pub/pkgsrc/packages/NetBSD/$arch/@OSREL@/All
  http://mirror-master.dragonflybsd.org/packages/$arch/DragonFly-$osrelease/stable/All/
 -ftp://ftp.minix3.org/pub/minix/packages/$osrelease/$arch/All
 +http://www.minix3.org/pkgsrc/packages/$osrelease/$arch/All

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/02 20:11:45 asau Exp $
+# $NetBSD: Makefile,v 1.41 2012/10/03 21:56:19 wiz Exp $
 
 DISTNAME=		mercury-compiler-11.07
 PKGNAME=		mercury-11.07
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pax bison flex
 USE_TOOLS+=		perl # ?
 USE_GNU_READLINE=	yes # rl_prep_term_function
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc

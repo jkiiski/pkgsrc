@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2012/03/03 12:54:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/16 11:17:57 wiz Exp $
 #
 
 DISTNAME=	slang-2.2.4
 PKGNAME=	lib${DISTNAME:slang%=slang2%}
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	lslan
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v2.2/ \
@@ -48,7 +48,7 @@ CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termcap}/share/terminfo
 .endif
 
 REPLACE_INTERPRETER+=	slsh
-REPLACE.slsh.old=	/usr/bin/env\ slsh
+REPLACE.slsh.old=	slsh
 REPLACE.slsh.new=	${PREFIX}/bin/slsh
 REPLACE_FILES.slsh=	slsh/scripts/jpegsize slsh/scripts/lsrpm \
 			slsh/scripts/sldb slsh/scripts/slprof \

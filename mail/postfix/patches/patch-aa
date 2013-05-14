@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.20 2008/02/18 17:45:34 ghen Exp $
+$NetBSD: patch-aa,v 1.21 2008/09/04 08:25:20 martti Exp $
 
 Make this pkgsrc friendly.
 
---- postfix-install.orig	Fri Feb  8 01:03:52 2008
+--- postfix-install.orig	2011-11-19 23:09:16.000000000 +0000
 +++ postfix-install
-@@ -365,26 +365,6 @@ HTML files. Specify \"no\" if you do not want to insta
+@@ -365,26 +365,6 @@ HTML files. Specify \"no\" if you do not
  : ${tempdir=`pwd`}
- : ${config_directory=`bin/postconf -h -d config_directory`}
+ : ${config_directory=`bin/postconf -c conf -h -d config_directory`}
  
 -# Find out the location of installed configuration files.
 -

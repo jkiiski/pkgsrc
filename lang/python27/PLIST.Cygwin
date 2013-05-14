@@ -1,0 +1,2 @@
+@comment $NetBSD$
+bin/libpython${PY_VER_SUFFIX}.dll

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2012/08/21 21:44:00 marino Exp $
+# $NetBSD: options.mk,v 1.17 2013/03/16 22:41:50 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	gd ghostscript gtk guile lua ocaml pangocairo rsvg tcl x11 perl

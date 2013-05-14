@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2012/10/08 23:01:20 adam Exp $
+# $NetBSD: Makefile,v 1.34 2013/02/16 11:20:40 wiz Exp $
 
 DISTNAME=	pgadmin3-1.12.1
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=pgadmin3/release/v${PKGVERSION_NOREV}/src/}
 
@@ -9,7 +9,7 @@ MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
 COMMENT=	Graphical PostgreSQL client and administration tool
 
-PGSQL_VERSIONS_ACCEPTED=90 84 83
+PGSQL_VERSIONS_ACCEPTED=90 84
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt

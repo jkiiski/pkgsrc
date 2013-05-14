@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 19:51:22 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/05 12:26:23 imil Exp $
 #
 
-DISTNAME=	salt-0.10.5
+DISTNAME=	salt-0.15.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cloud.github.com/downloads/saltstack/salt/
+MASTER_SITES=	http://pypi.python.org/packages/source/s/salt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
@@ -21,20 +21,25 @@ SUBST_FILES.fix-paths+=	salt/modules/mysql.py
 SUBST_FILES.fix-paths+=	salt/modules/postgres.py
 SUBST_FILES.fix-paths+=	salt/modules/tls.py
 SUBST_FILES.fix-paths+=	salt/utils/parsers.py
+SUBST_FILES.fix-paths+=	salt/utils/migrations.py
 SUBST_SED.fix-paths+=	-e "s|/etc/salt|${PKG_SYSCONFDIR}|g"
+
+REPLACE_PYTHON+=	salt/modules/munin.py
+REPLACE_PYTHON+=	salt/returners/sentry_return.py
+
+RCD_SCRIPTS+=		salt_master salt_minion
+FILES_SUBST+=		PYTHON=${PYTHONBIN:Q}
 
 PKG_SYSCONFSUBDIR=	salt
 
-EGDIR=		${PREFIX}/share/examples/salt
-INSTALLATION_DIRS+= ${EGDIR}
-CONF_FILES+=	${EGDIR}/master.template ${PKG_SYSCONFDIR}/master
-CONF_FILES+=	${EGDIR}/minion.template ${PKG_SYSCONFDIR}/minion
-
-RCD_SCRIPTS+=	salt_master salt_minion
+EGDIR=			${PREFIX}/share/examples/salt
+INSTALLATION_DIRS+= 	${EGDIR}
+CONF_FILES+=		${EGDIR}/master ${PKG_SYSCONFDIR}/master
+CONF_FILES+=		${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/master.template ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/conf/minion.template ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/minion ${DESTDIR}${EGDIR}/
 
 # Dependencies are documented at
 # http://docs.saltstack.org/en/latest/topics/installation/index.html#dependencies
@@ -44,6 +49,7 @@ post-install:
 # There's also an optional dependency on gcc, for Cython support, but
 # we don't bother with that here.
 #
+.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 DEPENDS+= zeromq>=2.1.9:../../net/zeromq
 DEPENDS+= ${PYPKGPREFIX}-zmq>=2.1.9:../../net/py-zmq

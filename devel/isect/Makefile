@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2010/01/17 12:02:13 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2013/02/06 23:22:05 jperkin Exp $
 #
 
 DISTNAME=	isect-1.6.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isectd/}
 
@@ -13,7 +13,7 @@ COMMENT=	Open source middleware daemon
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 RCD_SCRIPTS=	isect
 

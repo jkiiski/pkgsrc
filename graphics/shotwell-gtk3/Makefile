@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/10/10 11:41:12 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2013/04/21 12:06:27 drochner Exp $
 #
 
-DISTNAME=		shotwell-0.13.1
+DISTNAME=		shotwell-0.14.1
 PKGREVISION=		1
 CATEGORIES=		graphics
-MASTER_SITES=		http://yorba.org/download/shotwell/0.13/
+MASTER_SITES=		http://yorba.org/download/shotwell/0.14/
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgrsc-users@NetBSD.org
@@ -23,6 +23,8 @@ MAKE_ENV+=		VALAC=${VALAC}
 
 REPLACE_SH+=		configure
 
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/libgee/buildlink3.mk"
@@ -37,7 +39,7 @@ BUILDLINK_ABI_DEPENDS.libraw+= libraw>=0.13.2
 # Required for dealing with .svg icons. Spotted on a clean box
 .include "../../graphics/librsvg/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala018/buildlink3.mk"
+.include "../../lang/vala020/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

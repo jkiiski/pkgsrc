@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/03 21:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2013/05/02 06:50:42 wen Exp $
 
-DISTNAME=	namespace-clean-0.23
+DISTNAME=	namespace-clean-0.24
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel perl5
@@ -13,8 +13,9 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 
-DEPENDS+=	p5-B-Hooks-EndOfScope>=0.10:../../devel/p5-B-Hooks-EndOfScope
+DEPENDS+=	p5-B-Hooks-EndOfScope>=0.12:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-Package-Stash>=0.23:../../devel/p5-Package-Stash
+DEPENDS+=	p5-Module-Implementation-[0-9]*:../../devel/p5-Module-Implementation
 
 BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.88}:../../devel/p5-Test-Simple
 

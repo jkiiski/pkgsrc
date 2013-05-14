@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/12/22 00:26:02 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:17:17 asau Exp $
 #
 
 DISTNAME=	libjit-0.1.2
@@ -15,7 +15,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake lex yacc makeinfo
 GNU_CONFIGURE=		yes
-INFO_FILES=		# PLIST
+INFO_FILES=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

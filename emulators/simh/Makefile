@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2012/07/16 00:14:33 abs Exp $
+# $NetBSD: Makefile,v 1.41 2013/03/26 13:43:19 martin Exp $
 
 DISTNAME=	simhv39-0
 PKGNAME=	simh-3.9.0
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
@@ -44,7 +44,9 @@ do-install:
 		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN; \
 		fi ;							\
 	done)
+
 	${INSTALL_DATA} ${WRKSRC}/VAX/ka655x.bin ${DESTDIR}${PREFIX}/share/simh
+	${INSTALL_DATA} ${WRKSRC}/VAX/vmb.exe ${DESTDIR}${PREFIX}/share/simh
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
 		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)

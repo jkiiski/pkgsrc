@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2013/01/20 12:34:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.55 2013/02/06 23:23:57 jperkin Exp $
 
 PKGNAME=	${APACHE_PKG_PREFIX}-subversion-${SVNVER}
-PKGREVISION=	7
 COMMENT=	WebDAV server (Apache module) for Subversion
 
 .include "../../devel/subversion/Makefile.common"
@@ -18,7 +17,7 @@ post-patch:
 	${RM} ${WRKSRC}/build-outputs.mk
 	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../mk/apache.mk"

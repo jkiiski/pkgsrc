@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/09/03 15:51:39 taca Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/11 07:46:45 taca Exp $
 
-DISTNAME=	rspec-core-2.12.2
+DISTNAME=	rspec-core-2.13.1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

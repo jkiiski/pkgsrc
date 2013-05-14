@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/02/06 14:44:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/06 23:21:08 jperkin Exp $
 #
 
 PKGNAME=	poco-data-${POCO_VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ RDBMS Master Accessor libraries
@@ -17,7 +18,7 @@ CONFIGURE_ARGS+=	--no-samples
 
 USE_TOOLS+=	pax
 
-BUILD_DIRS=		${WRKSRC}/Data
+BUILD_DIRS=		Data
 INSTALLATION_DIRS=	include/Poco/Data lib
 
 do-install:

@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/08/16 15:52:11 wiz Exp $
+$NetBSD$
 
---- config.h.in.orig	2008-01-14 18:48:57.000000000 +0000
+--- config.h.in.orig	2011-11-17 21:46:08.000000000 +0000
 +++ config.h.in
+@@ -2,7 +2,7 @@
+ 
+ #undef WORDS_BIGENDIAN
+ 
+-#if __STDC_VERSION__ < 199901L
++#if __STDC_VERSION__ < 199901L && !defined(__func__)
+ # if __GNUC__ >= 2
+ #  define __func__ __FUNCTION__
+ # else
 @@ -250,7 +250,7 @@
  #include <duma.h>
  #endif

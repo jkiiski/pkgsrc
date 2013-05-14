@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-configure.ac,v 1.1 2013/01/22 11:46:38 wiz Exp $
 
 automake-1.13 compat.
 

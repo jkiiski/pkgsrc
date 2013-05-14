@@ -1,13 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/01/17 12:02:33 wiz Exp $
-
-BUILDLINK_DEPMETHOD.libfetch?=	build
+# $NetBSD: buildlink3.mk,v 1.9 2013/02/06 23:20:50 jperkin Exp $
 
 BUILDLINK_TREE+=	libfetch
 
 .if !defined(LIBFETCH_BUILDLINK3_MK)
 LIBFETCH_BUILDLINK3_MK:=
 
+BUILDLINK_DEPMETHOD.libfetch?=	build
+
 BUILDLINK_API_DEPENDS.libfetch+=	libfetch>=2.28
+BUILDLINK_ABI_DEPENDS.libfetch?=	libfetch>=2.34nb1
 BUILDLINK_PKGSRCDIR.libfetch?=	../../net/libfetch
 
 pkgbase := libfetch

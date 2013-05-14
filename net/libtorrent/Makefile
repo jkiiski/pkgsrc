@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2012/07/02 07:01:51 tron Exp $
+# $NetBSD: Makefile,v 1.47 2013/02/06 23:20:53 jperkin Exp $
 
 DISTNAME=	libtorrent-0.13.2
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -55,6 +55,10 @@ OPENSSL_LIBS=	-L${BUILDLINK_PREFIX.openssl}/lib \
 
 CONFIGURE_ENV+=	OPENSSL_CFLAGS=${OPENSSL_CFLAGS:Q}
 CONFIGURE_ENV+=	OPENSSL_LIBS=${OPENSSL_LIBS:Q}
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
 .endif
 
 .include "../../devel/libsigc++/buildlink3.mk"

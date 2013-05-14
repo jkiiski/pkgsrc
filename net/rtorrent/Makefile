@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2012/10/23 17:19:06 asau Exp $
+# $NetBSD: Makefile,v 1.53 2013/02/06 23:23:23 jperkin Exp $
 
 DISTNAME=	rtorrent-0.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -40,6 +40,10 @@ CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
 
 .if !empty(CC_VERSION:Mgcc-*) && !empty(MACHINE_ARCH:Mi?86)
 CXXFLAGS+=	-march=i486
+.endif
+
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
 .endif
 
 INSTALLATION_DIRS=	share/examples/rtorrent

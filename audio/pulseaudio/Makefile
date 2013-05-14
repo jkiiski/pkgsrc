@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2012/11/06 12:04:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.69 2013/02/16 11:20:17 wiz Exp $
 #
 
 DISTNAME=	pulseaudio-2.1
-PKGREVISION=	1
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -32,6 +32,8 @@ MAKE_ENV+=		EGDIR=${EGDIR}
 
 CONFIGURE_ARGS+=	--enable-samplerate
 CONFIGURE_ARGS+=	--disable-tcpwrap
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 # Use native atomic ops on NetBSD >= 5.0, otherwise
 # fallback to libatomic_ops

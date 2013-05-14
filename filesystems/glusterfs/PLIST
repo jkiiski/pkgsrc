@@ -1,3 +1,4 @@
+@comment $NetBSD$
 etc/glusterfs/glusterd.vol.sample
 lib/libglusterfs.la
 lib/libgfrpc.la

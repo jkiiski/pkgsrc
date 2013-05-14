@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/12/15 03:22:43 jnemeth Exp $
+$NetBSD: MESSAGE,v 1.1.1.1 2012/01/15 18:36:18 jnemeth Exp $
 
 ${PKGBASE} now runs as ${ASTERISK_USER}:${ASTERISK_GROUP} instead of ${ROOT_USER}:${ROOT_GROUP} by default.
 

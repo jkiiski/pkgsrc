@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2012/04/07 19:35:48 dholland Exp $
+# $NetBSD: Makefile.common,v 1.60 2013/03/03 23:53:45 wiz Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile

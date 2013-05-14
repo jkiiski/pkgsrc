@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/07 21:38:04 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/25 06:56:01 asau Exp $
 
 DISTNAME=	sed-3.02
 PKGNAME=	ja-sed-3.02
@@ -19,7 +19,7 @@ CONFLICTS+=	gsed-[0-9]*
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--program-transform-name='s,^,j,'
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	share/doc/ja-sed
 

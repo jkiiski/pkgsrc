@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 23:02:38 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/02/16 11:25:24 wiz Exp $
 #
 
 DISTNAME=	kiwi-1.9.29
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/kiwi/1.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,8 +24,8 @@ SUBST_SED.localedir=	-e 's|share/locale|${PKGLOCALEDIR}/locale|'
 
 # tarball contains neither api nor howto.
 post-install:
-	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/api || true
-	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/howto || true
+	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/api || ${TRUE}
+	rmdir ${DESTDIR}${PREFIX}/share/doc/kiwi/howto || ${TRUE}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

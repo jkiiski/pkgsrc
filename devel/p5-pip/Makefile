@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:55:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/31 11:19:20 asau Exp $
 
 DISTNAME=	pip-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AD/ADAMK/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/pip/
-COMMENT=	Perl Installation Program, for scripted+3rd-party distribution installation
+COMMENT=	Perl Installation Program
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

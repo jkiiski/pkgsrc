@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2012/08/27 14:45:36 morr Exp $
+# $NetBSD: Makefile,v 1.73 2013/03/21 00:29:05 mspo Exp $
 
 PKGNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 

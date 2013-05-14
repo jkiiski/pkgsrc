@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/02/28 17:17:57 apb Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:54 asau Exp $
 #
 
 DISTNAME=	regxml-${SNAPSHOT_DATE}-${SNAPSHOT_HASH:C/(......).*/\1/}
 PKGNAME=	regxml-0.0.${SNAPSHOT_DATE}
 CATEGORIES=	textproc
-EXTRACT_SUFX=	.tar.gz
 
 # The master site does not have a stable distfile.
 #

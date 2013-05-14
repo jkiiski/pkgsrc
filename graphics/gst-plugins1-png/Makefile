@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/06 14:10:58 asau Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/16 11:22:04 wiz Exp $
 #
 
 GST_PLUGINS1_NAME=	png

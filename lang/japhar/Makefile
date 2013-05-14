@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/09/15 10:05:19 obache Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/02 20:11:43 asau Exp $
 #
 
 DISTNAME=		japhar-0.08
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # The japhar tar archive uses ././@LongLink GNU tar hacks
 EXTRACT_USING=		nbtar

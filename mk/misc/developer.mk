@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.18 2009/08/23 18:09:45 joerg Exp $
+# $NetBSD: developer.mk,v 1.19 2011/09/15 21:45:52 wiz Exp $
 #
 # Public targets for developers:
 #
@@ -117,7 +117,7 @@ changes-entry-add: .PHONY ce-error-check
 	${RUN} ${ECHO} "	"${_CE_MSG:Q} >> ${PKGSRC_CHANGES}
 
 todo-entry-remove:
-	${RUN} ${SH} ${PKGSRCDIR}/mk/scripts/remove_todo ${PKGSRC_TODO} ${PKGBASE} ${PKGVERSION}
+	${RUN} PKG_ADMIN=${PKG_ADMIN_CMD:Q} ${SH} ${PKGSRCDIR}/mk/scripts/remove_todo ${PKGSRC_TODO} ${PKGBASE} ${PKGVERSION}
 
 changes-entry-commit: .PHONY ce-error-check
 	@${STEP_MSG} "Committing the change"

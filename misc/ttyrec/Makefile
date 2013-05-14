@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/08/18 12:43:52 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/08 09:57:39 asau Exp $
 
 DISTNAME=	ttyrec-1.0.8
 CATEGORIES=	misc
@@ -6,7 +6,7 @@ MASTER_SITES=	http://0xcc.net/ttyrec/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0xcc.net/ttyrec/
-COMMENT=	ttyrec is a tty recorder
+COMMENT=	Tty recorder
 LICENSE=	original-bsd
 
 .include "../../mk/bsd.prefs.mk"

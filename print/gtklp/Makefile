@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/10/08 23:02:20 adam Exp $
+# $NetBSD: Makefile,v 1.25 2013/02/06 23:23:31 jperkin Exp $
 #
 
 DISTNAME=	gtklp-1.2.7
-PKGREVISION=	16
+PKGREVISION=	18
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtklp/}
 EXTRACT_SUFX=	.src.tar.gz

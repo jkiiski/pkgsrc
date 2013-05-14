@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2013/01/03 13:39:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.559 2013/04/03 10:56:16 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -49,6 +49,8 @@ SUBDIR+=	foomatic4-db
 SUBDIR+=	foomatic4-db-engine
 SUBDIR+=	foomatic4-filters
 SUBDIR+=	ghostscript
+SUBDIR+=	ghostscript-agpl
+SUBDIR+=	ghostscript-gpl
 SUBDIR+=	glabels
 SUBDIR+=	gtklp
 SUBDIR+=	gutenprint-lib
@@ -113,7 +115,6 @@ SUBDIR+=	poppler-qt4
 SUBDIR+=	poppler-utils
 SUBDIR+=	poppler016
 SUBDIR+=	poster
-SUBDIR+=	printer-applet
 SUBDIR+=	pscal
 SUBDIR+=	psify
 SUBDIR+=	psjoin
@@ -125,6 +126,7 @@ SUBDIR+=	py-cups
 SUBDIR+=	py-pisa
 SUBDIR+=	py-pslib
 SUBDIR+=	py-reportlab
+SUBDIR+=	qpdf
 SUBDIR+=	qpdfview
 SUBDIR+=	rlpr
 SUBDIR+=	rtf2latex

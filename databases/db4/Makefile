@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2012/10/02 21:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.65 2013/03/01 16:10:23 jperkin Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -36,6 +36,8 @@ CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 OPSYSVARS+=		LIBSO_LIBS
 LIBSO_LIBS.SunOS+=	-lnsl -lrt
 CONFIGURE_ENV+=		LIBSO_LIBS=${LIBSO_LIBS:Q}
+
+.include "options.mk"
 
 # DB4 only want pthreads because it's really after POSIX 1003.1
 # inter-process mutexes.  In this case, we only care to use the native

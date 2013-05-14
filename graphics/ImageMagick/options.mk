@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2011/05/13 12:55:39 abs Exp $
+# $NetBSD: options.mk,v 1.13 2013/03/16 22:40:25 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ImageMagick
 PKG_SUPPORTED_OPTIONS=	x11 jasper djvu ghostscript wmf

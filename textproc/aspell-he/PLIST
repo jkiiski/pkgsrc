@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/he.multi
+lib/aspell/he.rws
+lib/aspell/hebrew.alias
+share/aspell/he.dat
+share/aspell/he_affix.dat
+share/aspell/iso-8859-8-nl.cmap
+share/aspell/iso-8859-8-nl.cset

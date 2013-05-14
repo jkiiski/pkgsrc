@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2011/12/02 07:13:28 sbd Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2012/05/07 01:53:20 dholland Exp $
 
 BUILDLINK_TREE+=	apr
 
@@ -18,7 +18,7 @@ ${BUILDLINK_DIR}/bin/apr-config: buildlink-directories
 
 buildlink-apr-cookie: ${BUILDLINK_DIR}/bin/apr-config
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 .include "../../devel/libuuid/buildlink3.mk"
 .endif

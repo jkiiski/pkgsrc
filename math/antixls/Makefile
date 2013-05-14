@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 21:56:35 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/12 10:44:10 wiz Exp $
 #
 
 DISTNAME=		antixls-0.2b
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Spreadsheet-ParseExcel-[0-9]*:../../math/p5-Spreadsheet-ParseExcel
 
 USE_TOOLS+=	perl:run
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} antixls
+EXTRACT_CMD=	${CP} $$extract_file antixls
 REPLACE_PERL+=	antixls
 NO_BUILD=	YES
 

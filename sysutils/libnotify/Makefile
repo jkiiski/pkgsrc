@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2012/10/08 23:00:50 adam Exp $
+# $NetBSD: Makefile,v 1.26 2013/02/16 11:18:52 wiz Exp $
 
 DISTNAME=	libnotify-0.4.5
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.galago-project.org/
 COMMENT=	Desktop notification framework
 LICENSE=	gnu-lgpl-v2.1
+
+CONFLICTS+=	libnotify07-[0-9]*
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

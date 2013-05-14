@@ -1,0 +1,8 @@
+@comment $NetBSD$
+include/libkcompactdisc/kcompactdisc.h
+lib/cmake/libkcompactdisc/LibkcompactdiscConfig.cmake
+lib/cmake/libkcompactdisc/LibkcompactdiscTargets-${TARGET}.cmake
+lib/cmake/libkcompactdisc/LibkcompactdiscTargets.cmake
+lib/libkcompactdisc.so
+lib/libkcompactdisc.so.4
+lib/libkcompactdisc.so.${PKGVERSION}

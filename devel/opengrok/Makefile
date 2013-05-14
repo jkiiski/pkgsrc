@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2012/12/16 01:52:11 obache Exp $
+# $NetBSD: Makefile,v 1.23 2013/02/06 23:22:09 jperkin Exp $
 #
 
 DISTNAME=	opengrok-0.8.1
-PKGREVISION=	6
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	http://hub.opensolaris.org/bin/download/Project+opengrok/files/
 

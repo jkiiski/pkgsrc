@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2012/11/15 14:50:37 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2013/04/27 12:09:32 drochner Exp $
 
-DISTNAME=	libsoup-2.40.2
+DISTNAME=	libsoup-2.42.2
 PKGNAME=	${DISTNAME:S/libsoup/libsoup24/}
 PKGREVISION=	1
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.40/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.42/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,6 +15,9 @@ LICENSE=	gnu-lgpl-v2
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+# XXX work around botched gettext check (ignores libintl)
+CONFIGURE_ENV+=		DATADIRNAME=share
 
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 

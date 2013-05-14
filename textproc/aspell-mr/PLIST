@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/marathi.alias
+lib/aspell/mr.multi
+lib/aspell/mr.rws
+share/aspell/mr.dat
+share/aspell/u-deva.cmap
+share/aspell/u-deva.cset

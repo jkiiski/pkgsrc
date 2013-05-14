@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/04/09 00:48:17 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/08 13:04:32 asau Exp $
 
 DISTNAME=	zonetab-0
 CATEGORIES=	time
 DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	zone.tab file
+COMMENT=	NetBSD zone.tab file
 
 NO_BUILD=	yes
 

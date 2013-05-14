@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/nn.multi
+lib/aspell/nn.rws
+lib/aspell/nynorsk.alias
+share/aspell/nn.dat

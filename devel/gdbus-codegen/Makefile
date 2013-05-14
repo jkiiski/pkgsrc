@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/07/15 00:28:09 marino Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 20:44:04 prlw1 Exp $
 
 .include "../../devel/glib2/Makefile.common"
 
 PKGNAME:=	${PKGNAME:S/glib2/gdbus-codegen/}
 CATEGORIES=	sysutils
 
-COMMENT=	gdbus-codegen utility
+COMMENT=	Generate code and/or documentation for one or more D-Bus interfaces
 
 NOT_FOR_PLATFORM=	HPUX-*-* OSF1-*-*
 

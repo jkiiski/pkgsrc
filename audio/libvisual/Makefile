@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.21 2011/04/22 13:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/12 00:24:44 asau Exp $
 #
 
-DISTNAME=		libvisual-0.4.0
-PKGREVISION=		3
-CATEGORIES=		audio graphics
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
+DISTNAME=	libvisual-0.4.0
+PKGREVISION=	3
+CATEGORIES=	audio graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://localhost.nl/~synap/libvisual-wiki/
-COMMENT=		Abstraction library between applications and audio visualisation plugins
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://localhost.nl/~synap/libvisual-wiki/
+COMMENT=	Abstraction library for applications and audio visualisation plugins
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config msgfmt
+
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libvisual.pc.in
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config msgfmt
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)

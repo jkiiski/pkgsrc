@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/11/30 17:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2012/01/13 10:54:46 obache Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -8,8 +8,8 @@ PKGREVISION=	1
 COMMENT+=	(esound plugin)
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/disable-esd/enable-esd/g}
-BUILD_DIRS=		${WRKSRC}/src/plugins/esd
-INSTALL_DIRS=		${WRKSRC}/src/plugins/esd
+BUILD_DIRS=		src/plugins/esd
+INSTALL_DIRS=		src/plugins/esd
 
 _LIBAO_BUILDING_PLUGIN=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/02 21:25:41 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 21:54:25 wiz Exp $
 
 DISTNAME=	postgis-1.5.3
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Spatial database capabilities for PostgreSQL
 
 LICENSE=	gnu-gpl-v2
 
-PGSQL_VERSIONS_ACCEPTED=	91 90 84 83
+PGSQL_VERSIONS_ACCEPTED=	91 90 84
 
 DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/05/16 20:49:50 zafer Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/11 22:37:14 asau Exp $
 
 DISTNAME=	postmark-1_5.c
 PKGNAME=	postmark-1.5
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netapp.com/tech_library/3022.html
 COMMENT=	NetApps file system benchmark
 
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} postmark.c
+EXTRACT_CMD=	${CP} $$extract_file postmark.c
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

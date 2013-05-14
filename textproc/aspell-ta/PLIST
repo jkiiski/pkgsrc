@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/ta.multi
+lib/aspell/ta.rws
+lib/aspell/tamil.alias
+share/aspell/ta.dat
+share/aspell/u-taml.cmap
+share/aspell/u-taml.cset

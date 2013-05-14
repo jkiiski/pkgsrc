@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_file__util__bsd.cc,v 1.1 2012/03/10 11:42:39 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_file__util__bsd.cc,v 1.1.1.1 2012/03/15 09:45:29 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/file_util_bsd.cc.orig	2012-03-09 12:27:38.000000000 +0000
+--- mozilla/ipc/chromium/src/base/file_util_bsd.cc.orig	2013-05-07 18:54:47.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/file_util_bsd.cc
-@@ -0,0 +1,79 @@
+@@ -0,0 +1,80 @@
 +// Copyright (c) 2006-2008 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -12,6 +12,7 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_file__util__bsd.cc,v 1.1 2012/03/10
 +#include "base/file_util.h"
 +
 +#include <fcntl.h>
++#include <unistd.h>
 +
 +#include <string>
 +#include <vector>

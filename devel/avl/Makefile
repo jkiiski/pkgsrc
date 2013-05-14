@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:16:39 asau Exp $
 #
 
 DISTNAME=	avl-1.4.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.stanford.edu/~blp/avl/
 COMMENT=	Library for manipulation of balanced binary trees
 
 GNU_CONFIGURE=	YES
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 # The text and html files documentation are not installed so just touch
 # them and makeinfo and texi2html are not needed at build time.

@@ -22,14 +22,3 @@ $NetBSD: patch-ae,v 1.12 2006/10/31 03:31:20 taca Exp $
  #ifdef HAVE_RPC_TYPES_H
  # include <rpc/types.h> /* For INADDR_LOOPBACK */
  #endif
-@@ -123,6 +128,10 @@
- #endif
- #ifdef HAVE_READPASSPHRASE_H
- # include <readpassphrase.h>
-+#endif
-+#ifdef HAVE_INTERIX
-+# include <interix/env.h>
-+# include <interix/security.h>
- #endif
- 
- #ifdef HAVE_IA_H

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/28 06:30:01 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/03 23:53:45 wiz Exp $
 #
 
 DISTNAME=	aipo${VERSION:S/.//g}0ja_linux32

@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2009/05/02 16:21:45 reed Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/01 22:21:09 wiz Exp $
 
 DISTNAME=		compat_headers-0.2
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		tnn@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pkgsrc.org/
-COMMENT=		compatibility headers
+COMMENT=		Compatibility headers
 
 PREV_PKGPATH=		pkgtools/posix_headers
 SUPERSEDES=		posix_headers-[0-9]*

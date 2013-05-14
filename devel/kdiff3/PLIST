@@ -1,7 +1,6 @@
 @comment $NetBSD$
 bin/kdiff3
 lib/kde4/kdiff3fileitemaction.so
-lib/kde4/libkdiff3part.so
 share/applications/kde4/kdiff3.desktop
 share/doc/kde/HTML/da/kdiff3/common
 share/doc/kde/HTML/da/kdiff3/index.cache.bz2

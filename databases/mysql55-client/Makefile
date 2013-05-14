@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/22 10:56:14 tron Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/06 23:20:54 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=	mysqc
@@ -28,9 +28,9 @@ REPLACE_PERL+=	scripts/mysqlhotcopy.sh
 # if manual compression is activated. The manual pages won't work otherwise.
 .if defined(MANZ)
 post-install:
-.  for FILE in mysql_client_test_embedded.1 mysqltest_embedded.1
-	${RM} -f ${DESTDIR}${PREFIX}/man/man1/${FILE}
-	${LN} -s ${FILE:S/_embedded//} ${DESTDIR}${PREFIX}/man/man1/${FILE}
+.  for mf in mysql_client_test_embedded.1 mysqltest_embedded.1
+	${RM} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mf}
+	${LN} -s ${mf:S/_embedded//} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${mf}
 .  endfor
 .endif
 

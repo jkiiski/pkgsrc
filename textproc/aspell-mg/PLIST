@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/malagasy.alias
+lib/aspell/mg.multi
+lib/aspell/mg.rws
+share/aspell/mg.dat

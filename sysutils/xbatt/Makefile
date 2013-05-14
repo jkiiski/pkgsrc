@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/06/12 22:04:53 zafer Exp $
+# $NetBSD: Makefile,v 1.27 2010/01/27 20:44:47 joerg Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -14,7 +14,7 @@ COMMENT=	Displays battery status of your notebook via APM
 PKG_DESTDIR_SUPPORT=	destdir
 
 .if !exists(/usr/include/machine/apmvar.h)
-PKG_SKIP_REASON+=	"APM is not available for ${MACHINE_PLATFORM}"
+PKG_FAIL_REASON+=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
 WRKSRC=		${WRKDIR}/xbatt-1.3

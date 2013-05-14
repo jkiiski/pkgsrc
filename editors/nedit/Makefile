@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2011/12/09 14:36:34 drochner Exp $
+# $NetBSD: Makefile,v 1.51 2012/10/03 11:43:38 asau Exp $
 
 DISTNAME=	nedit-${VERS}-src
 PKGNAME=	nedit-${VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_NEDIT:=v${VERS:S/./_/g}/} \
 		${MASTER_SITE_SOURCEFORGE:=nedit/}

@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 11:17:00 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/16 16:02:06 ryoon Exp $
 #
 
-DISTNAME=	gitolite-3.04
+GLVER=		3.4
+DISTNAME=	gitolite-${GLVER}
+PKGREVISION=	1
 CATEGORIES=	devel net
-MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v3.04.tar.gz
+MASTER_SITES=	-https://github.com/sitaramc/gitolite/archive/v${GLVER}.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sitaramc/gitolite/wiki
@@ -22,15 +24,16 @@ FETCH_USING=	curl
 NO_BUILD=	yes
 
 REPLACE_PERL=	src/lib/* src/VREF/* src/triggers/* src/triggers/*/* \
-		src/commands/* src/gitolite*
-REPLACE_SH=	src/VREF/* src/triggers/*
+		src/commands/* src/gitolite* src/lib/Gitolite/*/*
+REPLACE_SH=	src/VREF/* src/triggers/* src/triggers/post-compile/* \
+		src/commands/*
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Set PREFIX
-SUBST_FILES.prefix=	src/gitolite
-SUBST_FILES.prefix+=	src/lib/Gitolite/Rc.pm
-SUBST_VARS.prefix=	PREFIX
+SUBST_CLASSES+=		perl
+SUBST_STAGE.perl=	pre-configure
+SUBST_MESSAGE.perl=	Set PERL5
+SUBST_FILES.perl=	src/gitolite
+SUBST_FILES.perl+=	src/lib/Gitolite/Hooks/*
+SUBST_SED.perl=		-e 's,/usr/bin/perl,${PERL5},g'
 
 INSTALLATION_DIRS+=	bin lib \
 			share/doc/gitolite \

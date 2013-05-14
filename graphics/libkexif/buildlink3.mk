@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2012/09/15 10:05:02 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2013/02/09 22:11:29 ryoon Exp $
 
 BUILDLINK_TREE+=	libkexif
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libkexif
 LIBKEXIF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkexif+=	libkexif>=0.2.5
-BUILDLINK_ABI_DEPENDS.libkexif+=	libkexif>=0.2.5nb19
+BUILDLINK_ABI_DEPENDS.libkexif+=	libkexif>=0.2.5nb22
 BUILDLINK_PKGSRCDIR.libkexif?=	../../graphics/libkexif
 
 .include "../../graphics/libexif/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/03/01 22:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2013/02/21 07:58:21 wiz Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -14,6 +14,12 @@ AUTO_MKDIRS=		yes
 
 USE_BSD_MAKEFILE=	yes
 
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mclang*)
+MAKE_FLAGS+=		ACTIVE_CC=clang
+.endif
+
 .include "../../mk/bsd.prefs.mk"
 
 # Avoid self-referential and circular dependencies.
@@ -27,8 +33,8 @@ MAKE_ENV+=	NOGCCERROR=yes		# see PR 35930
 
 # Avoid catpage regeneration
 post-extract:
-	echo ".PHONY: checkperms.cat1" >> ${WRKSRC}/Makefile
-	echo "checkperms.cat1:" >> ${WRKSRC}/Makefile
-	echo "" >> ${WRKSRC}/Makefile
+	${ECHO} ".PHONY: checkperms.cat1" >> ${WRKSRC}/Makefile
+	${ECHO} "checkperms.cat1:" >> ${WRKSRC}/Makefile
+	${ECHO} "" >> ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"

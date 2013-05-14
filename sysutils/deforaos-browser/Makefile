@@ -1,10 +1,10 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.4 2013/03/13 20:14:53 khorben Exp $
 #
 
-DISTNAME=	Browser-0.4.9
-PKGNAME=	deforaos-browser-0.4.9
+DISTNAME=	Browser-0.4.11
+PKGNAME=	deforaos-browser-0.4.11
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/3720/
+MASTER_SITES=	http://www.defora.org/os/download/download/4289/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -22,6 +22,9 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/browser.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/browser.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/copy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/copy.1
@@ -34,6 +37,7 @@ post-install:
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/view.1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "options.mk"
 

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2012/10/28 06:30:22 asau Exp $
+# $NetBSD: Makefile,v 1.55 2013/05/03 16:17:35 drochner Exp $
 
-DISTNAME=	midori-0.4.7
+DISTNAME=	midori-0.4.9
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://archive.xfce.org/src/apps/midori/0.4/
@@ -15,6 +15,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--disable-zeitgeist
 
 CHECK_PORTABILITY_SKIP+= win32/x86-mingw32-opensuse/install.sh
 CHECK_PORTABILITY_SKIP+= win32/makedist/makedist.midori
@@ -75,5 +76,5 @@ BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_DEPMETHOD.vala= build
-.include "../../lang/vala018/buildlink3.mk"
+.include "../../lang/vala020/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2011/12/09 16:57:44 manu Exp $
+# $NetBSD: options.mk,v 1.7 2012/10/19 04:15:21 manu Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.glusterfs
 PKG_SUPPORTED_OPTIONS=  georeplication
@@ -11,4 +11,3 @@ PLIST_SRC+=		${PKGDIR}/PLIST.georeplication
 .else
 CONFIGURE_ARGS+=	--disable-georeplication
 .endif
-

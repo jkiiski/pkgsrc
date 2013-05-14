@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2012/10/08 23:01:32 adam Exp $
+# $NetBSD: Makefile,v 1.37 2013/02/16 11:21:07 wiz Exp $
 #
 
 DISTNAME=		tme-0.8
-PKGREVISION=		14
+PKGREVISION=		15
 CATEGORIES=		emulators
 MASTER_SITES=		http://csail.mit.edu/~fredette/tme/
 
@@ -21,6 +21,13 @@ USE_TOOLS+=		gmake perl:run pkg-config
 CONFIGURE_ARGS+=	--disable-debug
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-compare \
+			-Wno-error=sometimes-uninitialized
+.endif
+
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

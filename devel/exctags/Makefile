@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:56 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/03/22 05:07:50 rodent Exp $
 #
 
 DISTNAME=	ctags-5.8
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctags/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctags.sourceforge.net/
 COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -29,7 +30,7 @@ SUBST_SED.man+=		-e 's|fBctags|fBexctags|g'
 SUBST_SED.man+=		-e 's|fBetags|fBexetags|g'
 SUBST_SED.man+=		-e 's|"ctags|"exctags|g'
 SUBST_SED.man+=		-e 's|"etags|"exetags|g'
-SUBST_SED.man+=		-e 's|/usr/local|${LOCALBASE}|g'
+SUBST_SED.man+=		-e 's|/usr/local|${PREFIX}|g'
 
 SUBST_CLASSES+=		rename
 SUBST_STAGE.rename=	post-patch

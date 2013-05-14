@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.18 2012/12/19 08:14:42 obache Exp $
+# $NetBSD: Makefile.common,v 1.24 2013/05/09 14:04:42 joerg Exp $
 # used by www/webkit-gtk/Makefile
 # used by www/webkit-gtk3/Makefile
 
-DISTNAME=	webkitgtk-1.10.1
+DISTNAME=	webkitgtk-1.10.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -16,8 +16,6 @@ PATCHDIR=		${.CURDIR}/../../www/webkit-gtk/patches
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	bison gmake perl:build pkg-config msgfmt
-
-MAKE_JOBS_SAFE=		no
 
 PKGCONFIG_OVERRIDE=	Source/WebKit/gtk/webkit.pc.in
 
@@ -48,6 +46,13 @@ CONFIGURE_ENV+=	RUBY=${RUBY}
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+
+CXXFLAGS.SunOS+=	-fpermissive
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11 -Wno-c++11-narrowing
+.endif
 
 BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
 .include "../../devel/glib2/buildlink3.mk"

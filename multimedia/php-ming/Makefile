@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2012/06/18 15:15:48 taca Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/16 11:23:40 wiz Exp $
 
 .include "../../multimedia/ming/Makefile.common"
+PKGREVISION=		1
 PECL_VERSION=		${MING_VERSION}
 MODNAME=		ming
 CATEGORIES+=		multimedia
 DIST_SUBDIR?=		#empty
+EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://www.libming.org/

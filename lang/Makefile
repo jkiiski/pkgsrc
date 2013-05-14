@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.339 2012/12/29 19:48:52 dholland Exp $
+# $NetBSD: Makefile,v 1.343 2013/04/21 12:05:47 drochner Exp $
 #
 
 COMMENT=	Programming languages
@@ -62,6 +62,8 @@ SUBDIR+=	gcc45
 SUBDIR+=	gcc46
 SUBDIR+=	gcc47
 SUBDIR+=	gcc47-libs
+SUBDIR+=	gcc48
+SUBDIR+=	gcc48-libs
 SUBDIR+=	gforth
 SUBDIR+=	ghc
 SUBDIR+=	gnat-aux
@@ -111,7 +113,6 @@ SUBDIR+=	newlisp
 SUBDIR+=	nhc98
 SUBDIR+=	objc
 SUBDIR+=	ocaml
-SUBDIR+=	ocamlduce
 SUBDIR+=	onyx
 SUBDIR+=	oo2c
 SUBDIR+=	opencobol
@@ -143,7 +144,6 @@ SUBDIR+=	py27-html-docs
 #SUBDIR+=	python		# only contains Makefile fragments
 SUBDIR+=	python26
 SUBDIR+=	python27
-SUBDIR+=	python31
 SUBDIR+=	python32
 SUBDIR+=	python33
 SUBDIR+=	racket
@@ -201,6 +201,7 @@ SUBDIR+=	utilisp
 SUBDIR+=	vala
 SUBDIR+=	vala014
 SUBDIR+=	vala018
+SUBDIR+=	vala020
 SUBDIR+=	vscm
 SUBDIR+=	vslisp
 SUBDIR+=	wsbasic

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/05/03 09:55:31 obache Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/17 18:55:44 dholland Exp $
 
 DISTNAME=	xalarm-3.06
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 interactive alarm clock
@@ -21,7 +20,7 @@ KILL=		/bin/kill # should this be in bsd.pkg.mk ?
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(XALARM_USE_YOW)
-DEPENDS+=	emacs>=20.7:../../editors/emacs
+DEPENDS+=	emacs20>=20.7:../../editors/emacs
 .endif
 
 .if ${OPSYS} == "NetBSD"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/01/20 18:13:17 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/08 09:21:06 asau Exp $
 
 DISTNAME=	libdvdread-4.2.0
 CATEGORIES=	multimedia
@@ -20,5 +20,7 @@ MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"

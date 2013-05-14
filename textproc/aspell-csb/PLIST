@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/csb.multi
+lib/aspell/csb.rws
+lib/aspell/kashubian.alias
+lib/aspell/kaszëbsczi.alias
+share/aspell/csb.dat
+share/aspell/l-csb.cmap
+share/aspell/l-csb.cset

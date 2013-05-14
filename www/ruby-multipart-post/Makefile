@@ -1,6 +1,6 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.1 2013/01/26 08:46:29 obache Exp $
 
-DISTNAME=	multipart-post-1.1.5
+DISTNAME=	multipart-post-1.2.0
 CATEGORIES=	www
 
 MAINTAINER=	obache@NetBSD.org

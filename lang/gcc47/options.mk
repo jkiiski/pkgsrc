@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/06/23 22:13:02 marino Exp $
+# $NetBSD: options.mk,v 1.9 2013/02/05 07:12:23 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS+=	nls gcc-java
 .elif ${OPSYS} == "DragonFly"
 PKG_SUGGESTED_OPTIONS+= nls
 .elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
+PKG_SUGGESTED_OPTIONS+=	gcc-go gcc-inplace-math
 .else
 PKG_SUGGESTED_OPTIONS+= gcc-java
 .endif
@@ -28,8 +28,8 @@ MULTILIB_SUPPORTED=Yes
 .  endif
 .endif
 .if !empty(MULTILIB_SUPPORTED:M[Yy][Ee][Ss])
-PKG_SUPPORTED_OPTIONS+=  gcc-multilib
-PKG_SUGGESTED_OPTIONS+=  gcc-multilib
+PKG_SUPPORTED_OPTIONS+=	gcc-multilib
+PKG_SUGGESTED_OPTIONS+=	gcc-multilib
 .endif
 
 .include "../../mk/bsd.options.mk"

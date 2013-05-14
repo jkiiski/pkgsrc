@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2012/10/19 19:58:47 marino Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/10 11:12:28 wiz Exp $
 
-DISTNAME=		help2man-1.40.13
-CATEGORIES=		converters
-MASTER_SITES=		${MASTER_SITE_GNU:=help2man/}
+DISTNAME=	help2man-1.41.2
+CATEGORIES=	converters
+MASTER_SITES=	${MASTER_SITE_GNU:=help2man/}
 
-MAINTAINER=		arved@arved.at
-HOMEPAGE=		http://www.gnu.org/software/help2man/
-COMMENT=		Generate simple manual pages from program output
-LICENSE=		gnu-gpl-v3
+MAINTAINER=	arved@arved.at
+HOMEPAGE=	http://www.gnu.org/software/help2man/
+COMMENT=	Generate simple manual pages from program output
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=		p5-gettext>=1.01:../../devel/p5-gettext
 
@@ -25,14 +25,22 @@ INFO_FILES=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
+# XXX: will undoubtedly include more versions
+.if ${OPSYS} == "Darwin" && !empty(OS_VERSION:M9.*)
+SUBST_CLASSES+=		shlibarg
+SUBST_STAGE.shlibarg=	pre-configure
+SUBST_FILES.shlibarg=	Makefile.in
+SUBST_SED.shlibarg=	-e 's, -shared , -dynamiclib ,g'
+.endif
+
 PLIST_VARS+=		nls
 
 .if ${OPSYS} == "Darwin" && ${OS_VERSION:M8.*} != ""
-CONFIGURE_ARGS+= --disable-nls
+CONFIGURE_ARGS+=	--disable-nls
 .else
-.if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin"
 _STRIPFLAG_INSTALL=
-.endif
+.  endif
 USE_PKGLOCALEDIR=	yes
 PLIST.nls=		yes
 .endif

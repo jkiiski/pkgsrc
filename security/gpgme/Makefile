@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2011/10/06 18:00:00 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2013/05/04 02:50:41 obache Exp $
 
-DISTNAME=	gpgme-1.3.1
-PKGREVISION=	1
+DISTNAME=	gpgme-1.4.1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 EXTRACT_SUFX=	.tar.bz2
@@ -42,6 +41,12 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_lib_pthread_pthread_create=yes
+.endif
+
+# TLS is unsupported on NetBSD<=5, but causes crashes on -current too
+#.if !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*-*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+CONFIGURE_ENV+=		gpgme_cv_tls_works=no
 .endif
 
 # we want the getenv_r() semantics of NetBSD-current

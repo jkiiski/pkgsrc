@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/10/06 17:54:53 christos Exp $
+# $NetBSD: Makefile,v 1.21 2013/02/06 23:23:47 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/-/-clientonly-/}
 COMMENT=		The Network Backup Solution (client only)
 
-#PKGREVISION=		1
+PKGREVISION=		2
 
 CONFLICTS=		bacula-[0-9]* bacula-client-[0-9]*
 
@@ -27,7 +27,7 @@ RCD_SCRIPTS=		bacula-fd
 .include "../../sysutils/bacula/Makefile.common"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/scripts/dvd-handler ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/src/dird/query.sql ${DESTDIR}${PREFIX}/libexec/bacula/query.sql
 
 .include "options.mk"
 

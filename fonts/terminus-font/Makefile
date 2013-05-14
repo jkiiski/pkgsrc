@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.11 2012/10/21 12:52:14 cheusov Exp $
 #
 
 DISTNAME=		terminus-font-4.38
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=terminus-font/}
 MAINTAINER=		j+pkgsrc@salmi.ch
 HOMEPAGE=		http://terminus-font.sourceforge.net/
 COMMENT=		Clean, fixed-width font
-LICENSE=		open-font-license
+LICENSE=		ofl-v1.1
 
 USE_TOOLS+=		bdftopcf gmake gzip perl
 HAS_CONFIGURE=		yes

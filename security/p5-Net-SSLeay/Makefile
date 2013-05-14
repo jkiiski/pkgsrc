@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2012/10/21 22:28:16 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2013/02/06 23:23:42 jperkin Exp $
 
-DISTNAME=	Net-SSLeay-1.49
+DISTNAME=	Net-SSLeay-1.54
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nsl
 CATEGORIES=	security perl5

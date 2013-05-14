@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/croatian.alias
+lib/aspell/hr.multi
+lib/aspell/hr.rws
+share/aspell/hr.dat

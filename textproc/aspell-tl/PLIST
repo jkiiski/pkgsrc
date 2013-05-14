@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/tagalog.alias
+lib/aspell/tl.multi
+lib/aspell/tl.rws
+share/aspell/tl.dat

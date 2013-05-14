@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/02/27 03:35:11 taca Exp $
+# $NetBSD: Makefile,v 1.16 2013/02/06 23:21:37 jperkin Exp $
 
 MODNAME=		zlib
 CATEGORIES+=		archivers

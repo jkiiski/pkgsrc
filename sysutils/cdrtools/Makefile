@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.91 2012/12/18 07:58:05 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2013/02/27 08:40:37 wiz Exp $
 
-DISTNAME=	cdrtools-3.01a11
+DISTNAME=	cdrtools-3.01a14
 PKGNAME=	${DISTNAME:S/a/alpha/:S/-pre/pre/}
 CATEGORIES=	sysutils
 #MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/ \

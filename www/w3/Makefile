@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2011/03/31 13:25:56 obache Exp $
+# $NetBSD: Makefile,v 1.28 2013/02/17 19:18:10 dholland Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_XEMACS:=emacs-w3/}
 
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-emacs
 CONFIGURE_ARGS+=	--enable-site-install
 CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX}/w3
 CONFIGURE_ARGS+=	--datadir=${ETCDIR}
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 PLIST_SUBST+=	ETCDIR=${ETCDIR:S/^${PREFIX}\///:Q}
 

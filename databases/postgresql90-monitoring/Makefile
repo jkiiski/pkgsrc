@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/10/02 21:25:45 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/06 23:21:57 jperkin Exp $
 
 PKGNAME=	${DISTNAME:C/-/90-monitoring-/}
-PKGREVISION=	1
 COMMENT=	PostgreSQL monitoring tools
 
 DEPENDS+=	postgresql90-server>=${PKGVERSION_NOREV}:../../databases/postgresql90-server

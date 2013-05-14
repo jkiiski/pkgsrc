@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:56:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/06 14:58:20 rodent Exp $
 #
 
-DISTNAME=		mailhops-1.4
-PKGREVISION=		1
-CATEGORIES=		mail
-MASTER_SITES=		http://www.spinnaker.de/mutt/
+DISTNAME=	mailhops-1.4
+PKGREVISION=	1
+CATEGORIES=	mail
+MASTER_SITES=	http://www.spinnaker.de/mutt/
 EXTRACT_SUFX=		
 
-LICENSE=		gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
-MAINTAINER=		is@netbsd.org
-HOMEPAGE=		http://www.spinnaker.de/mutt/
-COMMENT=		Shows the route of an Internet mail message.
+MAINTAINER=	is@NetBSD.org
+HOMEPAGE=	http://www.spinnaker.de/mutt/
+COMMENT=	Shows the route of an Internet mail message
 
-WRKSRC=			${WRKDIR}
-EXTRACT_CMD=		echo ${CP} "$${extract_file}" ${WRKSRC}/mailhops; \
+WRKSRC=		${WRKDIR}
+EXTRACT_CMD=	${ECHO} ${CP} "$${extract_file}" ${WRKSRC}/mailhops; \
 				${CP} "$${extract_file}" ${WRKSRC}/mailhops
 
 
@@ -35,4 +35,3 @@ do-install:
 
 
 .include "../../mk/bsd.pkg.mk"
-

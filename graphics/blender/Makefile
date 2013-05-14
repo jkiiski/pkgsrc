@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2013/01/19 20:40:55 riastradh Exp $
+# $NetBSD: Makefile,v 1.91 2013/03/13 20:28:48 ryoon Exp $
 
-DISTNAME=	blender-2.65a
-PKGREVISION=	2
+DISTNAME=	blender-2.66a
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -72,7 +72,7 @@ do-install:
 		${SCONSDIR}/bin/scons ${SCONS_ARGS}
 
 CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py \
-			share/blender/2.65/python/lib/python3.3/venv/scripts/posix/pydoc
+			share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/python/lib/python3.3/venv/scripts/posix/pydoc
 
 post-install:
 	${LN} -sf ${PREFIX}/share/blender/blender \

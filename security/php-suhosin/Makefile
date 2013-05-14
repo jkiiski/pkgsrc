@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/16 22:34:23 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/23 18:16:50 asau Exp $
 #
 
 MODNAME=		suhosin
@@ -12,7 +12,7 @@ MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://www.hardened-php.net/suhosin/index.html
 COMMENT=		Advanced protection system for PHP installations
 
-# There is no patch for PHP 5.4 yet(?). 
+# There is no patch for PHP 5.4 yet(?).
 PHP_VERSIONS_ACCEPTED=	53
 
 CONFIGURE_ARGS=		--enable-${MODNAME}

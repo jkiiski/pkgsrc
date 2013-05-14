@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/hus.multi
+lib/aspell/hus.rws
+share/aspell/hus.dat
+share/aspell/hus_affix.dat

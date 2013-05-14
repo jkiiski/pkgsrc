@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2012/10/03 11:43:32 asau Exp $
+# $NetBSD: Makefile,v 1.46 2013/02/16 23:58:36 dholland Exp $
 
 DISTNAME=	emacs-20.7
+PKGNAME=	${DISTNAME:S/emacs/emacs20/}
 PKGREVISION=	16
 CATEGORIES=	editors
 MASTER_SITES=	http://ftp.gnu.org/pub/old-gnu/emacs/	\
@@ -75,7 +76,7 @@ MAKE_ENV+=	INSTALL_STRIP=${_STRIPFLAG_INSTALL:Q}
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 

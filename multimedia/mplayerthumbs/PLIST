@@ -1,0 +1,8 @@
+@comment $NetBSD$
+bin/mplayerthumbsconfig
+lib/kde4/videopreview.so
+share/kde/apps/videothumbnail/sprocket-large.png
+share/kde/apps/videothumbnail/sprocket-medium.png
+share/kde/apps/videothumbnail/sprocket-small.png
+share/kde/config.kcfg/mplayerthumbs.kcfg
+share/kde4/services/videopreview.desktop

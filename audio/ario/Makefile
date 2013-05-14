@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2012/12/16 01:51:57 obache Exp $
+# $NetBSD: Makefile,v 1.29 2013/04/06 03:45:06 rodent Exp $
 #
 
 DISTNAME=	ario-1.5.1
-PKGREVISION=	12
+PKGREVISION=	15
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ario-player/1.5.1/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ario-player.sourceforge.net/
-COMMENT=	mpd client
+COMMENT=	Client for mpd
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes

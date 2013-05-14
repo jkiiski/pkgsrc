@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2012/10/02 17:10:29 tron Exp $
+# $NetBSD: Makefile,v 1.51 2013/02/06 23:21:38 jperkin Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
 
 .include "Makefile.common"
-PKGREVISION=		23
+PKGREVISION=		25
 
 USE_TOOLS+=		unzip:run
 

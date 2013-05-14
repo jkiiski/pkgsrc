@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/15 11:53:23 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/31 11:16:31 asau Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	7
@@ -21,8 +21,8 @@ SUBST_CLASSES+=		mod
 SUBST_MESSAGE.mod=	Fixing deprecated module names.
 SUBST_STAGE.mod=	post-patch
 SUBST_FILES.mod=	Profile.py SourceEditor.py StcStyle.py
-SUBST_SED.mod=		-e 's,wxPython\.lib\.PyCrust,wxPython.py,g'	\
-			-e 's,wxPython\.py,wx.py,g'
+SUBST_SED.mod=		-e 's,wxPython\.lib\.PyCrust,wxPython.py,g'
+SUBST_SED.mod+=		-e 's,wxPython\.py,wx.py,g'
 
 SUBST_CLASSES+=		py
 SUBST_MESSAGE.py=	Fixing paths in a wrapper script.

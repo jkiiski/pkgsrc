@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:50 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 21:30:42 wiz Exp $
 #
 
 DISTNAME=	trueskill-0.1.4
@@ -7,7 +7,7 @@ CATEGORIES=	games devel
 MASTER_SITES=	http://pypi.python.org/packages/source/t/trueskill/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://packages.python.org/trueskill/
+HOMEPAGE=	http://trueskill.org/
 COMMENT=	Python module implementing the TrueSkill rating system
 LICENSE=	2-clause-bsd
 

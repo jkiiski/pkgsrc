@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2010/04/17 15:03:19 zafer Exp $
+# $NetBSD: Makefile,v 1.41 2013/03/01 21:16:11 markd Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.uni-mainz.de/pub/software/gnu/vm/ \
 		ftp://tug.org/vm/ \
@@ -18,7 +18,7 @@ HOMEPAGE=	http://www.wonderworks.com/vm/
 COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/vm
@@ -35,7 +35,7 @@ PIXMAPDIR.emacs=	${EMACS_LISPPREFIX}/vm/pixmaps
 PIXMAPDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/vm
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_DATA} *.el* ${DESTDIR}${EMACS_LISPPREFIX}/vm
+	cd ${WRKSRC} && ${INSTALL_DATA} *.el *.elc ${DESTDIR}${EMACS_LISPPREFIX}/vm
 	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\

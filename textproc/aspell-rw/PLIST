@@ -1,0 +1,4 @@
+@comment $NetBSD$
+lib/aspell/rw.multi
+lib/aspell/rw.rws
+share/aspell/rw.dat

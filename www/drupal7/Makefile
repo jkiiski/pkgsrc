@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2012/12/20 12:45:58 taca Exp $
+# $NetBSD: Makefile,v 1.19 2013/03/16 07:21:24 obache Exp $
 
-DISTNAME=	drupal-7.19
+DISTNAME=	drupal-7.22
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -23,8 +23,7 @@ PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS+=	WWW_USER
 
 BUILD_DEFS+=		WWW_USER WWW_GROUP
-USE_TOOLS+=		perl:run pax
-REPLACE_PERL=		scripts/code-style.pl
+USE_TOOLS+=		pax
 
 OWN_DIRS_PERMS+=	${DRUPAL}/sites/default \
 			${WWW_USER} ${WWW_GROUP} 0750

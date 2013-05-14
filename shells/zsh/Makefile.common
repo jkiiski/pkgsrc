@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2012/08/16 13:30:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.70 2013/03/28 22:26:13 jperkin Exp $
 # used by shells/zsh/Makefile
 # used by shells/zsh-current/Makefile
 
@@ -30,6 +30,14 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .if ${OPSYS} == "Darwin"
 #CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_LIB:Q}
 INSTALL_UNSTRIPPED=	yes
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+# These can't be detected automagically in cross-builds.
+CONFIGURE_ENV+=		zsh_cv_shared_environ=yes
+CONFIGURE_ENV+=		zsh_cv_shared_tgetent=yes
+CONFIGURE_ENV+=		zsh_cv_shared_tigetstr=yes
+CONFIGURE_ENV+=		zsh_cv_sys_dynamic_execsyms=yes
 .endif
 
 PLIST_VARS+=	xattr
@@ -87,7 +95,7 @@ _ZSH_OPSYS_VARS.notcsetpgrp=	--without-tcsetpgrp
 ### terminfo
 CHECK_BUILTIN.terminfo=	yes
 .include "../../mk/terminfo.builtin.mk"
-.if !empty(USE_BUILTIN.terminfo:M[Yy][Ee][Ss])
+.if !empty(USE_BUILTIN.terminfo:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 PLIST.terminfo=	yes
 .endif
 
@@ -95,7 +103,7 @@ PLIST.terminfo=	yes
 .if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*)
 CHECK_BUILTIN.curses=	yes
 .include "../../mk/curses.builtin.mk"
-.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss])
+.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 PLIST.curses=	yes
 .endif
 .endif

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2012/06/28 05:15:38 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/23 19:51:23 asau Exp $
 #
 
-DISTNAME=		sformat-3.5
-PKGREVISION=		1
-CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.berlios.de/pub/sformat/
+DISTNAME=	sformat-3.5
+PKGREVISION=	1
+CATEGORIES=	sysutils
+MASTER_SITES=	ftp://ftp.berlios.de/pub/sformat/
 
-MAINTAINER=		Andreas.Hallmann@tiscali.de
-HOMEPAGE=		http://freshmeat.net/projects/sformat
-COMMENT=		SCSI disk maintainance, formating, and ultimative repair tool with support for NetBSD labels
+MAINTAINER=	Andreas.Hallmann@tiscali.de
+HOMEPAGE=	http://freshmeat.net/projects/sformat
+COMMENT=	SCSI disk maintainance, formating, and ultimative repair tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/06/13 06:46:41 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2012/10/31 11:16:55 asau Exp $
 #
 # used by devel/emacs20-elib/Makefile
 
@@ -17,7 +17,7 @@ MAKEFLAGS+=		EMACS=${EMACS_FLAVOR:Q}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake makeinfo
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 DISTINFO_FILE=	${.CURDIR}/../../devel/elib/distinfo
 PATCHDIR=	${.CURDIR}/../../devel/elib/patches

@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2012/10/31 11:16:39 asau Exp $
+# $NetBSD: Makefile,v 1.25 2013/02/16 11:20:41 wiz Exp $
 
 DISTNAME=	automoc4-0.9.88
-PKGREVISION=	16
+PKGREVISION=	18
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=automoc4/0.9.88/}
 EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	automoc4
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://www.kde.org
+HOMEPAGE=	http://www.kde.org/
 COMMENT=	Automatic moc for Qt 4 packages
 
 USE_LANGUAGES=	c c++

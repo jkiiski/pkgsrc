@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2012/10/31 11:16:40 asau Exp $
-#
+# $NetBSD: Makefile,v 1.62 2013/02/18 22:38:19 adam Exp $
 
 DISTNAME=	bmake-20110606
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -29,14 +29,12 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-default-sys-path=${makesyspath}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OS_VARIANT} == "SmartOS"
+.if !empty(MACHINE_PLATFORM:MSunOS-5.11-*) && exists(/usr/bin/bash)
 CONFIGURE_ARGS+=	--with-defshell=/usr/bin/bash
-.elif ${OPSYS} == "SunOS" && ${OS_VERSION} == "5.11"
-CONFIGURE_ARGS+=	--with-defshell=/bin/ksh
 .elif ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "IRIX"
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
@@ -58,5 +56,8 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmake ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+do-test:
+	cd ${WRKSRC}/unit-tests && ${WRKSRC}/bmake test
 
 .include "../../mk/bsd.pkg.mk"

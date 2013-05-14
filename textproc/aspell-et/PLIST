@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/estonian.alias
+lib/aspell/et.multi
+lib/aspell/et.rws
+share/aspell/et.dat
+share/aspell/et_affix.dat

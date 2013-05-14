@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/wa.multi
+lib/aspell/wa.rws
+lib/aspell/walloon.alias
+lib/aspell/walon.alias
+share/aspell/wa.dat
+share/aspell/wa_phonet.dat

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:55:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:19:11 asau Exp $
 
-DISTNAME=	Test-TinyMocker-0.03 
+DISTNAME=	Test-TinyMocker-0.03
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel perl5

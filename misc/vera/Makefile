@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 19:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/08 09:57:40 asau Exp $
 
 DISTNAME=	vera-1.16
 CATEGORIES=	misc
@@ -10,7 +10,7 @@ HOMEPAGE=	http://cgi.snafu.de/ohei/user-cgi-bin/veramain-e.cgi
 COMMENT=	Virtual Entity of Relevant Acronyms
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	${PKGINFODIR}
 

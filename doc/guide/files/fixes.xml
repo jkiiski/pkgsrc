@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.110 2012/09/30 09:16:56 asau Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.119 2013/05/05 21:26:37 rodent Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -128,34 +128,41 @@ INTERACTIVE_STAGE=      configure install
     <varname>ACCEPTABLE_LICENSES</varname> variable with "=" instead
     of "+=".  The licenses accepted by default are:
     <programlisting>
-        public-domain unlicense
-        gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
-        gnu-gpl-v1
-        gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
-        gnu-gpl-v3 gnu-lgpl-v3
-        original-bsd modified-bsd 2-clause-bsd
-        x11 mit miros
-        apache-1.1 apache-2.0
-        artistic artistic-2.0
-        cddl-1.0
-        cpl-1.0
-        open-font-license
-        mpl-1.0 mpl-1.1 mpl-2.0
-        php png-license
-        postgresql-license
-        zlib
-        zpl
-        python-software-foundation
-        ipafont
-        ibm-public-license-1.0
-        isc
-        boost-license
-        mplusfont
-        cc-by-sa-v3.0
-        lppl-1.3c
-        lucent
-        epl-v1.0
-	info-zip
+	apache-1.1 apache-2.0
+	arphic-public
+	artistic artistic-2.0
+	boost-license
+	cc-by-sa-v3.0
+	cddl-1.0
+	cpl-1.0
+	epl-v1.0
+	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
+	gnu-gpl-v1
+	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
+	gnu-gpl-v3 gnu-lgpl-v3
+	ibm-public-license-1.0
+	ipafont
+	isc
+	lppl-1.3c
+	lucent
+	miros
+	mit
+	mpl-1.0 mpl-1.1 mpl-2.0
+	mplusfont
+	ofl-v1.0 ofl-v1.1
+	original-bsd modified-bsd 2-clause-bsd
+	php
+	png-license
+	postgresql-license
+	public-domain
+	python-software-foundation
+	qpl-v1.0
+	sgi-free-software-b-v2.0
+	sleepycat-public
+	unlicense
+	x11
+	zlib
+	zpl
     </programlisting>
     </para>
 
@@ -201,11 +208,18 @@ LICENSE=        xv-license
 ACCEPTABLE_LICENSES+=xv-license
     </programlisting>
 
-    <para>When adding a package with a new license, the license text
-    should be added to <filename>pkgsrc/licenses</filename> for
-    displaying.  A list of known licenses can be seen in this
-    directory.</para>
-
+    <para>When adding a package with a new license, the following steps
+    are required:</para>
+    <orderedlist>
+    <listitem><para>Check if the file can avoid the -license filename tag as described above by referencing <ulink url="http://www.gnu.org/licenses/license-list.html">Various Licenses and Comments about Them</ulink> and <ulink url="http://opensource.org/licenses/alphabetical">Licenses by Name | Open Source Initiative</ulink>.  If this is the case, additionally add the license filename to:</para>
+    <itemizedlist>
+    <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in <filename>pkgsrc/mk/license.mk</filename></para></listitem>
+    <listitem><para>default_acceptable_licenses in <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
+    <listitem><para>the ACCEPTABLE_LICENSES list in <filename>pkgsrc/doc/guide/files/fixes.xml</filename></para></listitem>
+    </itemizedlist>
+    <para>with the proper syntax as demonstrated in those files, respectively.</para></listitem>
+    <listitem><para>The license text should be added to <filename>pkgsrc/licenses</filename> for displaying.  A list of known licenses can be seen in this directory.</para></listitem>
+    </orderedlist>
     <para>When the license changes (in a way other than formatting),
     please make sure that the new license has a different name (e.g.,
     append the version number if it exists, or the date).  Just
@@ -701,8 +715,8 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     sure the distfile was really updated on purpose, and that
     no trojan horse or so crept in.
     Please mention that the distfiles were compared and what was found
-    in your commit message.
-    Then, the correct way to work around this is to
+    in your commit message.</para>
+    <para>Then, the correct way to work around this is to
     set <varname>DIST_SUBDIR</varname> to a unique directory name,
     usually based on <varname>PKGNAME_NOREV</varname>. All
     <varname>DISTFILES</varname> and
@@ -712,11 +726,12 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     In case this
     happens more often, <varname>PKGNAME</varname> can be used (thus
     including the <filename>nbX</filename> suffix) or a date stamp
-    can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.
-    Do not forget regenerating the <filename>distinfo</filename> file
+    can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.</para>
+    <para><varname>DIST_SUBDIR</varname> is also used when a distfile's name does not contain a version and the distfile is apt to change. In cases where the likelihood of this is very small, <varname>DIST_SUBDIR</varname> might not be required. Additionally, <varname>DIST_SUBDIR</varname> must not be removed unless the distfile name changes, even if a package is being moved or renamed.</para>
+    <para>Do not forget regenerating the <filename>distinfo</filename> file
     after that, since it contains the <varname>DIST_SUBDIR</varname>
     path in the filenames.
-    Also increase the PKGREVISION if the installed package is different.
+    Also, increase the PKGREVISION if the installed package is different.
     Furthermore, a mail to the package's authors seems appropriate
     telling them that changing distfiles after releases without
     changing the file names is not good practice.</para>
@@ -1136,11 +1151,15 @@ pre-configure:
 	for the following macros.</para>
 
 <programlisting>
-FreeBSD     __FreeBSD__
+Cygwin      __CYGWIN__
 DragonFly   __DragonFly__
+FreeBSD     __FreeBSD__
+Haiku       __HAIKU__
 Interix     __INTERIX
 IRIX        __sgi (TODO: get a definite source for this)
 Linux       linux, __linux, __linux__
+MirBSD      __MirBSD__ (__OpenBSD__ is also defined)
+Minix3      __minix
 NetBSD      __NetBSD__
 OpenBSD     __OpenBSD__
 Solaris     sun, __sun
@@ -1417,19 +1436,30 @@ REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
     the installed <filename>.packlist</filename> file generated by
     most perl5 modules.  This is invoked by defining
     <varname>PERL5_PACKLIST</varname> to a space-separated list of
-    paths to packlist files, e.g.:</para>
+    packlist files relative to <varname>PERL5_PACKLIST_DIR</varname>
+    (<varname>PERL5_INSTALLVENDORARCH</varname> by default),
+    e.g.:</para>
 
     <programlisting>
-PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
+PERL5_PACKLIST= auto/Pg/.packlist
     </programlisting>
 
-    <para>The variables <varname>PERL5_SITELIB</varname>,
-    <varname>PERL5_SITEARCH</varname>, and
-    <varname>PERL5_ARCHLIB</varname> represent the three locations
-    in which perl5 modules may be installed, and may be used by
-    perl5 packages that don't have a packlist.  These three
-    variables are also substituted for in the
-    <filename>PLIST</filename>.</para>
+    <para>The perl5 config variables
+    <varname>installarchlib</varname>,
+    <varname>installscript</varname>,
+    <varname>installvendorbin</varname>,
+    <varname>installvendorscript</varname>,
+    <varname>installvendorarch</varname>,
+    <varname>installvendorlib</varname>,
+    <varname>installvendorman1dir</varname>, and
+    <varname>installvendorman3dir</varname> represent those
+    locations in which components of perl5 modules may be installed,
+    provided as variable with uppercase and prefixed with
+    <varname>PERL5_</varname>, e.g. <varname>PERL5_INSTALLARCHLIB</varname>
+    and may be used by perl5 packages that don't have a packlist.
+    These variables are also substituted for in the
+    <filename>PLIST</filename> as uppercase prefixed with
+    <varname>PERL5_SUB_</varname>.</para>
   </sect2>
 
 
@@ -1883,8 +1913,8 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 
       <para>If a package installs <filename>.desktop</filename> files
       under <filename>share/applications</filename> and these include
-      MIME information, you need to take extra steps to ensure that they
-      are registered into the MIME database:</para>
+      MIME information (MimeType key), you need to take extra steps to
+      ensure that they are registered into the MIME database:</para>
 
       <orderedlist>
         <listitem>

@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.63 2012/05/11 14:08:59 drochner Exp $
+# $NetBSD: Makefile,v 1.68 2013/02/12 09:15:36 adam Exp $
 
-DISTNAME=	gmp-5.0.5
+DISTNAME=	gmp-5.1.1
 CATEGORIES=	devel math
-MASTER_SITES=	${MASTER_SITE_GNU:=gmp/}
+MASTER_SITES=	ftp://ftp.gmplib.org/pub/${DISTNAME}/
+# Use .tar.bz2 distfile so that no extra dependency on archivers/xz
+# is needed when building lang/gcc* with option gcc-inplace-math.
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -12,12 +14,11 @@ LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 autoconf makeinfo
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-readline
 
 TEST_TARGET=		check
@@ -25,6 +26,10 @@ TEST_TARGET=		check
 PLIST_VARS+=		cxx
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+.endif
 
 .if empty(PKGSRC_COMPILER:Msunpro)
 CONFIGURE_ARGS+=	--enable-cxx

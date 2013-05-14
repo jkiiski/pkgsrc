@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2010/11/01 00:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2013/02/06 19:30:55 jperkin Exp $
 #
 
 DISTNAME=		arping-2.08
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.habets.pp.se/pub/synscan/
 
@@ -18,7 +18,7 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.libnet11}/include/libnet11
 
 do-build:
 	${CC} -o ${WRKSRC}/arping ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} \
-	    ${WRKSRC}/arping-2/arping.c ${LIBS}    
+	    ${WRKSRC}/arping-2/arping.c ${LIBS}
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/arping.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8

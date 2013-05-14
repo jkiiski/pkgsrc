@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2012/12/17 01:00:40 khorben Exp $
+# $NetBSD: Makefile,v 1.432 2013/04/21 12:44:52 ryoon Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -158,6 +158,7 @@ SUBDIR+=	mime-construct
 SUBDIR+=	mimedefang
 SUBDIR+=	mimp
 SUBDIR+=	mini_sendmail
+SUBDIR+=	minimalist
 SUBDIR+=	mpop
 SUBDIR+=	msmtp
 SUBDIR+=	mush
@@ -212,6 +213,7 @@ SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
 SUBDIR+=	p5-Mail-Mbox-MessageParser
 SUBDIR+=	p5-Mail-Milter
+SUBDIR+=	p5-Mail-POP3Client
 SUBDIR+=	p5-Mail-RFC822-Address
 SUBDIR+=	p5-Mail-SPF
 SUBDIR+=	p5-Mail-SPF-Query
@@ -228,6 +230,7 @@ SUBDIR+=	p5-Net-SMTP_auth
 SUBDIR+=	p5-Net-validMX
 SUBDIR+=	p5-Sendmail-AccessDB
 SUBDIR+=	p5-Sendmail-PMilter
+SUBDIR+=	p5-Test-Email
 SUBDIR+=	p5-URI-imap
 SUBDIR+=	p5-User-Identity
 SUBDIR+=	p5-razor-agents
@@ -282,12 +285,9 @@ SUBDIR+=	ripmime
 SUBDIR+=	rmail-mime
 SUBDIR+=	roundcube
 SUBDIR+=	rss2email
-SUBDIR+=	ruby-actionmailer3
-SUBDIR+=	ruby-actionmailer31
 SUBDIR+=	ruby-actionmailer32
 SUBDIR+=	ruby-mail
-SUBDIR+=	ruby-mail22
-SUBDIR+=	ruby-mail23
+SUBDIR+=	ruby-mail24
 SUBDIR+=	ruby-mailfactory
 SUBDIR+=	ruby-mime-types
 SUBDIR+=	ruby-tmail
@@ -300,6 +300,7 @@ SUBDIR+=	serialmail
 SUBDIR+=	sid-milter
 SUBDIR+=	sigrot
 SUBDIR+=	sma
+SUBDIR+=	smtp-vilter
 SUBDIR+=	smtpfeed
 SUBDIR+=	solid-pop3d
 SUBDIR+=	spamass-milter

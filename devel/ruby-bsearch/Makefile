@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/09/10 05:12:28 taca Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/31 11:19:40 asau Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
@@ -13,7 +13,7 @@ LICENSE=	ruby-license
 
 VERSION=	1.5
 NO_CONFIGURE=	yes
-TEST_DIRS=	${WRKSRC}/tests
+TEST_DIRS=	tests
 TEST_TARGET=	check
 
 RD_SRCS=	bsearch.en.rd bsearch.ja.rd

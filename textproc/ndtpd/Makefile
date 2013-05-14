@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/10/03 21:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/25 06:56:09 asau Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -16,7 +16,7 @@ USE_TOOLS+=	makeinfo perl:run
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${NDTPD_RUNDIR:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/29 22:58:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/02 10:40:36 fhajny Exp $
 #
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
@@ -13,7 +13,10 @@ LICENSE=		mpl-1.1
 
 USE_TOOLS+=		bash:run coreutils gmake unzip zip
 
+MAKE_JOBS_SAFE=		no
+
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
@@ -72,6 +75,7 @@ MAKE_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
 MAKE_ENV+=		MAN_DIR="${DESTDIR}${PREFIX}/man"
 MAKE_ENV+=		RMQ_VERSION=${RMQ_VERSION}
 MAKE_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
+MAKE_ENV+=		GIT_SSL_NO_VERIFY=true
 
 INSTALL_ENV+=		TARGET_DIR="${DESTDIR}${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}"
 INSTALL_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
@@ -80,6 +84,7 @@ INSTALL_ENV+=		RMQ_VERSION=${RMQ_VERSION}
 INSTALL_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
 
 REPLACE_PYTHON+=	calculate-relative
+REPLACE_PYTHON+=	plugins-src/rabbitmq-amqp1.0/codegen.py
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf ${DESTDIR}${PREFIX}/share/examples/rabbitmq/rabbitmq-env.conf

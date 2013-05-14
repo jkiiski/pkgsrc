@@ -1,0 +1,6 @@
+@comment $NetBSD$
+lib/aspell/ku.multi
+lib/aspell/ku.rws
+lib/aspell/kurdi.alias
+lib/aspell/kurdish.alias
+share/aspell/ku.dat

@@ -1,0 +1,5 @@
+@comment $NetBSD$
+lib/aspell/sl.multi
+lib/aspell/sl.rws
+lib/aspell/slovenian.alias
+share/aspell/sl.dat

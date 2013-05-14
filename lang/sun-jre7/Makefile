@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2012/12/15 18:36:51 abs Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/13 11:19:36 ryoon Exp $
 
-# Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
+# Note: Regen distinfo with PKG_OPTIONS.sun-jre7+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
+# Note: This needs to be kept in sync with the sun-jdk7 package
+# Note: If you make makesum, make sure that you include both archs in distinfo
 
-DISTNAME=	jre-7u10-linux-${DIST_ARCH}
-PKGNAME=	sun-jre7-7.0.10
+DISTNAME=	jre-7u21-${DIST_OS}-${DIST_ARCH}
+PKGNAME=	sun-jre7-7.0.21
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
 
-DOWNLOAD_NAME=	Java Runtime Environment (JRE) 7u10
+DOWNLOAD_NAME=	Java Runtime Environment (JRE) 7u21
 
 USE_TOOLS+=	pax
 
-WRKSRC=		${WRKDIR}/jre1.7.0_10
+WRKSRC=		${WRKDIR}/jre1.7.0_21
 JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
 REQD_DIRS=	${JAVA_HOME}
@@ -26,9 +28,15 @@ CONF_FILES=	# empty
 
 .include "../../lang/sun-jre7/Makefile.common"
 
-SFILES_MK=sfiles-${EMUL_OPSYS}-${EMUL_ARCH}.mk
+SFILES_MK=sfiles-${DIST_OS}-${EMUL_ARCH}.mk
 
 .sinclude "${SFILES_MK}"
+
+# The 64-bit Solaris downloads for some inexplicable reason only contain
+# the additional 64-bit files, and you need the main 32-bit file too.
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "x86_64"
+DISTFILES=	${DEFAULT_DISTFILES} ${DEFAULT_DISTFILES:S/x64/i586/}
+.endif
 
 .for file in ${SFILES}
 CONF_FILES+=	${JAVA_HOME}/lib/${file}.default ${JAVA_HOME}/lib/${file}
@@ -42,7 +50,7 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_SRC=	PLIST.linux-${EMUL_ARCH}
+PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 
 PLIST_VARS+=	jce native
 .if !empty(PKG_OPTIONS:Msun-jre-jce)

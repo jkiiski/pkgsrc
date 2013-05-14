@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/28 14:52:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/31 11:19:23 asau Exp $
 
 DISTNAME=	PDCurses-3.3
 PKGNAME=	${DISTNAME:tl}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pdcurses/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pdcurses.sourceforge.net/
-COMMENT=	public domain implementation of the X/Open curses standard
+COMMENT=	Public domain implementation of the X/Open curses standard
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

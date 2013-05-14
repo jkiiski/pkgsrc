@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2012/11/29 08:00:12 jnemeth Exp $
+# $NetBSD: Makefile,v 1.250 2013/03/16 04:05:40 taca Exp $
 
 COMMENT=	Mathematics
 
@@ -78,6 +78,7 @@ SUBDIR+=	dfftpack
 SUBDIR+=	dieharder
 SUBDIR+=	djbfft
 SUBDIR+=	eigen2
+SUBDIR+=	eigen3
 SUBDIR+=	eispack
 SUBDIR+=	ess
 SUBDIR+=	eukleides
@@ -99,6 +100,7 @@ SUBDIR+=	genius
 SUBDIR+=	glpk
 SUBDIR+=	gnumeric
 SUBDIR+=	gnumeric110
+SUBDIR+=	gnumeric112
 SUBDIR+=	gp-autpgrp
 SUBDIR+=	gp-factint
 SUBDIR+=	gp-fplsa
@@ -113,12 +115,14 @@ SUBDIR+=	gtklife
 SUBDIR+=	harminv
 SUBDIR+=	heirloom-factor
 SUBDIR+=	heirloom-units
+SUBDIR+=	isl
 SUBDIR+=	itpp
 SUBDIR+=	kalgebra
 SUBDIR+=	kcalc
 SUBDIR+=	kseg
 SUBDIR+=	lapack
 SUBDIR+=	libffm
+SUBDIR+=	libint
 SUBDIR+=	libmatheval
 SUBDIR+=	linpack
 SUBDIR+=	lp_solve
@@ -181,6 +185,7 @@ SUBDIR+=	p5-Statistics-Descriptive
 SUBDIR+=	p5-Test-Number-Delta
 SUBDIR+=	pari
 SUBDIR+=	pari-galdata
+SUBDIR+=	pear-Math_BigInteger
 SUBDIR+=	pear-Numbers_Roman
 SUBDIR+=	pear-Numbers_Words
 SUBDIR+=	php-bcmath
@@ -214,7 +219,8 @@ SUBDIR+=	qalculate-units
 SUBDIR+=	qhull
 SUBDIR+=	quadpack
 SUBDIR+=	randlib
-SUBDIR+=	ruby-rb-gsl
+SUBDIR+=	ruby-gsl
+SUBDIR+=	ruby-narray
 SUBDIR+=	ruby-spreadsheet
 SUBDIR+=	sc
 SUBDIR+=	scilab

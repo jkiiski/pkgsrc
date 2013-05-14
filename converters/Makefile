@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2012/07/05 16:26:05 sno Exp $
+# $NetBSD: Makefile,v 1.119 2013/03/05 20:05:57 pettai Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -23,6 +23,7 @@ SUBDIR+=	dvi2tty
 SUBDIR+=	enriched2html
 SUBDIR+=	fondu
 SUBDIR+=	fribidi
+SUBDIR+=	gbase
 SUBDIR+=	help2man
 SUBDIR+=	hztty
 SUBDIR+=	ish
@@ -44,6 +45,7 @@ SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Convert-Color
 SUBDIR+=	p5-Convert-TNEF
 SUBDIR+=	p5-Convert-UUlib
+SUBDIR+=	p5-Data-Hexify
 SUBDIR+=	p5-JSON
 SUBDIR+=	p5-JSON-Any
 SUBDIR+=	p5-JSON-PP

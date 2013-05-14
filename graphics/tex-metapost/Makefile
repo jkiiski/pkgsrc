@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2011/07/28 08:54:58 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/15 22:34:40 minskim Exp $
 
 DISTNAME=	metapost
 PKGNAME=	tex-${DISTNAME}-1.212
 TEXLIVE_REV=	23089
 
 MAINTAINER=	minskim@NetBSD.org
-COMMENT=	A development of MetaFont for creating graphics
+COMMENT=	Development of MetaFont for creating graphics
 
 CONFLICTS+=	teTeX-texmf<=3.0nb25
 DEPENDS+=	tex-kpathsea>=2009.16044:../../print/tex-kpathsea

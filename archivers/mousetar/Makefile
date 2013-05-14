@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/04/07 23:35:35 dholland Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/11 19:46:57 asau Exp $
 #
 
 DISTNAME=	mousetar-20021217
@@ -9,7 +9,7 @@ DISTFILES=	tar.c tar.man
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	none
-COMMENT=	der Mouse's version of tar program
+COMMENT=	Version of tar program from der Mouse
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

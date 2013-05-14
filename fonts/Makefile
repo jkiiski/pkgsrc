@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.230 2013/01/26 11:16:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.233 2013/03/11 18:48:14 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -121,6 +121,7 @@ SUBDIR+=	jisx0208fonts
 SUBDIR+=	jisx0212fonts
 SUBDIR+=	jisx0213fonts
 SUBDIR+=	jmk-fonts
+SUBDIR+=	jsMath-fonts
 SUBDIR+=	kanjistrokeorders-ttf
 SUBDIR+=	kcfonts
 SUBDIR+=	kiloji-ttf
@@ -164,6 +165,7 @@ SUBDIR+=	py-TTFQuery
 SUBDIR+=	py-fonttools
 SUBDIR+=	ricty-ttf
 SUBDIR+=	roboto-fonts
+SUBDIR+=	ruby-afm
 SUBDIR+=	ruby-ttfunk
 SUBDIR+=	sgi-fonts
 SUBDIR+=	sourcecodepro-fonts
@@ -300,6 +302,7 @@ SUBDIR+=	ttf2pt1
 SUBDIR+=	ttftot42
 SUBDIR+=	ttmkfdir2
 SUBDIR+=	type1inst
+SUBDIR+=	ubuntu-fonts
 SUBDIR+=	umefont-ttf
 SUBDIR+=	un-core-ttf
 SUBDIR+=	un-extra-ttf

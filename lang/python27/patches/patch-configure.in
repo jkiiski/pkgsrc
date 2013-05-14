@@ -1,7 +1,7 @@
 $NetBSD$
 
---- configure.in.orig	Mon Apr  9 23:07:36 2012
-+++ configure.in
+--- configure.ac.orig	Mon Apr  9 23:07:36 2012
++++ configure.ac
 @@ -779,7 +779,7 @@ if test $enable_shared = "yes"; then
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION

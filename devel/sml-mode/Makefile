@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2009/08/06 01:44:51 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2013/02/17 19:18:01 dholland Exp $
 
 DISTNAME=	sml-mode-3.9.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel editors
 MASTER_SITES=	ftp://flint.cs.yale.edu/pub/monnier/sml-mode/
 
@@ -11,7 +11,7 @@ COMMENT=	Emacs mode for editing Standard ML source code
 
 BUILD_TARGET=	default
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/sml-mode
 

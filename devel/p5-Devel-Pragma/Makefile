@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:54:54 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 11:18:02 asau Exp $
 
-DISTNAME=	Devel-Pragma-0.54 
+DISTNAME=	Devel-Pragma-0.54
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel perl5

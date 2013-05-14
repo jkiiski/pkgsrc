@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.229 2012/12/11 14:58:00 ryoon Exp $
+# $NetBSD: makevars.map,v 1.232 2013/03/08 12:35:43 obache Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -327,6 +327,7 @@ EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 # ^^ FIXME: Looks like a type mismatch.
 EXPORT_SYMBOLS_LDFLAGS	List of LdFlag [$system]
 EXTRACT_CMD		ShellCommand [$system]
+EXTRACT_DIR		Pathname [$package]
 EXTRACT_ELEMENTS	List of Pathmask [$package_list]
 EXTRACT_ONLY		List of Pathname [$package_list]
 EXTRACT_OPTS		List of ShellWord [m:as,c:as]
@@ -350,6 +351,7 @@ FILESDIR		RelativePkgPath [$package]
 FILES_SUBST		List of ShellWord [$package_list]
 FILES_SUBST_SED		List of ShellWord
 FIX_RPATH		List of Varname [$package_list]
+FLEX_REQD		List of Version [$package_list]
 FONTS_DIRS.*		List of Pathname [m:as,c:a]
 GAMEDATAMODE		FileMode [$system]
 GAMES_GROUP		UserGroupName [$system]
@@ -701,6 +703,7 @@ TOOLS_NOOP		List of Tool [$system]
 TOOLS_PATH.*		Pathname [$system]
 TOOLS_PLATFORM.*	ShellCommand [$system]
 TOUCH_FLAGS		List of ShellWord [$system]
+UAC_REQD_EXECS		List of PrefixPathname [$package_list]
 UNLIMIT_RESOURCES	List of { datasize stacksize memorysize } [m:as,c:a]
 UNPRIVILEGED_USER	UserGroupName [$user]
 UNPRIVILEGED_GROUP	UserGroupName [$user]

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2012/10/08 23:01:42 adam Exp $
+# $NetBSD: Makefile,v 1.31 2013/05/07 11:08:39 wiz Exp $
 #
 
 DISTNAME=	geeqie-1.1
-PKGREVISION=	5
+PKGREVISION=	7
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geeqie/}
 
@@ -12,7 +12,6 @@ COMMENT=	Image viewer
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-gps
 
 LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
@@ -27,7 +26,8 @@ REPLACE_BASH+=		plugins/import/geeqie-import
 post-build:
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
 
-.include "../../geography/libchamplain04/buildlink3.mk"
+.include "options.mk"
+
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

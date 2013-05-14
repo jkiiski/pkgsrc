@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2012/03/06 23:28:52 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/25 06:56:02 asau Exp $
 
 DISTNAME=	kakasi-2.3.4
 PKGREVISION=	5
 CATEGORIES=	japanese textproc
-MASTER_SITES=	http://kakasi.namazu.org/stable/ 
+MASTER_SITES=	http://kakasi.namazu.org/stable/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://kakasi.namazu.org/

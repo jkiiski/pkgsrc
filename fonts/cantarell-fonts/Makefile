@@ -1,4 +1,4 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.1 2013/01/23 21:38:26 wiz Exp $
 #
 
 DISTNAME=	cantarell-fonts-0.0.12
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/CantarellFonts
 COMMENT=	Contemporary Humanist sans serif font designed for on-screen reading
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES

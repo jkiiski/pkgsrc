@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/04/28 21:25:37 zafer Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 11:54:33 asau Exp $
 #
 
 DISTNAME=	crack-attack-sounds-1.1.14-58.noarch
 PKGNAME=	crack-attack-sounds-1.1.14
 CATEGORIES=	games
-MASTER_SITES=	http://download.opensuse.org/distribution/10.3/repo/oss/suse/noarch/ 
+MASTER_SITES=	http://download.opensuse.org/distribution/10.3/repo/oss/suse/noarch/
 EXTRACT_SUFX=	.rpm
 
 MAINTAINER=	dsainty@NetBSD.org

@@ -1,4 +1,6 @@
-$NetBSD$
+$NetBSD: patch-aa,v 1.5 2007/02/23 00:14:09 wiz Exp $
+
+Change names of install programmes as to not conflict with other packages.
 
 --- Makefile.in.orig	2003-07-27 22:09:58.000000000 +0000
 +++ Makefile.in

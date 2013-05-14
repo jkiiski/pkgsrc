@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/kz_h8write
+share/kz_h8write/README.txt

@@ -67,6 +67,7 @@ share/sip${PYVERSSUFFIX}/QtCore/qabstractanimation.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstracteventdispatcher.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractfileengine.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractitemmodel.sip
+share/sip${PYVERSSUFFIX}/QtCore/qabstractnativeeventfilter.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstractstate.sip
 share/sip${PYVERSSUFFIX}/QtCore/qabstracttransition.sip
 share/sip${PYVERSSUFFIX}/QtCore/qanimationgroup.sip
@@ -151,11 +152,13 @@ share/sip${PYVERSSUFFIX}/QtCore/qtimeline.sip
 share/sip${PYVERSSUFFIX}/QtCore/qtimer.sip
 share/sip${PYVERSSUFFIX}/QtCore/qtranslator.sip
 share/sip${PYVERSSUFFIX}/QtCore/qurl.sip
+share/sip${PYVERSSUFFIX}/QtCore/qurlquery.sip
 share/sip${PYVERSSUFFIX}/QtCore/quuid.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvariant.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvariantanimation.sip
 share/sip${PYVERSSUFFIX}/QtCore/qvector.sip
 share/sip${PYVERSSUFFIX}/QtCore/qwaitcondition.sip
+share/sip${PYVERSSUFFIX}/QtCore/qwineventnotifier.sip
 share/sip${PYVERSSUFFIX}/QtCore/qxmlstream.sip
 share/sip${PYVERSSUFFIX}/QtDeclarative/QtDeclarativemod.sip
 share/sip${PYVERSSUFFIX}/QtDeclarative/qdeclarativecomponent.sip
@@ -339,6 +342,7 @@ share/sip${PYVERSSUFFIX}/QtGui/qrawfont.sip
 share/sip${PYVERSSUFFIX}/QtGui/qregion.sip
 share/sip${PYVERSSUFFIX}/QtGui/qrgb.sip
 share/sip${PYVERSSUFFIX}/QtGui/qrubberband.sip
+share/sip${PYVERSSUFFIX}/QtGui/qscreen.sip
 share/sip${PYVERSSUFFIX}/QtGui/qscrollarea.sip
 share/sip${PYVERSSUFFIX}/QtGui/qscrollbar.sip
 share/sip${PYVERSSUFFIX}/QtGui/qsessionmanager.sip
@@ -507,6 +511,7 @@ share/sip${PYVERSSUFFIX}/QtWebKit/qwebframe.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebhistory.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebhistoryinterface.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebinspector.sip
+share/sip${PYVERSSUFFIX}/QtWebKit/qwebkitglobal.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebkitversion.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebpage.sip
 share/sip${PYVERSSUFFIX}/QtWebKit/qwebpluginfactory.sip

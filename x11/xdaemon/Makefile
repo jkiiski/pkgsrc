@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2009/04/08 22:43:26 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/29 05:07:01 asau Exp $
 
 DISTNAME=	xdaemon-1.2
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-DISTFILES=	Daemon.README \
-		${IMAGES:=_bw.xbm} \
-		${IMAGES:=_color.xpm} \
-		${IMAGES:=_icon.xbm} \
-		${IMAGES:=_mask.xbm} \
+DISTFILES=	Daemon.README ${IMAGES:=_bw.xbm} ${IMAGES:=_color.xpm} \
+		${IMAGES:=_icon.xbm} ${IMAGES:=_mask.xbm}
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/23 19:51:01 asau Exp $
 
 DISTNAME=	fatback-1.3
 PKGREVISION=	1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://sourceforge.net/project/showfiles.php?group_id=46038
 COMMENT=	Recover deleted files from FAT filesystems
 
 GNU_CONFIGURE=	yes
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	lex

@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.17 2010/05/19 11:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/02 20:11:57 asau Exp $
 
-DISTNAME=		vslisp-4.0-1
-PKGNAME=		vslisp-4.0.1
-PKGREVISION=		2
-CATEGORIES=		lang
-MASTER_SITES=		$(MASTER_SITE_SOURCEFORGE:=vslisp/)
+DISTNAME=	vslisp-4.0-1
+PKGNAME=	vslisp-4.0.1
+PKGREVISION=	2
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vslisp/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://vslisp.sourceforge.net/
-COMMENT=		Embeddable Lisp library and standalone interpreter
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://vslisp.sourceforge.net/
+COMMENT=	Embeddable Lisp library and standalone interpreter
 
-WRKSRC=			${WRKDIR}/vslisp-4.0
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+WRKSRC=		${WRKDIR}/vslisp-4.0
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/vslisp

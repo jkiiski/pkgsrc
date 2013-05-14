@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.22 2011/10/15 00:23:08 reed Exp $
+# $NetBSD: bsd.depends.mk,v 1.23 2012/10/01 09:54:18 bad Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -109,6 +109,6 @@ depends-cookie:
 #	Command line variables:
 #
 #	VARNAME
-#		Either DEPENDS or BUILD_DEPENDS.
+#		DEPENDS, BUILD_DEPENDS, or TOOL_DEPENDS.
 #
 show-depends: .PHONY _pkgformat-show-depends

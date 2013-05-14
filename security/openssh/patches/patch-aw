@@ -10,14 +10,3 @@
  
  #include <errno.h>
  #include <fcntl.h>
-@@ -109,6 +111,10 @@
- #ifdef SSH_TUN_FREEBSD
- #include <sys/socket.h>
- #include <net/if.h>
-+
-+#ifdef HAVE_NET_TUN_IF_TUN_H
-+#include <net/tun/if_tun.h>
-+#endif
- 
- #ifdef HAVE_NET_IF_TUN_H
- #include <net/if_tun.h>

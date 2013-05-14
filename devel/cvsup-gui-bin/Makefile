@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/31 11:16:51 asau Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	motoyuki@bsdclub.org
 HOMEPAGE=	http://www.cvsup.org/
-COMMENT=	cvsup GUI client
+COMMENT=	GUI client for cvsup
 
 CVSUP_VERSION=	${DISTNAME:S/cvsup-gui-static-//}
 

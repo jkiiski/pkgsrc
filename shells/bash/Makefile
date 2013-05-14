@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2012/08/20 06:41:48 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2013/02/12 23:31:40 tcort Exp $
 
 BASH_VERSION=		4.2
 
@@ -67,7 +67,7 @@ BUILDLINK_DEPMETHOD.readline=	build
 .endif
 
 # Minix lacks setpgid() which is needed for job control.
-# Also set with-bash-malloc to no
+# bash malloc() is also broken on Minix
 .if ${OPSYS} == "Minix"
 CONFIGURE_ARGS+=	--disable-job-control
 CONFIGURE_ARGS+=	--with-bash-malloc=no
@@ -83,6 +83,21 @@ USE_GNU_READLINE=		yes
 BUILDLINK_API_DEPENDS.readline+=	readline>=6.0
 
 .include "../../devel/readline/buildlink3.mk"
+.endif
+
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS]) && ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}
+CONFIGURE_ENV+=		ac_cv_c_long_long=yes
+CONFIGURE_ENV+=		ac_cv_c_long_double=yes
+CONFIGURE_ENV+=		bash_cv_type_rlimit=yes
+CONFIGURE_ENV+=		bash_cv_getcwd_malloc=yes
+CONFIGURE_ENV+=		bash_cv_func_sigsetjmp=yes
+CONFIGURE_ENV+=		bash_cv_printf_a_format=yes
+CONFIGURE_ENV+=		bash_cv_job_control_missing=present
+CONFIGURE_ENV+=		bash_cv_sys_named_pipes=present
+CONFIGURE_ENV+=		bash_cv_unusable_rtsigs=no
+CONFIGURE_ENV+=		bash_cv_func_ctype_nonascii=yes
+CONFIGURE_ENV+=		bash_cv_wexitstatus_offset=8
 .endif
 
 post-install:

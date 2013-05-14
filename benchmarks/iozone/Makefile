@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2012/09/11 22:37:12 asau Exp $
+# $NetBSD: Makefile,v 1.47 2013/03/18 09:29:17 ast Exp $
 
 DISTNAME=	iozone3_408
 PKGNAME=	iozone-3.408
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
 EXTRACT_SUFX=	.tar
@@ -43,6 +43,11 @@ BUILD_TARGET=		generic
 .endif
 
 REPLACE_PERL =		iozone_visualizer.pl report.pl
+SUBST_CLASSES+=		crlf
+SUBST_MESSAGE.crlf=	Stripping EOL CR in ${REPLACE_PERL}
+SUBST_STAGE.crlf=	post-extract
+SUBST_FILES.crlf=	${REPLACE_PERL}
+SUBST_FILTER_CMD.crlf=	${TR} -d '\r'
 
 EGDIR =			share/examples/IOzone
 DOCDIR =		share/doc/IOzone

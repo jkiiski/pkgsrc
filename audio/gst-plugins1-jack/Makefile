@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/15 10:03:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/09 22:11:32 ryoon Exp $
 #
 
 GST_PLUGINS1_NAME=	jack

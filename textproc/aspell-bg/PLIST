@@ -1,0 +1,8 @@
+@comment $NetBSD$
+lib/aspell/bg.multi
+lib/aspell/bg.rws
+lib/aspell/bulgarian.alias
+share/aspell/bg.dat
+share/aspell/bg_affix.dat
+share/aspell/bg_phonet.dat
+share/aspell/bulgarian.kbd

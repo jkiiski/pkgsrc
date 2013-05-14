@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/02/27 03:35:12 taca Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/06 23:23:21 jperkin Exp $
 
 MODNAME=		ftp
 CATEGORIES+=		net

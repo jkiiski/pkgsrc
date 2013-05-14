@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/01/08 05:25:54 obache Exp $
+# $NetBSD: options.mk,v 1.5 2013/03/16 22:39:20 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.GraphicsMagick
 PKG_SUPPORTED_OPTIONS=	bzip2 lzma x11 jasper ghostscript wmf

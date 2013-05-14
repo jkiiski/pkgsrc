@@ -1,13 +1,15 @@
-# $NetBSD: Makefile.common,v 1.8 2011/03/21 06:05:44 obache Exp $
+# $NetBSD: Makefile.common,v 1.12 2013/02/17 07:43:49 dholland Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
 
 DISTNAME=	emacs-${EMACSVERSION}a
+PKGNAME?=	emacs21-${EMACSVERSION}a
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
@@ -80,7 +82,7 @@ LDFLAGS+=	-Z
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 REPLACE_PERL=	lib-src/grep-changelog
 
 post-extract:

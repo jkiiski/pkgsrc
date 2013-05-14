@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2012/10/23 17:18:24 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/05/03 17:52:35 wiz Exp $
 #
 
-DISTNAME=	gssdp-0.12.2.1
-PKGREVISION=	3
+DISTNAME=	gssdp-0.14.2
+PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/0.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gssdp/0.14/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../lang/vala018/buildlink3.mk"
+.include "../../lang/vala020/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

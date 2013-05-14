@@ -1,0 +1,7 @@
+@comment $NetBSD$
+lib/aspell/chewa.alias
+lib/aspell/chichewa.alias
+lib/aspell/ny.multi
+lib/aspell/ny.rws
+lib/aspell/nyanja.alias
+share/aspell/ny.dat

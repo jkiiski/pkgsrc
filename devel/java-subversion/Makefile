@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2013/01/20 12:34:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.21 2013/02/06 23:22:06 jperkin Exp $
 
 PKGNAME=	java-subversion-${SVNVER}
 COMMENT=	Java bindings for Subversion
