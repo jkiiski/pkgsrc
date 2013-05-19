@@ -8,7 +8,7 @@ RELEASE=/usr/src/releasetools/release.sh
 PKGSRC=/usr/pkgsrc
 PACKAGEURL="ftp://ftp.minix3.org/pub/minix/packages/`uname -r`/`uname -m`/All/"
 PACKAGES="
-	gmp mpfr gcc44 
+	gmp mpfr gcc44 automake autoconf
 	scmgit-base
 "
 JAILROOTBASE=/usr/pbulk-jail
