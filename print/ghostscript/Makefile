@@ -17,6 +17,8 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	ghostscript
 PKG_OPTIONS_GROUP.ghostscript+=	ghostscript-agpl ghostscript-gpl
 PKG_SUGGESTED_OPTIONS+=		ghostscript-gpl
 
+.include "../../mk/bsd.prefs.mk"
+
 .if ${OPSYS} == "Minix"
 SUBST_CLASSES+=		lzconfig
 SUBST_STAGE.lzconfig=	post-extract
