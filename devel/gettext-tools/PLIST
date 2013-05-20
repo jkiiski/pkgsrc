@@ -111,7 +111,7 @@ share/doc/gettext/recode-sr-latin.1.html
 share/doc/gettext/textdomain.3.html
 share/doc/gettext/tutorial.html
 share/doc/gettext/xgettext.1.html
-share/gettext/archive.dir.tar.xz
+share/gettext/archive.dir.tar.bz2
 share/locale/be/LC_MESSAGES/gettext-runtime.mo
 share/locale/be/LC_MESSAGES/gettext-tools.mo
 share/locale/bg/LC_MESSAGES/gettext-runtime.mo
