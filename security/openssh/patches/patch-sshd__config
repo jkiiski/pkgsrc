@@ -6,7 +6,7 @@
  #UseLogin no
 -UsePrivilegeSeparation sandbox		# Default for new installations.
 +#UsePrivilegeSeparation sandbox		# Default for new installations.
-+UsePrivilegeSeparation no # not well supported under Minix
++UsePrivilegeSeparation no
  #PermitUserEnvironment no
  #Compression delayed
  #ClientAliveInterval 0

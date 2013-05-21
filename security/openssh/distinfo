@@ -34,6 +34,6 @@ SHA1 (patch-session.c) = aba585358f22db8b37b6673526af96765c65dc49
 SHA1 (patch-ssh-keygen.c) = 666cf9f17b03375fc1c8c9824921aeaa5322884f
 SHA1 (patch-ssh.c) = eecce1698455567f9e48b498fe937d235890c315
 SHA1 (patch-sshd.c) = faf9ff468a0938e20f7cf18192c47dec46763e8c
-SHA1 (patch-sshd__config) = 667f97b0eaa128e93c3bccb27de053e6c56204d0
+SHA1 (patch-sshd__config) = d88ffbec5e26274bed337467e6a62bfea8fc844d
 SHA1 (patch-sshpty.c) = 9f08f899919d05567998087a060b90800c2c7b11
 SHA1 (patch-uidswap.c) = 4c7c4e1621dc54a180bcba9a81d58f114a819eb0
