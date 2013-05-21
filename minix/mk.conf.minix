@@ -19,6 +19,7 @@ ZSH_STATIC?=yes
 CURSES_DEFAULT?= ncurses
 
 EXTRACT_USING?=    bsdtar
+FETCH_USING?=fetch
 
 LOCALBASE?=        /usr/pkg
 SITE_MINIX?=http://www.minix3.org/
