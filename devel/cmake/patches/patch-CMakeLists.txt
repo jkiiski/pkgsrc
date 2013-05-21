@@ -5,7 +5,7 @@
      endif()
      set(CMAKE_CURL_INCLUDES ${CURL_INCLUDE_DIRS})
 -    set(CMAKE_CURL_LIBRARIES ${CURL_LIBRARIES})
-+    set(CMAKE_CURL_LIBRARIES ${CURL_LIBRARIES} ssl idn terminfo z)
++    set(CMAKE_CURL_LIBRARIES ${CURL_LIBRARIES} ssl crypto idn terminfo z)
    else()
      set(CURL_SPECIAL_ZLIB_H ${CMAKE_ZLIB_HEADER})
      set(CURL_SPECIAL_LIBZ_INCLUDES ${CMAKE_ZLIB_INCLUDES})
