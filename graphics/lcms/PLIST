@@ -3,8 +3,8 @@ bin/icc2ps
 bin/icclink
 bin/icctrans
 bin/jpegicc
-bin/tiffdiff
-bin/tifficc
+@comment libtiff fails: bin/tiffdiff
+@comment libtiff fails: bin/tifficc
 bin/wtpt
 include/icc34.h
 include/lcms.h
@@ -13,7 +13,7 @@ lib/pkgconfig/lcms.pc
 man/man1/icc2ps.1
 man/man1/icclink.1
 man/man1/jpegicc.1
-man/man1/tifficc.1
+@comment libtiff fails: man/man1/tifficc.1
 man/man1/wtpt.1
 share/doc/lcms/LCMSAPI.TXT
 share/doc/lcms/TUTORIAL.TXT
