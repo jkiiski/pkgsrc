@@ -1,6 +1,8 @@
 # $NetBSD: Makefile,v 1.46 2011/10/31 22:58:45 sbd Exp $
 #
 
+BROKEN=		This packages hangs while doing its file lock tests on MINIX
+
 DISTNAME=	procmail-3.22
 PKGREVISION=	3
 CATEGORIES=	mail

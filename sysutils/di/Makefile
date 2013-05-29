@@ -1,6 +1,8 @@
 # $NetBSD$
 #
 
+BROKEN=		This package hangs during pbulk under MINIX
+
 DISTNAME=	di-4.34
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gentoo.com/di/

@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.6 2012/10/03 16:10:13 asau Exp $
 
+BROKEN=	This package hangs during pbulk under MINIX
 DISTNAME=	Data-Currency-0.04002
 PKGNAME=	p5-${DISTNAME}
 PKGREVISION=	4

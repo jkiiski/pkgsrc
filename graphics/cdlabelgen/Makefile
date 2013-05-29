@@ -1,5 +1,6 @@
 # $NetBSD: Makefile,v 1.25 2012/10/06 14:10:43 asau Exp $
 
+BROKEN=		This package hangs during pbulk under MINIX
 DISTNAME=	cdlabelgen-4.2.0
 #KGREVISION=	1
 CATEGORIES=	graphics
