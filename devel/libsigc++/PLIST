@@ -53,58 +53,58 @@ share/doc/libsigc++-2.0/reference/html/bdwn.png
 share/doc/libsigc++-2.0/reference/html/classes.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01const__reference__wrapper_3_01T__wrapped_01_4_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__argument_3_01reference__wrapper_3_01T__wrapped_01_4_01_4.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor0.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor0__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor0__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor1-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor1.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor1__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor1__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor2-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor2.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor2__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor2__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor3-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor3.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor3__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor3__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor4-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor4.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor5-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor5.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor5__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor5__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor6-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor6.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor6__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor6__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor7-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor7.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor7__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor0-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__mem__functor7__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor0.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor0__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor1-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor0__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor1-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor1.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor1__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor2-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor1__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor2-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor2.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor2__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor3-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor2__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor3-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor3.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor3__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor3__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor4-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor4.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor5-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor5-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor5.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor5__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor6-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor5__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor6-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor6.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor6__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor7-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor6__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor7-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor7.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor7__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__const__volatile__mem__functor7__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__mem__functor0.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__mem__functor0__inherit__graph.png
@@ -131,32 +131,32 @@ share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__mem__functor7.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__mem__functor7__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor0.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor0__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor0__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor1-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor1.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor1__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor1__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor2-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor2.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor2__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor2__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor3-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor3.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor3__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor3__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor4-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor4.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor5-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor5.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor5__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor5__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor6-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor6.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor6__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor6__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor7-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor7.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor7__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1bound__volatile__mem__functor7__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__limit__reference-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__limit__reference.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__limit__reference_3_01T__type_00_01true_01_4.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__mem__functor0.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__mem__functor0__inherit__graph.png
@@ -183,36 +183,36 @@ share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__mem__functor7.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__mem__functor7__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__limit__reference-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__limit__reference.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__limit__reference_3_01T__type_00_01true_01_4.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor0.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor0__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor0__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor1-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor1.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor1__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor1__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor2-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor2.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor2__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor2__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor3-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor3.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor3__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor3__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor4-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor4.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor5-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor5.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor5__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor5__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor6-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor6.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor6__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor6__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor7-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor7.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor7__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1const__volatile__mem__functor7__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1limit__reference-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1limit__reference.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1limit__reference_3_01T__type_00_01true_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1limit__reference_3_01T__type_00_01true_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1limit__reference_3_01T__type_00_01true_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1limit__reference_3_01T__type_00_01true_01_4.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1mem__functor0.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1mem__functor0__inherit__graph.png
@@ -323,8 +323,8 @@ share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot__base__inherit__graph.p
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1slot__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__limit__reference-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__limit__reference.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__limit__reference_3_01T__type_00_01true_01_4.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor0-members.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor0.html
 share/doc/libsigc++-2.0/reference/html/classsigc_1_1volatile__mem__functor0__inherit__graph.png
@@ -509,30 +509,30 @@ share/doc/libsigc++-2.0/reference/html/structsigc_1_1functor__base.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1functor__base__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1functor__trait-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1functor__trait.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3-1_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3-1_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3-1_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3-1_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_010_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3-1_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_010_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_010_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_010_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_011_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_010_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_011_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_011_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_011_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_012_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_011_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_012_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_012_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_012_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_013_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_012_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_013_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_013_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_013_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_014_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_013_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_014_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_014_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_014_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_015_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_014_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_015_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_015_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_015_00_01T__functor_01_4__inherit__graph.png
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_015_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1is__base__and__derived-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1is__base__and__derived.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1lambda-members.html
@@ -546,9 +546,9 @@ share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__functor.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__functor__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4-members.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4.html
-share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4__inherit__graph.png
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4-members.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4.html
+@comment fn too long: share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor_3_01void_00_01T__functor_01_4__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1retype__return__functor__inherit__graph.png
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1signal__base-members.html
 share/doc/libsigc++-2.0/reference/html/structsigc_1_1signal__base.html
