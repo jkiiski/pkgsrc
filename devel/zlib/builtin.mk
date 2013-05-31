@@ -45,6 +45,8 @@ BUILTIN_VERSION.zlib!=							\
 BUILTIN_VERSION.zlib=	1.1.4nb1
 .  endif
 BUILTIN_PKG.zlib=	zlib-${BUILTIN_VERSION.zlib}
+# LSC: Hack, for some reason during pbulk, this is not set.
+BUILDLINK_PREFIX.zlib=	/usr/pkg
 .endif
 MAKEVARS+=	BUILTIN_PKG.zlib
 
