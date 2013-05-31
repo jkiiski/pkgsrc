@@ -1,7 +1,6 @@
 # $NetBSD: builtin.mk,v 1.10 2008/10/05 21:36:35 cube Exp $
 
 BUILTIN_PKG:=	fontconfig
-PKGCONFIG_FILE.fontconfig=	${X11BASE}/lib/pkgconfig/fontconfig.pc
 
 BUILTIN_FIND_FILES_VAR:=		H_FONTCONFIG
 BUILTIN_FIND_FILES.H_FONTCONFIG=	\
@@ -87,3 +86,19 @@ MAKEVARS+=	USE_BUILTIN.fontconfig
 ###
 
 .include "../../mk/x11.builtin.mk"
+
+CHECK_BUILTIN.fontconfig?=	no
+.if !empty(CHECK_BUILTIN.fontconfig:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
+.  endif
+
+.  if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
+USE_BUILTIN.expat=	yes
+USE_BUILTIN.freetype2=	yes
+USE_BUILTIN.zlib=	yes
+.  endif
+
+.endif	# CHECK_BUILTIN.fontconfig
