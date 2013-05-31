@@ -116,7 +116,7 @@ pbulksh_bin_kit() {
 	sh ./bootstrap/cleanup
 
 	# Trim the .ifdef BSD_PKG_MK and .endif lines to make a "fragment"
-	sed -e '1d;$d' /usr/pkgsrc/minix/mk.conf.minix > /usr/pkgsrc/minix/mk.conf.minix.frag
+	sed -e '/ifdef.*BSD_PKG_MK/d;$d' /usr/pkgsrc/minix/mk.conf.minix > /usr/pkgsrc/minix/mk.conf.minix.frag
 
 	env PATH=/usr/pbulk/bin:/usr/pbulk/sbin:/usr/pkg.sav/gcc44/bin:/usr/pkg.sav/bin:/usr/pkg.sav/sbin:${PATH} CFLAGS="-march=i586" LD_LIBRARY_PATH=/usr/pkg.sav/lib sh ./bootstrap/bootstrap \
 		--mk-fragment=/usr/pkgsrc/minix/mk.conf.minix.frag \
