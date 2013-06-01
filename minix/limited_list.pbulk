@@ -28,6 +28,7 @@ chat/naim
 converters/fribidi
 converters/libiconv
 converters/p5-MIME-Base64
+converters/unix2dos
 cross/avr-binutils
 cross/avr-gcc
 cross/avr-libc
@@ -208,6 +209,7 @@ misc/getopt
 misc/libutf
 misc/watch
 net/fetch
+net/httping
 net/libfetch
 net/libpcap
 net/openntpd
@@ -363,6 +365,7 @@ www/libwww
 www/links
 www/links-gui
 www/lynx
+www/micro_httpd
 www/neon
 www/snarf
 www/urlget
