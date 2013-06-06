@@ -65,6 +65,18 @@ pbulksh_bootstrap() {
 
 	cd /usr/pkgsrc
 
+
+	# Trim the .ifdef BSD_PKG_MK and .endif lines to make a "fragment"
+	# and adapt a few path to the ones expected for pbulk
+	sed \
+		-e '/.*BSD_PKG_MK/d' \
+		-e 's@LOCALBASE?=.*@LOCALBASE=	/usr/pbulk@' \
+		-e 's@VARBASE?=.*@VARBASE=	/usr/pbulk/var@' \
+		-e 's@PKG_DBDIR?=.*@PKG_DBDIR=	/usr/pbulk/.pkgdb@' \
+		-e 's@WRKOBJDIR?=.*@WRKOBJDIR=	/usr/tmp/pbulk-outer@' \
+		/usr/pkgsrc/minix/mk.conf.minix \
+		> /usr/pkgsrc/minix/mk.conf.minix.pbulk
+
 	env CFLAGS="-march=i586" sh ./bootstrap/bootstrap --prefix=/usr/pbulk \
 			--varbase=/usr/pbulk/var \
 			--workdir=/usr/tmp/pbulk-bootstrap \
@@ -97,6 +109,10 @@ pbulksh_backup() {
 	mkdir /usr/pkg
 	mv /usr/var /usr/var.sav
 	mkdir /usr/var
+
+	# Fix symlinks
+	ln -sf /usr/pkg.sav/bin/clang /usr/bin/cc
+	ln -sf /usr/pkg.sav/bin/strip /usr/bin/strip
 }
 
 # Create a bootstrap a binary kit. pbulk needs this.
@@ -159,7 +175,7 @@ pbulksh_build() {
 		exit 1
 	fi
 
-	env STRIP=strip PATH=/bin:/sbin:/usr/pkg.sav/bin:/usr/pkg.sav/sbin:/usr/bin:/usr/sbin:/usr/pbulk/bin:/usr/pbulk/sbin:/usr/pkg.sav/gcc44/bin:${PATH} LD_LIBRARY_PATH=/usr/pkg.sav/lib /usr/pbulk/bin/bulkbuild
+	env PATH=/bin:/sbin:/usr/pkg.sav/bin:/usr/pkg.sav/sbin:/usr/bin:/usr/sbin:/usr/pbulk/bin:/usr/pbulk/sbin:/usr/pkg.sav/gcc44/bin:${PATH} LD_LIBRARY_PATH=/usr/pkg.sav/lib /usr/pbulk/bin/bulkbuild
 }
 
 # Restore the backed up /usr/pkg and /usr/var
@@ -178,6 +194,10 @@ pbulksh_restore() {
 	mv /usr/pkg.sav /usr/pkg
 	rm -rf /usr/var
 	mv /usr/var.sav /usr/var
+
+	# Fix symlinks
+	ln -sf /usr/pkg/bin/clang /usr/bin/cc
+	ln -sf /usr/pkg/bin/strip /usr/bin/strip
 }
 
 pbulksh_all() {

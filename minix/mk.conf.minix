@@ -1,48 +1,69 @@
+# We ensure this Makefile is only seen during pkgsrc builds
+.ifdef BSD_PKG_MK
+
 # Allow local overrides:
 .-include "${.PARSEDIR}/local.mk.conf"
 
-.ifdef BSD_PKG_MK
-
-CFLAGS+=	-march=i586
-PKGSRC_COMPILER?= gcc
-
-DISTDIR?=/usr/pkgsrc/distfiles
-SKIP_LICENSE_CHECK?=yes
-IS_BUILTIN.dl?=    yes
-ALLOW_VULNERABLE_PACKAGES?=      yes
-
-PKG_OPTIONS.gcc44?=-gcc-java -gcc-objc
-PKG_OPTIONS.gcc47?=-gcc-java -gcc-objc
-PKG_OPTIONS.groff?=-x11 -groff-docs
-ZSH_STATIC?=yes
-
-CURSES_DEFAULT?= ncurses
-
-EXTRACT_USING?=    bsdtar
-FETCH_USING?=fetch
-
-LOCALBASE?=        /usr/pkg
+#######################################################################
+# Download URLs for sources and packages
 SITE_MINIX?=http://www.minix3.org/
-MASTER_SITE_BACKUP?=${SITE_MINIX}/distfiles-backup/ ftp://ftp.netbsd.org/pub/pkgsrc/distfiles/${DIST_SUBDIR} ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR} http://ftp.jp.netbsd.org/pub/pkgsrc/distfiles/${DIST_SUBDIR}
+
 MASTER_SITE_MINIX?=${SITE_MINIX}/distfiles-minix/
-PACKAGES?=${PKGSRCDIR}/packages/${OS_VERSION}/${MACHINE_ARCH}
-PKGMANDIR?=        man
 
-PKG_DBDIR=        /usr/var/db/pkg
-PKG_DEFAULT_OPTIONS?= -inet6
-PKG_OPTIONS.ghostscript?=-fontconfig
-PKG_RCD_SCRIPTS?=YES
-
-RCD_SCRIPTS_DIR?=${LOCALBASE}/etc/rc.d
-
-VARBASE?=        /usr/var
-WRKOBJDIR?=    /usr/pkgsrc/work
+MASTER_SITE_BACKUP?= \
+	${SITE_MINIX}/distfiles-backup/ \
+	ftp://ftp.netbsd.org/pub/pkgsrc/distfiles/${DIST_SUBDIR} \
+	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/${DIST_SUBDIR} \
+	http://ftp.jp.netbsd.org/pub/pkgsrc/distfiles/${DIST_SUBDIR}
 
 MASTER_SITE_OVERRIDE?=${MASTER_SITE_BACKUP}
 
-PYTHON_VERSION_DEFAULT?=27
-PYPACKAGE?=python27
+#######################################################################
+# PKGSRC Paths
+LOCALBASE?=	/usr/pkg
+VARBASE?=	/usr/var
+PKG_DBDIR?=	/usr/var/db/pkg
+WRKOBJDIR?=	/usr/pkgsrc/work
+DISTDIR?=	/usr/pkgsrc/distfiles
+PACKAGES?=	${PKGSRCDIR}/packages/${OS_VERSION}/${MACHINE_ARCH}
 
+#######################################################################
+# Compilation Flags for all packages
+CFLAGS+= -march=i586
+
+#######################################################################
+# PKGSRC tools
+PKGSRC_COMPILER?=			gcc
+EXTRACT_USING?=				bsdtar
+FETCH_USING?=				fetch
+
+#######################################################################
+# PKGSRC Build Options
+SKIP_LICENSE_CHECK?=		yes
+ALLOW_VULNERABLE_PACKAGES?=	yes
+
+PKG_DEFAULT_OPTIONS?= -inet6
+
+PKG_RCD_SCRIPTS?=			yes
+RCD_SCRIPTS_DIR?=			${LOCALBASE}/etc/rc.d
+
+PKGMANDIR?=					man
 PREFER_PKGSRC?=	MesaLib Xft2 Xrandr Xrender glu fontconfig freetype2
 
-.endif
+
+IS_BUILTIN.dl?=				yes
+ZSH_STATIC?=				yes
+
+CURSES_DEFAULT?=			ncurses
+
+PYTHON_VERSION_DEFAULT?=	27
+PYPACKAGE?=					python27
+
+#######################################################################
+# Package-specific default options
+PKG_OPTIONS.gcc44?=			-gcc-java -gcc-objc
+PKG_OPTIONS.gcc47?=			-gcc-java -gcc-objc
+PKG_OPTIONS.groff?=			-x11 -groff-docs
+PKG_OPTIONS.ghostscript?=	-fontconfig
+
+.endif # BSD_PKG_MK
