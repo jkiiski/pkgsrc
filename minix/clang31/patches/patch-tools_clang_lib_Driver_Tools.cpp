@@ -36,7 +36,7 @@ $NetBSD$
    if (Output.isFilename()) {
      CmdArgs.push_back("-o");
      CmdArgs.push_back(Output.getFilename());
-@@ -4608,42 +4635,86 @@ void minix::Link::ConstructJob(Compilation &C, const J
+@@ -4608,42 +4635,87 @@ void minix::Link::ConstructJob(Compilation &C, const J
  
    if (!Args.hasArg(options::OPT_nostdlib) &&
        !Args.hasArg(options::OPT_nostartfiles)) {
@@ -113,7 +113,8 @@ $NetBSD$
 +    }
 +#endif
    }
-+  CmdArgs.push_back("-L/usr/pkg/compiler-rt/lib -lCompilerRT-Generic");
++  CmdArgs.push_back("-L/usr/pkg/compiler-rt/lib");
++  CmdArgs.push_back("-lCompilerRT-Generic");
  
 +  if (!Args.hasArg(options::OPT_nostdlib) &&
 +      !Args.hasArg(options::OPT_nostartfiles)) {

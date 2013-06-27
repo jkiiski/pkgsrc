@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Support/Unix/Unix.h.orig	Thu Nov 24 15:07:52 2011
+--- lib/Support/Unix/Unix.h.orig	Tue Dec 13 03:20:07 2011
 +++ lib/Support/Unix/Unix.h
 @@ -84,4 +84,9 @@ static inline bool MakeErrMsg(
    return true;

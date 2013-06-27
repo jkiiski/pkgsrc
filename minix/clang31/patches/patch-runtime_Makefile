@@ -1,6 +1,6 @@
 $NetBSD$
 
---- runtime/Makefile.orig	Tue Apr 17 16:22:20 2012
+--- runtime/Makefile.orig	Tue Dec 13 03:20:05 2011
 +++ runtime/Makefile
 @@ -20,7 +20,7 @@ ifeq ($(ARCH), Sparc)
  PARALLEL_DIRS := $(filter-out libprofile, $(PARALLEL_DIRS))

@@ -1,6 +1,6 @@
 $NetBSD$
 
---- lib/Support/raw_ostream.cpp.orig	Tue Nov 29 00:14:24 2011
+--- lib/Support/raw_ostream.cpp.orig	Tue Dec 13 03:20:07 2011
 +++ lib/Support/raw_ostream.cpp
 @@ -584,8 +584,8 @@ uint64_t raw_fd_ostream::seek(uint64_t off) {
  }
